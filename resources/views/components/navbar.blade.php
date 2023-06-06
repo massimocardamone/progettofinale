@@ -9,9 +9,11 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
+          @auth
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="{{route('create')}}">Aggiungi prodotto</a>
           </li>
+          @endauth
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
