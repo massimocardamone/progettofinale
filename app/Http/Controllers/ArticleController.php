@@ -29,18 +29,7 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        $article = Article::create([
-            'name'=>$request->name,
-            'price'=>$request->price,
-            'description'=>$request->description,
-            'genre_id'=>$request->genre_id,
-            'user_id'=>Auth::id()
-        ]);
-      
-        return redirect(route('home'))->with('message', 'Il tuo articolo è stato correttamente caricato');
-    }
+    
 
     /**
      * Display the specified resource.
