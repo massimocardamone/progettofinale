@@ -11,6 +11,10 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+<<<<<<< HEAD
+=======
+        "@fortawesome/fontawesome-free": "^6.4.0",
+>>>>>>> 759bdf6d2ca5d60947704fa1516012214ae209f6
         "bootstrap": "^5.3.0"
     }
 }
