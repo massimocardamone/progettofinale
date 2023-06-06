@@ -23,7 +23,7 @@ class ArticleController extends Controller
     public function create()
     {
         $genres = Genre::all();
-        return view('product.create',compact('genres'));
+        return view('create',compact('genres'));
     }
 
     /**
@@ -38,8 +38,8 @@ class ArticleController extends Controller
             'genre_id'=>$request->genre_id,
             'user_id'=>Auth::id()
         ]);
-
-        return redirect(route('home'));
+      
+        return redirect(route('home'))->with('message', 'Il tuo articolo è stato correttamente caricato');
     }
 
     /**

@@ -9,11 +9,11 @@ class ProductController extends Controller
     public function create()
     {
        
-        return view('product.create');
+        return view('create');
     }
 
     public function edit(Product $product)
     {
-        return view('product.edit', compact('product'));
+        return view('edit', compact('product'));
     }
 }

@@ -8,10 +8,25 @@
     @livewireStyles
     @vite(['resources/css/app.css'])
 </head>
+
 <body>
+    
     <x-navbar/>
+    @if (session('message'))
+    <div class="alert alert-success">
+        {{ session('message') }}
+    </div>
+    @endif
     <x-header title="{{$title}}"/>
+
+   
+
     {{$slot}}
+
+
+
+
+
     @livewireScripts
     @vite(['resources/js/app.js'])
 </body>
