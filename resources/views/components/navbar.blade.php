@@ -27,6 +27,28 @@
             </ul>
           </li> --}}
         </ul>
+        @auth
+        <ul class="navbar-nav mx-end">
+          {{-- <li class="nav-item">
+            <a class="nav-link" href="{{route('profile')}}">Il tuo profilo</a>
+          </li> --}}
+          <li class="nav-item">
+            <form method="POST" action="{{route('logout')}}">
+              @csrf
+              <button >Logout</button>
+          </form> 
+          </li>
+        </ul>    
+        @else
+        <ul class="navbar-nav mx-end">
+            <li class="nav-item">
+                <a href="{{route('register')}}" class="nav-link">Registrati</a>
+            </li>
+            <li class="nav-item me-md-3">
+                <a href="{{route('login')}}" class="nav-link">Login</a>
+            </li>
+        </ul>
+        @endauth
         {{-- <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>

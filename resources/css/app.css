@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 @import 'bootstrap/dist/css/bootstrap.min.css';
-=======
 @import '/node_modules/bootstrap/dist/css/bootstrap';
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import './style.css';
->>>>>>> 759bdf6d2ca5d60947704fa1516012214ae209f6
