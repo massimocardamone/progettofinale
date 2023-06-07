@@ -19,12 +19,12 @@
         <div class="col-6 col-md-4 d-flex justify-content-end">
             <div class="row rigahomesezprod flex-column justify-content-around">
               <div class="col-3 d-flex colsezsx align-items-center">
-                <div class="bg-primary contentcolsx">
-                  <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eaque fugiat, ratione nemo maxime laborum aliquid officiis doloribus ab. Autem quis dolorem praesentium delectus beatae obcaecati harum blanditiis, inventore modi!</h5>
-                </div>
+                {{-- <div class="bg-primary contentcolsx"> --}}
+                  <h5>Lorem Ipsum</h5>
+                {{-- </div> --}}
               </div>
               <div class="col-3 d-flex colsezsx align-items-center">
-                <h5>Lorem Ipsum</h5>
+                <h5 class="mytext">Lorem Ipsum</h5>
               </div>
               <div class="col-3 d-flex colsezsx align-items-center">
                 <h5>Lorem Ipsum</h5>
