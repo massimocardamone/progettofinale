@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Genre;
+use GdFont;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,34 +17,36 @@ class ArticleController extends Controller
         $this->middleware('auth')->except('index','show');
     }
     /**
-     * Display a listing of the resource.
+     * vista prodotti
      */
     public function index()
     {
         $articles=Article::all();
-        return view('article.index', compact('articles'));
+        $genres=Genre::all();
+        return view('article.index', compact('articles', 'genres'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * vista form
      */
     public function create()
     {
         $genres = Genre::all();
         return view('article.create',compact('genres'));
     }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     
 
     /**
-     * Display the specified resource.
+     *dettagli
      */
     public function show(Article $article)
     {
         return view ('article.detail',compact('article'));
+    }
+
+    public function show_category(Genre $genre){
+ $genres= Genre::all();
+        return view('article.indexGenre', compact('genre', 'genres'));
     }
 
     /**
