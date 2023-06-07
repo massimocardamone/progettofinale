@@ -15,9 +15,13 @@ use App\Http\Controllers\ProductController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+//home
 Route::get('/', [PublicController::class,'homepage'])->name('home');
+//vista creazione form
 Route::get('/formArticle',[ArticleController::class,'create'])->name('create');
-Route::post('/formArticle/send',[ArticleController::class,'store'])->name('store');
+//dettagli
 Route::get('/article/detail{article}',[ArticleController::class, 'show'])->name('show');
+//indice prodotti
 route::get('/Articles',[ArticleController::class, 'index'])->name('article_index');
+//indice categoria
+route::get('/article/category{genre}',[ArticleController::class, 'show_category'])->name('show_category');
