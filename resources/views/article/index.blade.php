@@ -2,7 +2,7 @@
 <div class="container-fluid">
 
 {{-- LISTA CATEGORIE --}}
-    <div class="row bg-warning justify-content-evenly py-2">
+    <div class="row justify-content-evenly py-2">
         @foreach ($genres as $genre )
         <div class="col mx-1 d-flex">
             <a class="btn" href="{{route('show_category', compact('genre', 'genres'))}}">{{$genre->genre}}</a>

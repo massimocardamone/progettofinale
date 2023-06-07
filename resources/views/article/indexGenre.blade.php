@@ -1,5 +1,5 @@
 <x-layout docTitle="detail" title="{{$genre->genre}}">
-<div class="row bg-warning justify-content-evenly py-2" >
+<div class="row justify-content-evenly py-2" >
         @foreach ($genres as $items )
         <div class="col mx-1 d-flex">
             <a class="btn" href="{{route('show_category', ['genre'=>$items])}}">{{$items->genre}}</a>
@@ -22,7 +22,7 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12 col-md-3">
-                <h1 class="bg-warning">nessun prodotto</h1> 
+                <h1>nessun prodotto</h1> 
 
             </div>
         </div>
