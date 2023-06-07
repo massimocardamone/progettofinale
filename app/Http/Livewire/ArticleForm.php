@@ -14,8 +14,22 @@ class ArticleForm extends Component
     public $description;
     public $genre_id;
 
+    protected $rules = [
+        'name'=> 'required',
+        'price'=> 'required',
+        'description'=> 'required'
+
+    ];
+
+    protected $messages = [
+        '*.required' => ' il campo deve essere un obbligatorio.',
+
+    ];
+
     public function store()
     {
+        $this->validate();
+
         $article = Article::create([
             'name'=>$this->name,
             'price'=>$this->price,
