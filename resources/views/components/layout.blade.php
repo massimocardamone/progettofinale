@@ -13,8 +13,8 @@
     
     <x-navbar/>
     @if (session('message'))
-    <div class="alert alert-success">
-        {{ session('message') }}
+    <div class="alert alert-success text-center">
+       <h3 class="lead">{{ session('message') }}</h3> 
     </div>
     @endif
     <x-header title="{{$title}}"/>
