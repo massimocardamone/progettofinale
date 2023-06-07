@@ -7,8 +7,8 @@
     @endif
 
     <div class="mb-3">
-      <label for="name" class="form-label">Nome Prodotto </label>
-      <input type="text" class="form-control" wire:model="name" id="name" >
+      <label for="name" class="form-label">Nome Prodotto</label>
+      <input type="text" class="form-control myinput" wire:model="name" id="name" >
     </div>
 
     {{-- <div class="mb-3">
@@ -17,14 +17,14 @@
       </div> --}}
 
     <div class="mb-3">
-        <label for="description" >Descrizione</label>
-        <textarea wire:model="description" id="description" class="form-control" cols="30" rows="10" ></textarea>
+        <label for="description" class="form-label">Descrizione</label>
+        <textarea wire:model="description" id="description" class="form-control myinput" cols="30" rows="10" ></textarea>
       </div>
 
 
       <div class="mb-3">
         <label for="price" class="form-label">Prezzo</label>
-        <input type="number" step="0.01" wire:model="price" class="form-control" id="price">
+        <input type="number" step="0.01" wire:model="price" class="form-control myinput" id="price">
       </div>
 
       <div class="mb-3 d-flex">
@@ -32,7 +32,7 @@
         <div class="form-check mx-2">
           <input class="form-check-input" type="radio" value="{{$genre->id}}" wire:model="genre_id" id="flexCheckDefault">
           <label for="category" class="form-check-label">{{$genre->genre}}</label>
-        </div> 
+        </div>
         @endforeach
        
         

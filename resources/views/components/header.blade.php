@@ -1,7 +1,11 @@
-<div class="container mt-5">
+<div class="container myheader">
     <div class="row align-items-center vh-50">
         <div class="col-12">
             <h1 class="text-center display-1">{{$title}}</h1>
         </div>
+        {{-- <hr>
+        <div class="col-12 text-center">
+            <h2>Prezzi da mal di pancia!</h2>
+        </div> --}}
     </div>
 </div>

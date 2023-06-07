@@ -1,5 +1,5 @@
 <a href="{{route('show',compact('article'))}}">
-    <div class="card mycard my-5 mx-2">
+    <div class="card mycard my-3 mx-2">
         <div class="position-relative imgBox">
             <img class="cardimg img-fluid" src="{{Storage::url($article->img)}}" alt="">
             <div class="cardcategory">
