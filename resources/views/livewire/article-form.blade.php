@@ -27,19 +27,20 @@
         <input type="number" step="0.01" wire:model="price" class="form-control" id="price">
       </div>
 
-      <div class="mb-3">
+      <div class="mb-3 d-flex">
         @foreach ($genres as $genre)
-        <div class="form-check">
+        <div class="form-check mx-2">
           <input class="form-check-input" type="radio" value="{{$genre->id}}" wire:model="genre_id" id="flexCheckDefault">
           <label for="category" class="form-check-label">{{$genre->genre}}</label>
-        </div>
-        
+        </div> 
         @endforeach
        
         
       </div>
    
-     
+    <div class="d-flex justify-content-center mb-3">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
  
-    <button type="submit" class="btn btn-primary">Submit</button>
+    
   </form>

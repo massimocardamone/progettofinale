@@ -14,10 +14,10 @@ protected $fillable = [
     'name','price','description','img','user_id','genre_id'
 ];
 
-public function users(){
+public function user(){
     return $this->belongsTo(User::class); 
 }
-public function genres(){
+public function genre(){
     return $this->belongsTo(Genre::class); 
 }
 
