@@ -11,6 +11,7 @@
                 <li class="list-group text-light">Prezzo:€{{$article->price}}</li>
                 <li class="list-group text-light">Categoria:{{$article->genre->genre}}</li>
                 <li class="list-group text-light">Descrizione:{{$article->description}}</li>
+                <a href="{{route('home')}}" class="btn btn-success my-3">torna indietro</a>
             </ul>
         </div>
         

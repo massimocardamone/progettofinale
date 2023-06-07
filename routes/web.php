@@ -20,3 +20,4 @@ Route::get('/', [PublicController::class,'homepage'])->name('home');
 Route::get('/formArticle',[ArticleController::class,'create'])->name('create');
 Route::post('/formArticle/send',[ArticleController::class,'store'])->name('store');
 Route::get('/article/detail{article}',[ArticleController::class, 'show'])->name('show');
+route::get('/Articles',[ArticleController::class, 'index'])->name('article_index');
