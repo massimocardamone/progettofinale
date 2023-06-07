@@ -23,8 +23,8 @@ class ArticleForm extends Component
             'genre_id'=>$this->genre_id,
             'user_id'=>Auth::id()
         ]);
-        session()->flash('message','Scarpa caricata correttamente');
-        return redirect(route('home'))->with('message', 'Il tuo articolo è stato correttamente caricato');
+        session()->flash('message',"l'articolo caricato correttamente");
+        $this->reset();
     }
 
     public function render()

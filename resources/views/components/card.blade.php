@@ -1,7 +1,7 @@
 <a href="{{route('show',compact('article'))}}">
     <div class="card mycard my-5 mx-2">
         <div class="position-relative imgBox">
-            <img class="cardimg img-fluid" src="" alt="">
+            <img class="cardimg img-fluid" src="{{Storage::url($article->img)}}" alt="">
             <div class="cardcategory">
                 <!-- qui va il link alla pagina con tutti i prodotti della stessa categoria -->
                 <p class="m-0">{{$article->genre->genre}}</p>     
@@ -13,7 +13,7 @@
             </div>
             <div class="cardprice">
                 <h4>{{$article->price}} &euro;</h4>
-                <h4>{{$article->created_at}}</h4>
+                <h4>{{$article->created_at->format('d/m/y')}}</h4>
             </div>
             <div class="carddescription mt-1">
                 <p>{{$article->description}}</p>
