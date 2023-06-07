@@ -31,14 +31,26 @@
         </ul>
         @auth
         <ul class="navbar-nav mx-end">
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="{{route('profile')}}">Il tuo profilo</a>
-          </li> --}}
-          <li class="nav-item">
-            <form method="POST" action="{{route('logout')}}">
+          
+          <li class="nav-item dropdown mydrop">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Benvenuto {{Auth::user()->name}}
+            </a>
+            <ul class="dropdown-menu">
+            <li class="dropdown-item"><form method="POST" action="{{route('logout')}}">
+              @csrf
+              <button class="dropdown-item">Logout</button>
+          </form></li>
+
+
+
+          </ul>
+
+
+            {{-- <form method="POST" action="{{route('logout')}}">
               @csrf
               <button class="mybtn">Logout</button>
-          </form> 
+          </form>  --}}
           </li>
         </ul>    
         @else
