@@ -29,7 +29,7 @@ class ArticleController extends Controller
     public function create()
     {
         $genres = Genre::all();
-        return view('create',compact('genres'));
+        return view('article.create',compact('genres'));
     }
 
     /**
@@ -42,7 +42,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view ('article.detail',compact('article'));
     }
 
     /**
