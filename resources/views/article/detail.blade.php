@@ -10,7 +10,7 @@
                 <li class="list-group text-light">Nome: {{$article->name}}</li>
                 <li class="list-group text-light">Prezzo:€{{$article->price}}</li>
                 <li class="list-group text-light">Categoria:{{$article->genre->genre}}</li>
-                <li class="list-group text-light">Descrizione{{$article->description}}</li>
+                <li class="list-group text-light">Descrizione:{{$article->description}}</li>
             </ul>
         </div>
         
