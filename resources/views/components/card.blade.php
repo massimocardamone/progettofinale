@@ -1,4 +1,4 @@
-<a href="{{route('show')}}">
+<a href="{{route('show',compact('article'))}}">
     <div class="card mycard my-5 mx-2">
         <div class="position-relative imgBox">
             <img class="cardimg img-fluid" src="https://picsum.photos/id/237/287/300" alt="">
