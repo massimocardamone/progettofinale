@@ -174,3 +174,47 @@ body{
     text-overflow: " [..]";
     direction: ltr;
 } */
+
+.coldetsx{
+    border-radius: 20px 20px 20px 20px;
+    padding: 2rem 2rem 2rem 0rem;
+        
+}
+
+.coldetdx{
+    border-radius: 20px 20px 20px 20px;
+    padding: 2rem 0rem 2rem 2rem;
+}
+
+.imgdet{
+    border-radius: 30px 30px 30px 30px;
+}
+
+.coldetsxd{
+    border-radius: 20px 20px 20px 20px;
+    padding: 2rem; 
+    background-color: var(--darkt); 
+    box-shadow: 8px 10px 10px var(--dark);     
+}
+
+.coldetdxd{
+    border-radius: 20px 20px 20px 20px;
+    padding: 2rem;
+    background-color: var(--darkt);
+    box-shadow: 8px 10px 10px var(--dark);
+}
+
+.coldetsxd:hover{
+    border-radius: 20px 20px 20px 20px;
+    padding: 2rem; 
+    background-color: var(--lightt);
+    box-shadow: 8px 10px 10px var(--light);      
+}
+
+.coldetdxd:hover {
+    border-radius: 20px 20px 20px 20px;
+    padding: 2rem;
+    background-color: var(--lightt);
+    box-shadow: 8px 10px 10px var(--light);
+}
+
