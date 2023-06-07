@@ -87,3 +87,8 @@ body{
     background-color: var(--darkt);
     border-radius: 0px 20px 0px 0px;    
 }
+
+/**style ul*/
+.li-custom{
+  text-decoration: none;
+}

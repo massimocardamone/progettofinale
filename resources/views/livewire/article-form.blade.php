@@ -39,7 +39,7 @@
       </div>
    
     <div class="d-flex justify-content-center mb-3">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-success">Submit</button>
     </div>
  
     
