@@ -41,7 +41,8 @@ class ArticleForm extends Component
         session()->flash('message',"l'articolo caricato correttamente");
         $this->reset();
     }
-
+    
+       
     public function render()
     {
         return view('livewire.article-form', ['genres'=> Genre::all()]);

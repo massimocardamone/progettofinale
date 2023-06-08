@@ -34,13 +34,23 @@
           </li> --}}
         </ul>
         @auth
-        <ul class="navbar-nav">
+        <ul class="navbar-nav">  
           
           <li class="nav-item dropdown mydrop">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenuto {{Auth::user()->name}}
             </a>
             <ul class="dropdown-menu">
+              <li>
+                @if (Auth::user()->is_revisor)
+                <li class="dropdown-item">
+                  <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page" href="{{route('revisor_index')}}">Zona revisione</a>
+                  <span class="position-absolute top-0 start-100 translate_middle badge ruonded-pill bg-danger"></span>
+                  {{App\Models\Article::toBeRevisionedCount()}}
+                  <span class="visually-hidden">Prodotti da accettare </span>
+                
+                @endif
+              </li>
             <li class="dropdown-item"><form method="POST" action="{{route('logout')}}">
               @csrf
               <button class="dropdown-item">Logout</button>
