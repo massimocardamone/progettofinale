@@ -121,9 +121,9 @@ body{
 
   }
 
-  .myinput:active {
+  .myinput:focus {
     /* Stili quando il cursore si posiziona sopra il bottone */
-    background-color: var(--acc);
+    background-color: var(--lightt);
     color: var(--dark);
     border-color: var(--dark);
     box-shadow: 0px 0px 10px var(--acc);

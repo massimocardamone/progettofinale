@@ -1,4 +1,4 @@
-<x-layout docTitle="Index" title="lista  prodotti">
+<x-layout docTitle="Index" title="Tutti gli Articoli">
 <div class="container-fluid">
 
 {{-- LISTA CATEGORIE --}}

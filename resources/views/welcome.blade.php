@@ -5,7 +5,7 @@
 <div class="container mysezione11">
   <div class="row">
     <div class="col-12">
-      <h3>I nostri nuovi prodotti!</h3>
+      <h3 class="fst-italic">I nostri nuovi prodotti!</h3>
     </div>
   </div>
 </div>
@@ -16,7 +16,7 @@
           <x-card :article='$article'/>      
         </div>
         @endforeach
-        <div class="col-6 col-md-4 d-flex justify-content-end">
+        {{-- <div class="col-6 col-md-4 d-flex justify-content-end">
             <div class="row rigahomesezprod flex-column justify-content-around">
               <div class="col-3 d-flex colsezsx align-items-center">
                 <div class="bg-primary contentcolsx">
@@ -31,7 +31,7 @@
               </div>
             </div>
           
-        </div>
+        </div> --}}
     </div>
 </div>
 

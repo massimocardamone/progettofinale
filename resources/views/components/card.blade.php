@@ -13,10 +13,11 @@
             </div>
             <div class="cardprice">
                 <h4>{{$article->price}} &euro;</h4>
+                <h4>Aggiunto da: {{$article->user->name}}</h4>
                 <h4>{{$article->created_at->format('d/m/y')}}</h4>
             </div>
             <div class="carddescription mt-1">
-                <p>{{$article->description}}</p>
+                <p class="fst-italic">{{$article->description}}</p>
             </div>
         </div>
     </div>

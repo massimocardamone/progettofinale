@@ -15,9 +15,9 @@
           </li>
           @endauth
           <li class="nav-item">
-            <a class="nav-link" href="{{route('article_index')}}">tutti i prodotti</a>
+            <a class="nav-link" href="{{route('article_index')}}">Tutti i prodotti</a>
           </li>
-          <li class="nav-item dropdown">
+          {{-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               form
             </a>
@@ -27,7 +27,7 @@
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
-          </li>
+          </li> --}}
         </ul>
         @auth
         <ul class="navbar-nav mx-end">
