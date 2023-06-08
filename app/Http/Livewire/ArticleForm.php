@@ -17,7 +17,8 @@ class ArticleForm extends Component
     protected $rules = [
         'name'=> 'required',
         'price'=> 'required',
-        'description'=> 'required'
+        'description'=> 'required',
+        'genre_id'=>'required',
 
     ];
 
