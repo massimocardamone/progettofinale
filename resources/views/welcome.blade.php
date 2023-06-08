@@ -12,7 +12,7 @@
 <div class="container mt-1">
     <div class="row">
         @foreach ($articles as $article)
-        <div class="col-6 col-md-4">     
+        <div class="col-12 col-md-4">     
           <x-card :article='$article'/>      
         </div>
         @endforeach

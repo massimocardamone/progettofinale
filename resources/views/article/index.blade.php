@@ -5,7 +5,7 @@
         <div class="row justify-content-evenly py-2 mysection">
             @foreach ($genres as $genre )
             <div class="col-4 col-md-2 mx-1 d-flex justify-content-center">
-                <a  href="{{route('show_category', compact('genre', 'genres'))}}">
+                <a class="btn" href="{{route('show_category', compact('genre', 'genres'))}}">
                     
                     <button class="mybtn">{{$genre->genre}}</button>
                 </a>
