@@ -21,9 +21,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles=Article::all();
-        $genres=Genre::all();
-        return view('article.index', compact('articles', 'genres'));
+        $articles=Article::paginate(4);
+        
+        return view('article.index', compact('articles'));
     }
 
     /**
@@ -31,8 +31,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        $genres = Genre::all();
-        return view('article.create',compact('genres'));
+       
+        return view('article.create');
     }
     
 
@@ -45,8 +45,7 @@ class ArticleController extends Controller
     }
 
     public function show_category(Genre $genre){
- $genres= Genre::all();
-        return view('article.indexGenre', compact('genre', 'genres'));
+        return view('article.indexGenre', compact('genre'));
     }
 
     /**

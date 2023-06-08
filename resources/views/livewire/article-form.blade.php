@@ -46,16 +46,13 @@
         @foreach ($genres as $genre)
             <div class="form-check mx-2">
                 <input class="form-check-input @error('genre_id')
-        is-invalid
-      @enderror" type="radio"
+                is-invalid
+                @enderror" type="radio"
                     value="{{ $genre->id }}" wire:model="genre_id" id="flexCheckDefault">
                 <label for="category" class="form-check-label">{{ $genre->genre }}</label>
             </div>
         @endforeach
-
-
     </div>
-
     <div class="d-flex justify-content-center mb-3">
         <button type="submit" class="btn btn-success">Submit</button>
     </div>

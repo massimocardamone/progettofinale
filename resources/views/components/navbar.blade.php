@@ -40,7 +40,8 @@
             <li class="dropdown-item"><form method="POST" action="{{route('logout')}}">
               @csrf
               <button class="dropdown-item">Logout</button>
-          </form></li>
+           </form>
+          </li>
 
 
 

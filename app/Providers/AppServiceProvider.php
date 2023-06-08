@@ -3,9 +3,11 @@
 namespace App\Providers;
 
 use App\Models\Genre;
-use Illuminate\Contracts\View\View;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-use Nette\Schema\Schema;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,6 +24,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot():void
     {
-        //
+        if (Schema::hasTable('genres')) {
+            View::share('genres',Genre::all());
+        }
+        Paginator::useBootstrap();
     }
 }
