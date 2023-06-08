@@ -23,7 +23,7 @@ class ArticleForm extends Component
     ];
 
     protected $messages = [
-        '*.required' => ' il campo deve essere un obbligatorio.',
+        '*.required' => 'Il campo è obbligatorio.',
 
     ];
 
