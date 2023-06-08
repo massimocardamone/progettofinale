@@ -6,9 +6,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{{route('home')}}">Home</a>
-          </li>
+          
           @auth
           <li class="nav-item">
             <a class="nav-link" href="{{route('create')}}">Aggiungi prodotto</a>
@@ -16,6 +14,12 @@
           @endauth
           <li class="nav-item">
             <a class="nav-link" href="{{route('article_index')}}">Tutti i prodotti</a>
+          </li>
+          <li class="nav-item">
+            <form class="d-flex align-items-center mysearchbar" role="search">
+              <input class="form-control myinputsearch me-2" type="search" placeholder="Cerca un prodotto" aria-label="Search">
+              <button class="btn mybtn" type="submit">Search</button>
+            </form>
           </li>
           {{-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -30,7 +34,7 @@
           </li> --}}
         </ul>
         @auth
-        <ul class="navbar-nav mx-end">
+        <ul class="navbar-nav">
           
           <li class="nav-item dropdown mydrop">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -55,12 +59,12 @@
           </li>
         </ul>    
         @else
-        <ul class="navbar-nav mx-end">
+        <ul class="navbar-nav">
             <li class="nav-item">
                 <a href="{{route('register')}}" class="nav-link">Registrati</a>
             </li>
             <li class="nav-item me-md-3">
-                <a href="{{route('login')}}" class="nav-link">Login</a>
+                <a href="{{route('login')}}" class="nav-link">Accedi</a>
             </li>
         </ul>
         @endauth

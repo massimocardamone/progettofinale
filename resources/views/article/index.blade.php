@@ -1,26 +1,29 @@
 <x-layout docTitle="Index" title="Tutti gli Articoli">
-<div class="container-fluid">
-
-{{-- LISTA CATEGORIE --}}
-    <div class="row justify-content-evenly py-2">
-        @foreach ($genres as $genre )
-        <div class="col mx-1 d-flex">
-            <a class="btn" href="{{route('show_category', compact('genre', 'genres'))}}">{{$genre->genre}}</a>
+    <div class="container">
+        
+        {{-- LISTA CATEGORIE --}}
+        <div class="row justify-content-evenly py-2 mysection">
+            @foreach ($genres as $genre )
+            <div class="col-4 col-md-2 mx-1 d-flex justify-content-center">
+                <a  href="{{route('show_category', compact('genre', 'genres'))}}">
+                    
+                    <button class="mybtn">{{$genre->genre}}</button>
+                </a>
+            </div>
+            @endforeach
         </div>
-        @endforeach
     </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        @foreach ($articles as $article)
-        <div class="col-12 col-md-3">
-            <x-card :article="$article"/>
+    <div class="container mysection">
+        <div class="row">
+            @foreach ($articles as $article)
+            <div class="col-12 col-md-3">
+                <x-card :article="$article"/>
+            </div>
+            @endforeach
         </div>
-        @endforeach
+        <div class="col-12 d-flex justify-content-center mt-5">
+            {{$articles->links()}}
+        </div>
     </div>
-    <div class="col-12 d-flex justify-content-center mt-5">
-        {{$articles->links()}}
-    </div>
-</div>
-
+    
 </x-layout>
