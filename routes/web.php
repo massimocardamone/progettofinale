@@ -4,6 +4,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RevisorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,5 @@ Route::get('/article/detail{article}',[ArticleController::class, 'show'])->name(
 route::get('/Articles',[ArticleController::class, 'index'])->name('article_index');
 //indice categoria
 route::get('/article/category{genre}',[ArticleController::class, 'show_category'])->name('show_category');
+//home revisione
+route::get('/revisor/home',[RevisorController::class,'index'])->name('revisor_index');
