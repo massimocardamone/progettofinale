@@ -13,10 +13,13 @@
 <div class="container-fluid">
     <div class="row">
         @foreach ($articles as $article)
-<div class="col-12 col-md-3">
-    <x-card :article="$article"/>
-</div>
-@endforeach
+        <div class="col-12 col-md-3">
+            <x-card :article="$article"/>
+        </div>
+        @endforeach
+    </div>
+    <div class="col-12 d-flex justify-content-center mt-5">
+        {{$articles->links()}}
     </div>
 </div>
 

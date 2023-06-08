@@ -21,7 +21,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles=Article::all();
+        $articles=Article::paginate(4);
         $genres=Genre::all();
         return view('article.index', compact('articles', 'genres'));
     }
