@@ -1,4 +1,4 @@
-<x-layout docTitle="Homepage" title="Homepage">
+<x-layout docTitle="Homepage" title="C o l i c a S t o r e">
 
 
 
