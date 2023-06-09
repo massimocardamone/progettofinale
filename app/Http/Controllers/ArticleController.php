@@ -21,7 +21,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles=Article::orderBy('created_at','desc')->SimplePaginate(4);
+        $articles=Article::where('is_accepted',true)->orderBy('created_at','desc')->SimplePaginate(4);
         
         return view('article.index', compact('articles'));
     }
@@ -31,7 +31,6 @@ class ArticleController extends Controller
      */
     public function create()
     {
-       
         return view('article.create');
     }
     
