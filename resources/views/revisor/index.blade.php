@@ -23,16 +23,16 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12 col-md-6 d-flex justify-content-center">
-                <form method="POST" action="">
-                    @csrf
+                <form method="POST" action="{{ route('revisor.accept', ['article'=>$article_to_check]) }}">
                     @method('PATCH')
+                    @csrf
                     <button class="btn btn-success">accetta</button>
                 </form>
             </div>
             <div class="col-12 col-md-6 d-flex justify-content-center">
-                <form method="POST" action="">
-                    @csrf
+                <form method="POST" action="{{ route('revisor.refuse', ['article'=>$article_to_check]) }}">
                     @method('PATCH')
+                    @csrf
                     <button class="btn btn-success">rifiuta</button>
                 </form>
             </div>
