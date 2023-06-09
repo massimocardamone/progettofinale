@@ -33,3 +33,7 @@ route::get('/revisor/home',[RevisorController::class,'index'])->middleware('IsRe
 route::patch('/revisor/accept/{article}', [RevisorController::class, 'acceptArticle'])->name('revisor.accept');
 //*rifiuta articolo
 route::patch('/revisor/refuse/{article}', [RevisorController::class, 'rifuteArticle'])->name('revisor.refuse');
+//*richiedere di diventare revisore
+route::get('/revisor/richiesta',[RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+//* Risposta al revisore
+route::get('/revisor{user}',[RevisorController::class, 'makeRevisor'])->name('make.revisor');
