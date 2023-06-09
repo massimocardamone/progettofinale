@@ -23,8 +23,21 @@
                     <a href="{{route('register')}}" class="nav-link"><button class="btn btn-success ms-4">Registrati</button></a>
                 </div>
             </div>        
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
+                <div class="mb-3">
+                    <label for="userMail" class="form-label">Email utente</label>
+                    <input type="email" class="form-control @error('email') is invalid @enderror" name="email"
+                        id="userMail">
+                </div>
+                <div class="mb-3">
+                    <label for="userPassword" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control @error('email') is invalid @enderror" id="userPassword">
+                </div>
+                <div class="mb-3 form-check">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
 </x-layout>
-
-

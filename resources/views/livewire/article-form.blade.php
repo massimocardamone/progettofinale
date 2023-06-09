@@ -25,9 +25,9 @@
         <textarea wire:model="description" id="description"
             class="form-control myinput @error('description') is-invalid @enderror" cols="30" rows="10">
           </textarea>
-          @error('description')
-          <p class="text-danger">{{ $message}}</p>
-          @enderror
+        @error('description')
+            <p class="text-danger">{{ $message }}</p>
+        @enderror
     </div>
 
 
@@ -43,15 +43,27 @@
     </div>
 
     <div class="mb-3 d-flex">
-        @foreach ($genres as $genre)
-            <div class="form-check mx-2">
-                <input class="form-check-input @error('genre_id')
-                is-invalid
-                @enderror" type="radio"
-                    value="{{ $genre->id }}" wire:model="genre_id" id="{{$genre->id}}">
-                <label for="{{$genre->id}}" class="form-check-label">{{ $genre->genre }}</label>
+        <div class="container">
+            <div class="row">
+                @foreach ($genres as $genre)
+                    <div class="col-12 col-sm-4 col-md-4 ">
+                        <span class="form-check mx-2">
+                            <input
+                                class="form-check-input @error('genre_id')
+                            is-invalid
+                            @enderror"
+                                type="radio" value="{{ $genre->id }}" wire:model="genre_id"
+                                id="{{ $genre->id }}">
+                            <label for="{{ $genre->id }}" class="form-check-label">{{ $genre->genre }}</label>
+                        </span>
+                    </div>
+                @endforeach
+                 @error('genre_id')
+            <p class="text-danger">{{ $message }}</p>
+        @enderror
+
             </div>
-        @endforeach
+        </div>
     </div>
     <div class="d-flex justify-content-center mb-3">
         <button type="submit" class="btn btn-success">Submit</button>
