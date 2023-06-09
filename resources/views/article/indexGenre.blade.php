@@ -3,24 +3,22 @@
     <div class="container mysection">
         
         {{-- LISTA CATEGORIE --}}
-        <div class="row justify-content-evenly py-2">
-            @foreach ($genres as $items )
-            <div class="col-4 col-md-2 mx-1 d-flex justify-content-center">
-                <a class="btn" href="{{route('show_category', ['genre'=>$items])}}"><button class="mybtn">{{$items->genre}}</button></a>
-            </div>
-            @endforeach
-        </div>
+
+        <x-catNav />
+
     </div>
     
-    @if ( count($genre->articles)>0)
+    @if ( count($articles)>0)
     <div class="container mysection">
         <div class="row">
-            @foreach ($genre->articles as $single)
+            @foreach ($articles as $single)
             <div class="col-12 col-md-3">
                 <x-card :article="$single"></x-card>
             </div>
-            @endforeach
-            
+            @endforeach 
+            <div class="col-12 d-flex justify-content-center mt-5">
+                {{$articles->links()}}
+            </div>
         </div>
     </div>
     @else

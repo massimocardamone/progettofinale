@@ -45,6 +45,6 @@ class ArticleForm extends Component
        
     public function render()
     {
-        return view('livewire.article-form', ['genres'=> Genre::all()]);
+        return view('livewire.article-form');
     }
 }

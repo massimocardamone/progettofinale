@@ -21,7 +21,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles=Article::paginate(4);
+        $articles=Article::orderBy('created_at','desc')->SimplePaginate(4);
         
         return view('article.index', compact('articles'));
     }
@@ -43,9 +43,10 @@ class ArticleController extends Controller
     {
         return view ('article.detail',compact('article'));
     }
-
+    //Funzione per vista articoli per categoria
     public function show_category(Genre $genre){
-        return view('article.indexGenre', compact('genre'));
+        $articles= $genre->articles()->SimplePaginate(2);
+        return view('article.indexGenre', compact('genre','articles'));
     }
 
     /**
