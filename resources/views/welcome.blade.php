@@ -1,6 +1,6 @@
 <x-layout docTitle="Homepage" title="C o l i c a S t o r e">
 
-
+  <x-number-section artNum='{{$artNum}}' userNum='{{$userNum}}'/> 
 
 <div class="container mysezione11">
   <div class="row">
@@ -34,6 +34,7 @@
         </div> --}}
 
     </div>
+  
     
     <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0"><button>clicca qui</button></a>
 </div>

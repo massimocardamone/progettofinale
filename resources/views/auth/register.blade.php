@@ -1,5 +1,5 @@
 <x-layout docTitle="Register" title="Registrati">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row justify-content-center">
             <form method="POST" action="{{route('register')}}">
                 @csrf
@@ -18,7 +18,7 @@
                     <input type="password" name="password_confirmation" class="form-control" id="passwordConfirmation"> 
                 </div>
                 <div class="mb-3 form-check">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-success">Registrati</button>
                 </div>    
             </form>
         </div>
