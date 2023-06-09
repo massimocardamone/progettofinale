@@ -1,4 +1,4 @@
-<x-layout docTitle="detail" title="{{$article->name}}">
+<x-layout docTitle="detail" :title="$article->name">
      
 <div class="container mt-3">
     <div class="row justify-content-center ">
