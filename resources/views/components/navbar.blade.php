@@ -44,9 +44,11 @@
               <li>
                 @if (Auth::user()->is_revisor)
                 <li class="dropdown-item">
-                  <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page" href="{{route('revisor_index')}}">Zona revisione</a>
-                  <span class="position-absolute top-0 start-100 translate_middle badge ruonded-pill bg-danger"></span>
-                  {{App\Models\Article::toBeRevisionedCount()}}
+                  <a class="nav-link btnalert alert-danger btn-sm position-relative" aria-current="page" href="{{route('revisor_index')}}">Zona revisione
+                    <span class="position-absolute top-0 start-75 translate_middle badge ruonded-pill bg-danger">
+                      {{App\Models\Article::toBeRevisionedCount()}}
+                  </a>
+                  </span>
                   <span class="visually-hidden">Prodotti da accettare </span>
                 
                 @endif
