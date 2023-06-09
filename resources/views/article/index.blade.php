@@ -2,16 +2,9 @@
     <div class="container">
         
         {{-- LISTA CATEGORIE --}}
-        <div class="row justify-content-evenly py-2 mysection">
-            @foreach ($genres as $genre )
-            <div class="col-4 col-sm-4 col-md-2 mx-1 d-flex justify-content-center">
-                <a class="btn" href="{{route('show_category', compact('genre', 'genres'))}}">
-                    
-                    <button class="mybtn">{{$genre->genre}}</button>
-                </a>
-            </div>
-            @endforeach
-        </div>
+
+        <x-catNav />
+
     </div>
     {{-- LISTA CARD --}}
     <div class="container mysection">
