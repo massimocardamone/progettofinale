@@ -294,3 +294,16 @@ body{
     }
   }
  
+/* -----------------FOOTER-------------------- */
+
+.myfooter{
+    background-color: var(--darkt);
+}
+
+.myfootercolprinc{
+    padding: 1rem;    
+}
+
+.myfootercol{
+    color: var(--light);
+}
