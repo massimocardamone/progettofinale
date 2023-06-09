@@ -28,8 +28,8 @@ route::get('/Articles',[ArticleController::class, 'index'])->name('article_index
 route::get('/article/category{genre}',[ArticleController::class, 'show_category'])->name('show_category');
 
 //*home revisione
-route::get('/revisor/home',[RevisorController::class,'index'])->name('revisor_index');
+route::get('/revisor/home',[RevisorController::class,'index'])->middleware('IsRevisor')->name('revisor_index');
 //*accetta articolo
 route::patch('/revisor/accept/{article}', [RevisorController::class, 'acceptArticle'])->name('revisor.accept');
 //*rifiuta articolo
-route::patch('/revisor/refuse/{article}', [RevisorController::class, 'rifuteArticle '])->name('revisor.refuse');
+route::patch('/revisor/refuse/{article}', [RevisorController::class, 'rifuteArticle'])->name('revisor.refuse');
