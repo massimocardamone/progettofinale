@@ -16,6 +16,8 @@
           <x-card :article='$article'/>      
         </div>
         @endforeach
+
+        
         {{-- <div class="col-6 col-md-4 d-flex justify-content-end">
             <div class="row rigahomesezprod flex-column justify-content-around">
               <div class="col-3 d-flex colsezsx align-items-center">
