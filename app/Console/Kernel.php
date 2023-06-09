@@ -10,6 +10,11 @@ class Kernel extends ConsoleKernel
     /**
      * Define the application's command schedule.
      */
+    //*per poter utilizzare il comando nelle funzioni
+    protected $commands=[
+        MakeUserRevisor::class,
+    ];
+
     protected function schedule(Schedule $schedule): void
     {
         // $schedule->command('inspire')->hourly();

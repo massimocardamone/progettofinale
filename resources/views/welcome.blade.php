@@ -16,6 +16,19 @@
           <x-card :article='$article'/>      
         </div>
         @endforeach
+
+        {{--* per inviare la candidatura del relatore --}}
+        @auth
+        <div class="container ">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-3 mysezione11 mt-5 text-center">
+              <p>Colica Store</p>
+              <p>vuoi lavorare con noi?</p>
+              <a href="{{}}" class="btn btn-warning">clicca qui</a>
+            </div>
+          </div>
+        </div>  
+        @endauth
         {{-- <div class="col-6 col-md-4 d-flex justify-content-end">
             <div class="row rigahomesezprod flex-column justify-content-around">
               <div class="col-3 d-flex colsezsx align-items-center">
