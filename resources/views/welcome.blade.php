@@ -36,7 +36,7 @@
     </div>
   
     
-    <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0"><button>clicca qui</button></a>
+  
 </div>
 
 </x-layout>
