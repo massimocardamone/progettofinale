@@ -6,6 +6,7 @@ liLink.forEach(element=>{
 })
 link.forEach(element => {
     element.classList.add('mybtn');
+    element.classList.add('mx-3');
 });
 link[0].innerHTML='Precedente';
 link[1].innerHTML='Successivo';
