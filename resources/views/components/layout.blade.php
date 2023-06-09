@@ -12,7 +12,7 @@
 <body>
     
     <x-navbar/>
-    <x-header title="{{$title}}"/>
+    <x-header :title="$title"/>
     @if (session('message'))
     <div class="alert alert-success text-center">
        <h3 class="lead">{{ session('message') }}</h3> 
