@@ -5,10 +5,10 @@
                 <div class="col-12 col-md-3 myfootercol">
                     <ul>
                         <h2>chi siamo</h2>
-                        <li><a href="https://youtu.be/xvFZjo5PgG0">Cardamone Massimo</a></li>
-                        <li><a href="https://youtu.be/xvFZjo5PgG0">Cossu Stefano</a></li>
-                        <li><a href="https://youtu.be/xvFZjo5PgG0">Ieria Davide</a></li>
-                        <li><a href="https://youtu.be/xvFZjo5PgG0">Ladislao Walter</a></li>
+                        <li><a href="https://www.linkedin.com/in/massimo-cardamone-webdev/">Cardamone Massimo</a></li>
+                        <li><a href="https://www.linkedin.com/in/stefanocossu-webdev/">Cossu Stefano</a></li>
+                        <li><a href="https://www.linkedin.com/in/davide-ieria-dev/">Ieria Davide</a></li>
+                        <li><a href="https://www.linkedin.com/in/walterladislaowebdev/">Ladislao Walter</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-3 myfootercol">
