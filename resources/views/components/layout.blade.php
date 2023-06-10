@@ -18,6 +18,11 @@
        <h3 class="lead">{{ session('message') }}</h3> 
     </div>
     @endif
+    @if (session('access_denied'))
+    <div class="alert alert-danger text-center">
+       <h3 class="lead">{{ session('access_denied') }}</h3> 
+    </div>
+    @endif
 
    
 

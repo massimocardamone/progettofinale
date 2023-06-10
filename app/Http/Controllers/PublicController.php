@@ -12,9 +12,9 @@ class PublicController extends Controller
 {
     public function homepage() {
        
-        $articles=Article::take(6)->orderBy('created_at','desc')->get();
+        $articles=Article::where('is_accepted',true)->take(6)->orderBy('created_at','desc')->get();
         
-        $artNum= count(Article::all());
+        $artNum= count(Article::where('is_accepted',true)->get());
         $userNum= count(User::all());
 
         return view('welcome',compact('articles','artNum','userNum'));
