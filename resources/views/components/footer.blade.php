@@ -32,7 +32,7 @@
                     </ul>
                 </div>
                 <div class="col-12 col-md-3 myfootercol d-flex justify-content-center align-items-center">
-                    <img class="imglogo" src="./media/logocropped.png" alt="">
+                    <img class="imglogo" src="/media/logocropped.png" alt="">
                 </div>
             </div>
         </div>

@@ -44,7 +44,7 @@ class ArticleController extends Controller
     }
     //Funzione per vista articoli per categoria
     public function show_category(Genre $genre){
-        $articles= $genre->articles()->where('is_accepted', true)->SimplePaginate(2);
+        $articles= $genre->articles()->where('is_accepted', true)->SimplePaginate(4);
         return view('article.indexGenre', compact('genre','articles'));
     }
 
