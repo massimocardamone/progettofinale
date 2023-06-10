@@ -84,6 +84,15 @@ body{
   height:  50px;
 }
 
+/* logo */
+.divlogo{
+    width: 140px;
+  }
+  
+.imglogo{
+    width: 100%;
+  }
+
 .mycard{
     border-radius: 20px 20px 20px 20px;
     box-shadow: 3px 3px 10px var(--lightt);

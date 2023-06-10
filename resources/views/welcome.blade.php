@@ -37,6 +37,7 @@
     </div>
 </div>
 
+
  {{--* per inviare la candidatura del relatore --}}
  @auth
  <div class="container ">
