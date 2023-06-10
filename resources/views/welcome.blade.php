@@ -39,7 +39,8 @@
 
 
  {{--* per inviare la candidatura del relatore --}}
- @auth
+ @auth 
+ @if (!Auth::user()->is_revisor)
  <div class="container ">
    <div class="row justify-content-center">
      <div class="col-12 col-md-3 mysezione11 mt-5 text-center">
@@ -49,6 +50,7 @@
      </div>
    </div>
  </div>  
+ @endif
  @endauth
 
 </x-layout>
