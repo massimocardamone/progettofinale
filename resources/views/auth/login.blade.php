@@ -18,7 +18,7 @@
                 </form>
             </div>
             <div class="col-12">
-                <div class="">
+                <div class="mb-3">
                     <h5 class="ms-3" >Non sei registrato?</h5>
                     <a href="{{route('register')}}" class="nav-link"><button class="btn btn-success ms-4">Registrati</button></a>
                 </div>

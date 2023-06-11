@@ -6,13 +6,13 @@
             <div class="coldetsxd">
                 <ul class="">  
                     <li class="list-group text-light">Nome: {{$article->name}}</li>
-                    <li class="list-group text-light">Prezzo: €{{$article->price}}</li>
+                    <li class="list-group text-light"> <span>Prezzo: € <span class="priceDet">{{$article->price}}</span></span></li>
                     <li class="list-group text-light">Categoria: {{$article->genre->genre}}</li>
                     <li class="list-group text-light">Descrizione: {{$article->description}}</li>
                     <a href="{{route('home')}}" class="btn mybtn my-3">torna indietro</a>
                 </ul>
             </div>
-            
+        
         </div>
         <div class=" col-12 col-md-6 coldetdx">
             <div class="coldetdxd ">
@@ -34,3 +34,10 @@
     </div>    
 </div>
 </x-layout>
+
+
+<script>
+    let priceDet = document.querySelector('.priceDet');
+    let priceDetValue = parseFloat(priceDet.innerHTML);
+    priceDet.innerHTML= priceDetValue.toFixed(2);
+</script>

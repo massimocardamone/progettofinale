@@ -16,3 +16,26 @@ if (link.length>0) {
 link[0].innerHTML='<< Precedente';
 link[1].innerHTML='Successivo >>';
 }
+
+let prices = document.querySelectorAll('.price');
+if (prices) {
+    prices.forEach(price => {
+        let value = parseFloat(price.innerHTML)
+        
+        let int = Math.floor(value)
+        let dec = ((value - int).toFixed(2))*100
+        
+        
+        if (dec == 0) {
+            price.innerHTML=`
+            <span class="int">${int}</span><span class="dec">,00</span>`;
+        } else {
+            price.innerHTML=`
+            <span class="int">${int}</span><span class="dec">,${dec}</span>
+           `;
+        }
+        
+    });
+}
+
+

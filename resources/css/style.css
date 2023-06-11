@@ -316,3 +316,11 @@ body{
 .myfootercol{
     color: var(--light);
 }
+.dec{
+    font-size: small;
+    font-weight: 300;
+}
+.int{
+    font-size: 2rem;
+    font-weight: 600;
+}

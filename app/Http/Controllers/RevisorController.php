@@ -20,7 +20,7 @@ class RevisorController extends Controller
 // pusanti di accettazione articolo
     public function acceptArticle(Article $article){
         $article->setAccepted(true);
-        return redirect()->back()->with('message', "Complimenti, hai accettato l'annuncio");
+        return redirect()->back()->with('message', "Articolo accettato");
 
     }
 // pusanti di rifiuto articolo
@@ -35,7 +35,7 @@ class RevisorController extends Controller
 public function becomeRevisor(){
 
     Mail::to('colicaStore@noReply.com')->send(new BecomeRevisorMail(Auth::user()));
-    return redirect()->back()->with('message','Complimenti, hai richiesto di diventare revisore');
+    return redirect()->back()->with('message','Richiesta per diventare revisore inoltrata');
 }
 public function makeRevisor(User $user){
     Artisan::call('app:make-user-revisor', ['email' =>$user->email]);

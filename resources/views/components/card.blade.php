@@ -12,7 +12,7 @@
                 <h2>{{$article->name}}</h2>
             </div>
             <div class="cardprice">
-                <h4>{{$article->price}} &euro;</h4>
+                <h4><span><span class="price">{{$article->price}}</span> &euro;</span></h4>
                 <h5>Aggiunto da: {{$article->user->name}}</h5>
             </div>
             <div class="carddescription p-1">

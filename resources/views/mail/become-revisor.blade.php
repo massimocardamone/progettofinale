@@ -22,8 +22,8 @@
 </head>
 <body>
     <h1>L'utente ha richiesto di diventare revisore</h1>
-    <h3> nome:{{$user->name}}</h3>
-    <h3> email:{{$user->email}}</h3>
+    <h3> Nome: {{$user->name}}</h3>
+    <h3> Email: {{$user->email}}</h3>
     <a href="{{route('make.revisor',compact('user'))}}"  class="mybtn">Rendi revisore</a>
 </body>
 </html>
