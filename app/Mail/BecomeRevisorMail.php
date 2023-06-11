@@ -20,7 +20,7 @@ class BecomeRevisorMail extends Mailable
      */
     public function __construct(User $user)
     {
-       $this->user=$user;
+        $this->user=$user;
     }
 
     public function build(){
@@ -32,7 +32,7 @@ class BecomeRevisorMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Richiest per diventare Revisore',
+            subject: 'Richiesta per diventare Revisore',
         );
     }
 
