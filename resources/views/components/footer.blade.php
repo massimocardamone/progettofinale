@@ -25,10 +25,7 @@
                         <h2>I nostri Partners</h2>
                         <li>Apple</li>
                         <li>Nike</li>
-                        <li>Dark Web (cat.bambini)</li>
-                        <li>Deep Web (cat.bambini)</li>
-                        <li>transformers</li>
-                        <li>mia Khalifa</li>
+                        <li>Aulab</li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-3 myfootercol d-flex justify-content-center align-items-center">
