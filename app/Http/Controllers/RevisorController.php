@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use SebastianBergmann\Type\NullType;
 
 class RevisorController extends Controller
 {
@@ -27,8 +28,14 @@ class RevisorController extends Controller
     public function rifuteArticle(Article $article){
         $article->setAccepted(false);
         return redirect()->back()->with('message', "Articolo non accettato");
-
     }
+//pulsante di ultima modifica
+public function old(Article $article){
+    $article = Article::orderBy('created_at', 'desc')->where('is_accepted' ,!null,)->first();
+        $article->setAccepted(null);
+        return redirect()->back()->with('message', "Articolo annullato");
+
+}
 
 //Richiesta per diventare Revisor
 
