@@ -9,11 +9,15 @@
     {{-- LISTA CARD --}}
     <div class="container mysection">
         <div class="row">
-            @foreach ($articles as $article)
+            @forelse ($articles as $article)
             <div class="col-12 col-sm-8 col-md-3 mx-sm-auto">
                 <x-card :article="$article"/>
             </div>
-            @endforeach
+            @empty
+                <div class="col-12">
+                    <h3 class="text center">Nessun articolo trovato</h3>
+                </div>
+            @endforelse 
         </div>
         <div class="col-12 d-flex justify-content-center mt-5">
             {{$articles->links()}}
