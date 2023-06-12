@@ -19,7 +19,7 @@
                 <p class="fst-italic">{{$article->description}}</p>
             </div>
             <div class="carddate">
-                <p> creato in data {{$article->created_at->format('d/m/y')}}</p>
+                <p> creato in data <span class="created">{{$article->created_at->format('d/m/y')}}</span></p>
             </div>
         </div>
     </div>
