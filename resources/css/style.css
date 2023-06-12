@@ -396,3 +396,6 @@ body{
     color: red;
     transform: rotateZ(30deg)
 }
+.vh-60{
+    height: 75vh;
+}
