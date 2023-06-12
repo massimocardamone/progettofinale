@@ -22,9 +22,9 @@
         </div>
     </div>
     @else
-    <div class="container my-5 height-1">
+    <div class="container my-5 py-5 mysection">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 my-5 py-5">
                 <h2 class="text-center">Nessun Articolo per la categoria</h2> 
             </div>
         </div>
