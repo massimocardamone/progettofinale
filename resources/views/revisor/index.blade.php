@@ -8,7 +8,7 @@
             <form method="POST" action="{{ route('revisor.old', ['article' => $article_to_check]) }}">
                 @method('PATCH')
                 @csrf
-                <button class="btn btn-success"> Annulla </button>
+                <button class="btn mybtn"> Annulla </button>
             </form>
         </div>
         @else
@@ -18,7 +18,7 @@
                 <form method="POST" action="{{ route('revisor.oldArticle')}}">
                     @method('PATCH')
                     @csrf
-                    <button class="btn btn-success"> Annulla </button>
+                    <button class="btn mybtn"> Annulla </button>
                 </form>
             </div>
         </div>
@@ -53,14 +53,14 @@
                         <form method="POST" action="{{ route('revisor.accept', ['article' => $article_to_check]) }}">
                             @method('PATCH')
                             @csrf
-                            <button class="btn btn-success">Accetta</button>
+                            <button class="btn mybtn">Accetta</button>
                         </form>
                     </div>
                     <div class="col-12 col-md-4 d-flex justify-content-center">
                         <form method="POST" action="{{ route('revisor.refuse', ['article' => $article_to_check]) }}">
                             @method('PATCH')
                             @csrf
-                            <button class="btn btn-success">Rifiuta</button>
+                            <button class="btn mybtn">Rifiuta</button>
                         </form>
                     </div>
                 </div>
