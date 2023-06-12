@@ -394,9 +394,10 @@ body{
     position: absolute;
     content: "NEW";
     bottom: 420px;
-    right: -20px;
-    color: red;
-    transform: rotateZ(30deg)
+    right: -30px;
+    color: var(--acc);
+    transform: rotateZ(30deg);
+    text-shadow: 3px 3px 0px var(--sec);
 }
 .vh-60{
     height: 58vh;

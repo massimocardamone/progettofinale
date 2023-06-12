@@ -1,9 +1,9 @@
 <form wire:submit.prevent="store" enctype="multipart/form-data">
-    @if (session('message'))
+    {{-- @if (session('message'))
         <div class="alert alert-success text-center">
             {{ session('message') }}
         </div>
-    @endif
+    @endif --}}
 
     <div class="mb-3">
         <label for="name" class="form-label">Nome Prodotto</label>

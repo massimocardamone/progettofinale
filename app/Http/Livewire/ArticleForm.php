@@ -26,6 +26,7 @@ class ArticleForm extends Component
         '*.required' => 'Il campo è obbligatorio.',
         'price.min'=>'Il prezzo non può essere negativo'
 
+
     ];
 
     public function store()
@@ -39,8 +40,8 @@ class ArticleForm extends Component
             'genre_id'=>$this->genre_id,
             'user_id'=>Auth::id()
         ]);
-        session()->flash('message',"l'articolo caricato correttamente");
         $this->reset();
+        redirect(route('create'))->with('message','prodotto creato');
     }
     
        
