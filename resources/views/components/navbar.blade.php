@@ -20,9 +20,10 @@
             <a class="nav-link" href="{{route('article_index')}}">Tutti i prodotti</a>
           </li>
           <li class="nav-item">
-            <form class="d-flex align-items-center mysearchbar" role="search">
-              <input class="form-control myinputsearch me-2" type="search" placeholder="Cerca un prodotto" aria-label="Search">
-              <button class="btn mybtn" type="submit">Search</button>
+            <form class="d-flex align-items-center mysearchbar" role="search" action="{{route('searchArticle')}}" method="GET">
+              @csrf
+              <input class="form-control myinputsearch me-2" name="searched" type="search" placeholder="Cerca un prodotto" aria-label="Search">
+              <button class="btn mybtn" type="submit">Cerca</button>
             </form>
           </li>
         </ul>

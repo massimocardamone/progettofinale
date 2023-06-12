@@ -37,3 +37,6 @@ route::patch('/revisor/refuse/{article}', [RevisorController::class, 'rifuteArti
 route::get('/revisor/richiesta',[RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 //* Risposta al revisore
 route::get('/revisor{user}',[RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+//Rotta per Search
+route::get('/ricerca/articolo',[PublicController::class,'searchArticles'])->name('searchArticle');
