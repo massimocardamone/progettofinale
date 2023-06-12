@@ -16,7 +16,7 @@ class ArticleForm extends Component
 
     protected $rules = [
         'name'=> 'required',
-        'price'=> 'required',
+        'price'=> 'min:0|required',
         'description'=> 'required',
         'genre_id'=>'required',
 
@@ -24,6 +24,8 @@ class ArticleForm extends Component
 
     protected $messages = [
         '*.required' => 'Il campo è obbligatorio.',
+        'price.min'=>'Il prezzo non può essere negativo'
+
 
     ];
 
@@ -38,8 +40,8 @@ class ArticleForm extends Component
             'genre_id'=>$this->genre_id,
             'user_id'=>Auth::id()
         ]);
-        session()->flash('message',"l'articolo caricato correttamente");
         $this->reset();
+        redirect(route('create'))->with('message','prodotto creato');
     }
     
        

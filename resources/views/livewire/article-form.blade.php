@@ -1,9 +1,9 @@
 <form wire:submit.prevent="store" enctype="multipart/form-data">
-    @if (session('message'))
+    {{-- @if (session('message'))
         <div class="alert alert-success text-center">
             {{ session('message') }}
         </div>
-    @endif
+    @endif --}}
 
     <div class="mb-3">
         <label for="name" class="form-label">Nome Prodotto</label>
@@ -33,7 +33,7 @@
 
     <div class="mb-3">
         <label for="price" class="form-label">Prezzo</label>
-        <input type="number" step="0.01" wire:model="price"
+        <input type="number" step="0.01" min="0" wire:model="price"
             class="form-control myinput @error('price')
         is-invalid
       @enderror" id="price">
