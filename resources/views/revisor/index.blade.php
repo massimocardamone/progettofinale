@@ -4,11 +4,11 @@
        <h3 class="lead">{{ session('messageRev') }}</h3> 
     
         @if ($article_to_check)
-        <div class="col-12 d-flex justify-content-center">
+        <div class="w-100 d-flex justify-content-center">
             <form method="POST" action="{{ route('revisor.old', ['article' => $article_to_check]) }}">
                 @method('PATCH')
                 @csrf
-                <button class="btn btn-success">annulla </button>
+                <button class="btn btn-success"> Annulla </button>
             </form>
         </div>
         @else
@@ -18,7 +18,7 @@
                 <form method="POST" action="{{ route('revisor.oldArticle')}}">
                     @method('PATCH')
                     @csrf
-                    <button class="btn btn-success">annulla </button>
+                    <button class="btn btn-success"> Annulla </button>
                 </form>
             </div>
         </div>
@@ -37,7 +37,7 @@
                             <li class="list-group text-light">Prezzo: €{{ $article_to_check->price }}</li>
                             <li class="list-group text-light">Categoria: {{ $article_to_check->genre->genre }}</li>
                             <li class="list-group text-light">Descrizione: {{ $article_to_check->description }}</li>
-                            <a href="{{ route('home') }}" class="btn mybtn my-3">torna indietro</a>
+                            <a href="{{ route('home') }}" class="btn mybtn my-3">Torna Indietro</a>
                         </ul>
                     </div>
                 </div>
@@ -53,38 +53,21 @@
                         <form method="POST" action="{{ route('revisor.accept', ['article' => $article_to_check]) }}">
                             @method('PATCH')
                             @csrf
-                            <button class="btn btn-success">accetta</button>
+                            <button class="btn btn-success">Accetta</button>
                         </form>
                     </div>
                     <div class="col-12 col-md-4 d-flex justify-content-center">
                         <form method="POST" action="{{ route('revisor.refuse', ['article' => $article_to_check]) }}">
                             @method('PATCH')
                             @csrf
-                            <button class="btn btn-success">rifiuta</button>
+                            <button class="btn btn-success">Rifiuta</button>
                         </form>
                     </div>
-                    {{-- <div class="col-12 col-md-4 d-flex justify-content-center">
-                        <form method="POST" action="{{ route('revisor.old', ['article' => $article_to_check]) }}">
-                            @method('PATCH')
-                            @csrf
-                            <button class="btn btn-success">annulla </button>
-                        </form>
-                    </div> --}}
                 </div>
             </div>
         </div>
-    {{-- @else --}}
-    {{-- <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-4 d-flex justify-content-center">
-                <form method="POST" action="{{ route('revisor.oldArticle')}}">
-                    @method('PATCH')
-                    @csrf
-                    <button class="btn btn-success">annulla </button>
-                </form>
-            </div>
-        </div>
-    </div> --}}
+    @else
+    <div class="vh-50"></div>
     @endif
 
 
