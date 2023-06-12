@@ -25,7 +25,7 @@
        
     </div>
 
-    //script per nuovo su nuovi articoli
+{{-- script per nuovo su nuovi articoli --}}
     <script>
         let date = new Date();
         let today = date.getDate();

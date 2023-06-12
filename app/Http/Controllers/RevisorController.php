@@ -22,13 +22,13 @@ class RevisorController extends Controller
     public function acceptArticle(Article $article)
     {
         $article->setAccepted(true);
-        return redirect()->back()->with('message', "Articolo accettato");
+        return redirect()->back()->with('messageRev', "Articolo accettato");
     }
     // pusanti di rifiuto articolo
     public function rifuteArticle(Article $article)
     {
         $article->setAccepted(false);
-        return redirect()->back()->with('message', "Articolo non accettato");
+        return redirect()->back()->with('messageRev', "Articolo non accettato");
     }
     //pulsante di articolo annullato-dentro
     public function old(Article $article)
