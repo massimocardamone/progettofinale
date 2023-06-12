@@ -1,30 +1,29 @@
 <x-layout docTitle="home" title="{{ $article_to_check ? 'Articolo da revisionare' : 'non ci sono articoli' }}">
     @if (session('messageRev'))
-    <div class="alert alert-success text-center">
-       <h3 class="lead">{{ session('messageRev') }}</h3> 
-    
-        @if ($article_to_check)
-        <div class="w-100 d-flex justify-content-center">
-            <form method="POST" action="{{ route('revisor.old', ['article' => $article_to_check]) }}">
-                @method('PATCH')
-                @csrf
-                <button class="btn btn-success"> Annulla </button>
-            </form>
+        <div class="alert alert-success text-center">
+            <h3 class="lead">{{ session('messageRev') }}</h3>
+            @if ($article_to_check)
+                <div class="w-100 d-flex justify-content-center">
+                    <form method="POST" action="{{ route('revisor.old', ['article' => $article_to_check]) }}">
+                        @method('PATCH')
+                        @csrf
+                        <button class="btn btn-success"> Annulla </button>
+                    </form>
+                </div>
+            @else
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center">
+                            <form method="POST" action="{{ route('revisor.oldArticle') }}">
+                                @method('PATCH')
+                                @csrf
+                                <button class="btn btn-success"> Annulla </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            @endif
         </div>
-        @else
-        <div class="container">
-            <div class="row">
-            <div class="col-12 d-flex justify-content-center">
-                <form method="POST" action="{{ route('revisor.oldArticle')}}">
-                    @method('PATCH')
-                    @csrf
-                    <button class="btn btn-success"> Annulla </button>
-                </form>
-            </div>
-        </div>
-        </div>
-    </div>
-        @endif
     @endif
 
     @if ($article_to_check)
@@ -67,7 +66,7 @@
             </div>
         </div>
     @else
-    <div class="vh-50"></div>
+        <div class="vh-50"></div>
     @endif
 
 
