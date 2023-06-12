@@ -13,7 +13,6 @@
                             <a href="{{ route('home') }}" class="btn mybtn my-3">torna indietro</a>
                         </ul>
                     </div>
-
                 </div>
                 <div class=" col-12 col-md-6 coldetdx">
                     <div class="coldetdxd ">
@@ -47,6 +46,19 @@
                 </div>
             </div>
         </div>
+    @else
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <form method="POST" action="{{ route('revisor.oldArticle')}}">
+                    @method('PATCH')
+                    @csrf
+                    <button class="btn btn-success">annulla </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     @endif
 
 
