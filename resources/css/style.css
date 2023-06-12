@@ -389,10 +389,15 @@ body{
   }
 /* style per nuovo su nuovi articoli */
 .newArticle::after{
+    font-size: 2rem;
+    font-weight: 900;
     position: absolute;
-    content: "Nuovo!";
+    content: "NEW";
     bottom: 420px;
-    right: 0;
+    right: -20px;
     color: red;
     transform: rotateZ(30deg)
+}
+.vh-60{
+    height: 58vh;
 }
