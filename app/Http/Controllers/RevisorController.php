@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use SebastianBergmann\Type\NullType;
 
+
 class RevisorController extends Controller
 {
     //rotta per portare l'utente alla pagina revisore 
