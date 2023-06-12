@@ -13,37 +13,50 @@ use Illuminate\Support\Facades\Mail;
 class RevisorController extends Controller
 {
     //rotta per portare l'utente alla pagina revisore 
-    public function index(){
+    public function index()
+    {
         $article_to_check = Article::where('is_accepted', null)->first();
         return view('revisor.index', compact('article_to_check'));
     }
-// pusanti di accettazione articolo
-    public function acceptArticle(Article $article){
+    // pusanti di accettazione articolo
+    public function acceptArticle(Article $article)
+    {
         $article->setAccepted(true);
-        return redirect()->back()->with('message', "Articolo accettato");
-
+        return redirect()->back()->with('messageRev', "Articolo accettato");
     }
-// pusanti di rifiuto articolo
-    public function rifuteArticle(Article $article){
+    // pusanti di rifiuto articolo
+    public function rifuteArticle(Article $article)
+    {
         $article->setAccepted(false);
-        return redirect()->back()->with('message', "Articolo non accettato");
+        return redirect()->back()->with('messageRev', "Articolo non accettato");
     }
-//pulsante di ultima modifica
-public function old(Article $article){
-    $article = Article::orderBy('created_at', 'desc')->where('is_accepted' ,!null,)->first();
+    //pulsante di articolo annullato-dentro
+    public function old(Article $article)
+    {
+        $article = Article::orderBy('id', 'desc')->where('is_accepted', true)->orWhere('is_accepted', false)->first();
         $article->setAccepted(null);
         return redirect()->back()->with('message', "Articolo annullato");
-}
+    }
 
-//Richiesta per diventare Revisor
+    //pulante di ultimo articolo-fuori
+    public function old_article()
+    {
+        $article_to_check = Article::orderBy('id', 'desc')->first();
+        $article_to_check->setAccepted(null);
+        return redirect()->back()->with('message', "Articolo annullato");
+    }
 
-public function becomeRevisor(){
+    //Richiesta per diventare Revisor
 
-    Mail::to('colicaStore@noReply.com')->send(new BecomeRevisorMail(Auth::user()));
-    return redirect()->back()->with('message','Richiesta per diventare revisore inoltrata');
-}
-public function makeRevisor(User $user){
-    Artisan::call('app:make-user-revisor', ['email' =>$user->email]);
-    return redirect('/')->with('message','Congratulazioni '. $user->name . ', sei diventato revisore');
-}
+    public function becomeRevisor()
+    {
+
+        Mail::to('colicaStore@noReply.com')->send(new BecomeRevisorMail(Auth::user()));
+        return redirect()->back()->with('message', 'Richiesta per diventare revisore inoltrata');
+    }
+    public function makeRevisor(User $user)
+    {
+        Artisan::call('app:make-user-revisor', ['email' => $user->email]);
+        return redirect('/')->with('message', 'Congratulazioni ' . $user->name . ', sei diventato revisore');
+    }
 }

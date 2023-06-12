@@ -1,4 +1,30 @@
 <x-layout docTitle="home" title="{{ $article_to_check ? 'Articolo da revisionare' : 'non ci sono articoli' }}">
+    @if (session('messageRev'))
+    <div class="alert alert-success text-center">
+       <h3 class="lead">{{ session('messageRev') }}</h3> 
+    </div>
+        @if ($article_to_check)
+        <div class="col-12 col-md-4 d-flex justify-content-center">
+            <form method="POST" action="{{ route('revisor.old', ['article' => $article_to_check]) }}">
+                @method('PATCH')
+                @csrf
+                <button class="btn btn-success">annulla </button>
+            </form>
+        </div>
+        @else
+        <div class="container">
+            <div class="row">
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <form method="POST" action="{{ route('revisor.oldArticle')}}">
+                    @method('PATCH')
+                    @csrf
+                    <button class="btn btn-success">annulla </button>
+                </form>
+            </div>
+        </div>
+        </div>
+        @endif
+    @endif
 
     @if ($article_to_check)
         <div class="container mt-3">
@@ -13,7 +39,6 @@
                             <a href="{{ route('home') }}" class="btn mybtn my-3">torna indietro</a>
                         </ul>
                     </div>
-
                 </div>
                 <div class=" col-12 col-md-6 coldetdx">
                     <div class="coldetdxd ">
@@ -37,16 +62,28 @@
                             <button class="btn btn-success">rifiuta</button>
                         </form>
                     </div>
-                    <div class="col-12 col-md-4 d-flex justify-content-center">
+                    {{-- <div class="col-12 col-md-4 d-flex justify-content-center">
                         <form method="POST" action="{{ route('revisor.old', ['article' => $article_to_check]) }}">
                             @method('PATCH')
                             @csrf
                             <button class="btn btn-success">annulla </button>
                         </form>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
+    {{-- @else --}}
+    {{-- <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <form method="POST" action="{{ route('revisor.oldArticle')}}">
+                    @method('PATCH')
+                    @csrf
+                    <button class="btn btn-success">annulla </button>
+                </form>
+            </div>
+        </div>
+    </div> --}}
     @endif
 
 

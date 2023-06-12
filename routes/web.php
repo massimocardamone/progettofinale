@@ -35,6 +35,8 @@ route::patch('/revisor/accept/{article}', [RevisorController::class, 'acceptArti
 route::patch('/revisor/refuse/{article}', [RevisorController::class, 'rifuteArticle'])->name('revisor.refuse');
 //*annulla articolo
 route::patch('/revisor/null/{article}', [RevisorController::class, 'old'])->name('revisor.old');
+//*annulla articolo ultimo
+route::patch('/revisor/null', [RevisorController::class, 'old_article'])->name('revisor.oldArticle');
 //*richiedere di diventare revisore
 route::get('/revisor/richiesta',[RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 //* Risposta al revisore
