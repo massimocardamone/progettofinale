@@ -22,5 +22,6 @@
         <div class="col-12 d-flex justify-content-center mt-5">
             {{$articles->links()}}
         </div>
+       
     </div>
 </x-layout>

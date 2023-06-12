@@ -27,6 +27,9 @@ public function toSearchableArray(){
     return $array;
 }
 
+//   @return array 
+
+
 public function user(){
     return $this->belongsTo(User::class); 
 }
