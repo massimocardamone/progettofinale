@@ -89,6 +89,16 @@ body{
     width: 100%;
   }
 
+.linkbenvenuto{
+    color: var(--acc);
+}
+
+.linkbenvenuto:hover{
+    color: var(--acc);
+    text-shadow: 0px 0px 10px var(--lightt);
+}
+
+
 .mycard{
     border-radius: 20px 20px 20px 20px;
     box-shadow: 3px 3px 10px var(--lightt);

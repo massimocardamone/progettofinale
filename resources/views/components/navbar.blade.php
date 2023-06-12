@@ -30,8 +30,8 @@
         @auth
         <ul class="navbar-nav">  
           
-          <li class="nav-item dropdown mydrop">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item dropdown mydrop mydropdownmio">
+            <a class="nav-link linkbenvenuto dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenuto {{Auth::user()->name}}
             </a>
             @if (Auth::user()->is_revisor)
