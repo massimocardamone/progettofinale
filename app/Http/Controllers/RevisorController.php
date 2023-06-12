@@ -34,7 +34,6 @@ public function old(Article $article){
     $article = Article::orderBy('created_at', 'desc')->where('is_accepted' ,!null,)->first();
         $article->setAccepted(null);
         return redirect()->back()->with('message', "Articolo annullato");
-
 }
 
 //Richiesta per diventare Revisor
