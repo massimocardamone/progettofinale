@@ -93,14 +93,14 @@ body{
     border-radius: 20px 20px 20px 20px;
     box-shadow: 3px 3px 10px var(--lightt);
     background-color: var(--darkt);
-    height: 450px;
+    height: 470px;
 }
 
 .mycard:hover{
     border-radius: 20px 20px 20px 20px;
     box-shadow: 3px 3px 10px var(--lightt);
     background-color: var(--darkt);
-    height: 450px;
+    height: 470px;
 }
 
 .cardimg{
