@@ -387,3 +387,15 @@ body{
     text-decoration: none;
     cursor: pointer;
   }
+/* style per nuovo su nuovi articoli */
+.newArticle::after{
+    position: absolute;
+    content: "Nuovo!";
+    bottom: 420px;
+    right: 0;
+    color: red;
+    transform: rotateZ(30deg)
+}
+.vh-60{
+    height: 75vh;
+}

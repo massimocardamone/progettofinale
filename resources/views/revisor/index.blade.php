@@ -67,7 +67,7 @@
             </div>
         </div>
     @else
-    <div class="vh-50"></div>
+    <div class="vh-60"></div>
     @endif
 
 
