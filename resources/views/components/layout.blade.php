@@ -18,7 +18,6 @@
     <div class="alert alert-success text-center">
        <h3 class="lead">{{ session('message') }}</h3> 
     </div>
-    <link rel="shortcut icon" href="[percorso]/favicon.ico" />
     @endif
     @if (session('access_denied'))
     <div class="alert alert-danger text-center">
