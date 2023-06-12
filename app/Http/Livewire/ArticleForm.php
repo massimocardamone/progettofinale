@@ -25,6 +25,7 @@ class ArticleForm extends Component
     protected $messages = [
         '*.required' => 'Il campo è obbligatorio.',
 
+
     ];
 
     public function store()
@@ -38,8 +39,8 @@ class ArticleForm extends Component
             'genre_id'=>$this->genre_id,
             'user_id'=>Auth::id()
         ]);
-        session()->flash('message',"l'articolo caricato correttamente");
         $this->reset();
+        redirect(route('create'))->with('message','prodotto creato');
     }
     
        
