@@ -21,10 +21,10 @@
             <span class=" visually-hidden">Loading...</span>
         </div>
     </div>
-
-    <div id="End" class="d-none">
     <x-navbar />
-    <x-header :title="$title" />
+    
+    <div id="End" class="d-none">
+        <x-header :title="$title" />
     @if (session('message'))
         <div class="alert alert-success text-center">
             <h3 class="lead">{{ session('message') }}</h3>
@@ -36,6 +36,7 @@
         </div>
     @endif
         {{ $slot }}
+        <x-footer></x-footer>
     </div>
 
 
@@ -45,7 +46,6 @@
     @livewireScripts
     @vite(['resources/js/app.js'])
 
-    <x-footer></x-footer>
 </body>
 
 </html>
