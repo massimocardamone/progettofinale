@@ -2,9 +2,9 @@
     @if (session('messageRev'))
     <div class="alert alert-success text-center">
        <h3 class="lead">{{ session('messageRev') }}</h3> 
-    </div>
+    
         @if ($article_to_check)
-        <div class="col-12 col-md-4 d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center">
             <form method="POST" action="{{ route('revisor.old', ['article' => $article_to_check]) }}">
                 @method('PATCH')
                 @csrf
@@ -14,7 +14,7 @@
         @else
         <div class="container">
             <div class="row">
-            <div class="col-12 col-md-4 d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-center">
                 <form method="POST" action="{{ route('revisor.oldArticle')}}">
                     @method('PATCH')
                     @csrf
@@ -23,6 +23,7 @@
             </div>
         </div>
         </div>
+    </div>
         @endif
     @endif
 
