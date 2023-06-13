@@ -16,6 +16,10 @@ h1,h5,h4,h3,h2,p {
     color: var(--acc);
 }
 
+h2{
+    font-weight: 600;
+}
+
 p,label{
     color: var(--light);
 }
