@@ -56,13 +56,7 @@ class ArticleForm extends Component
     }
     public function store()
     {
-        // $this->validate();
-        // $this->article= Genre::find($this->genre)->articles()->create($this->validate());
-        // if(count($this->images)){
-        //     foreach ($this->images as $image) {
-        //         $this->article->images()->create(['path'=>$image->store('images', 'public')]);
-        //     }
-        // }
+    
         $this->validate();
         $article = Article::create(
             [
@@ -84,7 +78,6 @@ class ArticleForm extends Component
                }
         $this->reset();
         redirect(route('create'))->with('message','prodotto creato');
-
 
     }
     
