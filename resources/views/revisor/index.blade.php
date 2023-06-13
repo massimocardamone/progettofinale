@@ -32,17 +32,18 @@
                 <div class="col-12 col-md-6 d-flex align-items-center justify-content-center coldetsx">
                     <div class="coldetsxd">
                         <ul class="">
-                            <li class="list-group text-light">Nome: {{ $article_to_check->name }}</li>
+                            <li class="list-group text-light"><h4><span class="titleText">{{$article_to_check->name}}</span></h4></li>
                             <li class="list-group text-light">Prezzo: €{{ $article_to_check->price }}</li>
                             <li class="list-group text-light">Categoria: {{ $article_to_check->genre->genre }}</li>
                             <li class="list-group text-light">Descrizione: {{ $article_to_check->description }}</li>
-                            <a href="{{ route('home') }}" class="btn mybtn my-3">Torna Indietro</a>
+                            {{-- <a href="{{ route('home') }}" class="btn mybtn my-3">Torna Indietro</a> --}}
                         </ul>
                     </div>
                 </div>
                 <div class=" col-12 col-md-6 coldetdx">
                     <div class="coldetdxd ">
-                        <img class="img-fluid imgdet" src="{{ Storage::url($article_to_check->img) }}" alt="">
+                        {{-- <img class="img-fluid imgdet" src="{{ Storage::url($article_to_check->img) }}" alt=""> --}}
+                        <img class="imgdet img-fluid w-100" src="https://picsum.photos/400/300" alt="">
                     </div>
                 </div>
             </div>
