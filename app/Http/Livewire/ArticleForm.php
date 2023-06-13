@@ -77,7 +77,7 @@ class ArticleForm extends Component
                    }
                }
         $this->reset();
-        redirect(route('create'))->with('message','prodotto creato');
+        redirect(route('create'))->with('message','Prodotto aggiunto, in attesa revisione');
 
     }
     

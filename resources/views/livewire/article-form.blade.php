@@ -26,7 +26,7 @@
       @if(!empty($images))
           <div class="row">
             <div class="col-12">
-                <p>photo :</p>
+                <p>Photo :</p>
                 <div class="row border border-4 border-info rounded shadow py-4">
                     @foreach ($images as $key =>$image )
                         <div class="col my-3">
