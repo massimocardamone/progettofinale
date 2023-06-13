@@ -7,14 +7,15 @@
             </div>
             <div class=" col-12 col-md-4 coldetdx d-flex align-items-center">
                 <div class="coldetdxd ">
-                    <img class="img-fluid imgdet" src="{{Storage::url($article->img)}}" alt="">
+                    {{-- <img class="img-fluid imgdet" src="{{Storage::url($article->img)}}" alt=""> --}}
+                    <img class="imgdet img-fluid" src="https://picsum.photos/400/300" alt="">
                 </div>            
             </div>
             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center coldetsx ">
                 <div class="">
                     <ul class="">  
                         <li class="list-group d-flex coldetli">
-                            <h4>Nome: {{$article->name}}</h4>
+                            <h4>Nome: <span class="titleText">{{$article->name}}</span></h4>
                         </li>
                         <li class="list-group coldetli"> <h4><span>Prezzo: € <span class="priceDet">{{$article->price}}</span></span></h4></li>
                         <li class="list-group coldetli"><h4>Categoria: {{$article->genre->genre}}</h4></li>
@@ -40,13 +41,15 @@
         <div class="row">
             <div class="col-12 col-md-6 coldetsx">
                 <div class="coldetdxd ">
-                    <img class="img-fluid imgdet" src="{{Storage::url($article->img)}}" alt="">
+                    {{-- <img class="img-fluid imgdet" src="{{Storage::url($article->img)}}" alt=""> --}}
+                    <img class="imgdet img-fluid w-100" src="https://picsum.photos/400/300" alt="">
                 </div>            
             </div>
             
             <div class="col-12 col-md-6 coldetdx">
                 <div class="coldetdxd ">
-                    <img class="img-fluid imgdet" src="{{Storage::url($article->img)}}" alt="">
+                    {{-- <img class="img-fluid imgdet" src="{{Storage::url($article->img)}}" alt=""> --}}
+                    <img class="imgdet img-fluid w-100" src="https://picsum.photos/400/300" alt="">
                 </div>            
             </div>
         </div>    

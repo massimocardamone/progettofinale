@@ -31,25 +31,6 @@
     </div>
     @endif
 
-
-    {{-- script per nuovo su nuovi articoli --}}
-    <script>
-        let date = new Date();
-        let today = date.getDate();
-        let month = (date.getMonth())+1;
-        let year = (date.getYear())-100;
-        if (month < 10) {
-            month=`0${month}`
-        }
-        let value = `${today}/${month}/${year}`
-        let created = document.querySelectorAll('.created')
-        created.forEach(element => {
-        if (value == element.innerHTML) {
-         element.classList.add('newArticle')
-        }
-        });
-        
-    </script>
     
     
 </x-layout>
