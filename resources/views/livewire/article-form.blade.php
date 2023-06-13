@@ -23,7 +23,7 @@
             <p class="text-danger">{{ $message }}</p>
         @enderror
       </div>
-      @if (!empty($images))
+      @if(!empty($images))
           <div class="row">
             <div class="col-12">
                 <p>photo :</p>

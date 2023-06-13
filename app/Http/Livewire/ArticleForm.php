@@ -56,24 +56,32 @@ class ArticleForm extends Component
     }
     public function store()
     {
+        // $this->validate();
+        // $this->article= Genre::find($this->genre)->articles()->create($this->validate());
+        // if(count($this->images)){
+        //     foreach ($this->images as $image) {
+        //         $this->article->images()->create(['path'=>$image->store('images', 'public')]);
+        //     }
+        // }
         $this->validate();
-        $this->article= Genre::find($this->genre)->articles()->create($this->validate());
-        if(count($this->images)){
+        $article = Article::create(
+            [
+            'name'=>$this->name,
+            'price'=>$this->price,
+            'description'=>$this->description,
+            'genre_id'=>$this->genre_id,
+            'user_id'=>Auth::id()
+            ]);
+            
+
+        $article->user()->associate(Auth::user());
+        $this->article = $article;
+        $this->article->save();
+        if(count($this->images)>0){
             foreach ($this->images as $image) {
-                $this->article->images()->create(['path'=>$image->store('images', 'public')]);
-            }
-        }
-        // $article = Article::create([
-        //     'name'=>$this->name,
-        //     'price'=>$this->price,
-        //     'description'=>$this->description,
-        //     'genre_id'=>$this->genre_id,
-        //     'user_id'=>Auth::id()
-        // ]);
-
-$this->announcement->user()->associate(Auth::user());
-
-        $this->announcement->save();
+               $this->article->images()->create(['path'=>$image->store('images','public')]);
+                   }
+               }
         $this->reset();
         redirect(route('create'))->with('message','prodotto creato');
 
