@@ -17,9 +17,9 @@
 
     <div class="mb-3">
         <label for="image" class="form-label">Immagine</label>
-        <input wire:model='temporany_images' type="file" class="form-control @error('temporany_images')
+        <input wire:model='temporary_images' type="file" class="form-control @error('temporary_images')
         @enderror" multiple id="image" name='images' placeholder="img">
-        @error('temporany_images.*')
+        @error('temporary_images.*')
             <p class="text-danger">{{ $message }}</p>
         @enderror
       </div>
@@ -30,7 +30,7 @@
                 <div class="row border border-4 border-info rounded shadow py-4">
                     @foreach ($images as $key =>$image )
                         <div class="col my-3">
-                            <div class="mx-auto shadow rounded" style="background-image: url({{$image->temporanyUrl()}});">
+                            <div class=" img-flud mx-auto shadow rounded" style= "background-image: url({{$image->temporaryUrl()}}); width:50px;height:50px;">
                             </div>
                             <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
                         </div>

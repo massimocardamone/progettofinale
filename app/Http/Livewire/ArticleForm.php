@@ -16,7 +16,7 @@ class ArticleForm extends Component
     public $description;
     public $genre_id;
     public $images=[];
-    public $temporany_images;
+    public $temporary_images;
 
     use WithFileUploads;
 
@@ -25,7 +25,7 @@ class ArticleForm extends Component
         'price'=> 'min:0|required',
         'description'=> 'required',
         'images.*'=> 'image|max:1024',
-        'temporany_images.*'=> 'image|max:1024',
+        'temporary_images.*'=> 'image|max:1024',
         'genre_id'=>'required',
 
     ];
@@ -34,16 +34,16 @@ class ArticleForm extends Component
         '*.required' => 'Il campo è obbligatorio.',
         'price.min'=>'Il prezzo non può essere negativo',
         'images.image' => 'deve  contenere un immagine',
-        'temporany_images.*.image' => 'il file deve essere un immagine',
+        'temporary_images.*.image' => 'il file deve essere un immagine',
         'images.max' => 'il file deve essere di massimo 1MB',
-        'temporany_image.*.max' => 'il file deve essere di massimo 1MB',
+        'temporary_image.*.max' => 'il file deve essere di massimo 1MB',
     ];
 
-    public function updatedTemporanyImages(){
+    public function updatedTemporaryImages(){
         if ($this->validate ([
-            'temporany_images.*' => 'image|max:1024',
+            'temporary_images.*' => 'image|max:1024',
         ])){
-            foreach($this->temporany_images as $image){
+            foreach($this->temporary_images as $image){
                 $this->images[]= $image;
             }
         }
@@ -70,8 +70,12 @@ class ArticleForm extends Component
         //     'genre_id'=>$this->genre_id,
         //     'user_id'=>Auth::id()
         // ]);
-        redirect(route('create'))->with('message','prodotto creato');
+
+$this->announcement->user()->associate(Auth::user());
+
+        $this->announcement->save();
         $this->reset();
+        redirect(route('create'))->with('message','prodotto creato');
 
 
     }
