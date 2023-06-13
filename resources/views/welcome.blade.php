@@ -11,12 +11,15 @@
 </div>
 <div class="container mt-1">
     <div class="row">
+      
         @foreach ($articles as $article)
         <div class="col-12 col-md-4">     
           <x-card :article='$article'/>      
         </div>
         @endforeach
 
+      </div> 
+      
         {{-- <div class="col-6 col-md-4 d-flex justify-content-end">
             <div class="row rigahomesezprod flex-column justify-content-around">
               <div class="col-3 d-flex colsezsx align-items-center">
@@ -34,7 +37,7 @@
           
         </div> --}}
 
-    </div>
+    
 </div>
 
 

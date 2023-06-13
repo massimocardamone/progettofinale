@@ -16,6 +16,10 @@ h1,h5,h4,h3,h2,p {
     color: var(--acc);
 }
 
+h2{
+    font-weight: 600;
+}
+
 p,label{
     color: var(--light);
 }
@@ -412,3 +416,10 @@ body{
 .vh-60{
     height: 58vh;
 }
+
+
+/* LOGIN E REGISTRATI */
+/* VISTA LOGIN */
+/* .collog{
+    width: 60%;
+} */
