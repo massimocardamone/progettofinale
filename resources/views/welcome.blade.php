@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <x-layout docTitle="Homepage" title="C o l i c a S t o r e">
   
   <div class="container mymotto d-flex justify-content-center">
@@ -6,7 +5,6 @@
       <div class="col-12 d-flex  justify-content-center">
         <h2 class="fst-italic">Prezzi... da mal di pancia!</h2>
       </div>
-=======
 <x-layout docTitle="Homepage" title="C o l i c a S t o r e" animate="animate__backInDown">
 
   <x-number-section artNum='{{$artNum}}' userNum='{{$userNum}}'/> 
@@ -15,6 +13,7 @@
   <div class="row">
     <div class="col-12">
       <h3 class="fst-italic">{{ __('messages.I nostri prodotti')}}</h3>
+
     </div>
   </div>
   
@@ -30,13 +29,8 @@
     <div class="row bg-danger justify-content-between">
       <div class="col-12 col-md-8 bg-warning d-flex">
         @foreach ($articles as $article)
-<<<<<<< HEAD
         <div class="col-12 col-md-3">     
           <x-card :article='$article'/>      
-=======
-        <div class="col-12 col-md-4">     
-          <x-card :article='$article' animate="animate__fadeIn"/>      
->>>>>>> 9c8b22b0bfaee47d8b07fa2b6f72e17f829c6b1c
         </div>
         @endforeach
 

@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<x-layout docTitle="home" title="{{ $article_to_check ? 'Prodotto da revisionare' : 'non ci sono prodotti' }}">
-    <div class="container mt-5 mb-5">
-        <div class="row">
-=======
 <x-layout docTitle="home" title="{{ $article_to_check ? 'Articolo da revisionare' : 'non ci sono articoli' }}">
     {{-- messaggi di risposta --}}
     <div class="container">
         <div class="row ">
->>>>>>> 9c8b22b0bfaee47d8b07fa2b6f72e17f829c6b1c
             <div class="col-12">
                 @if (session('messageRev'))
                     <div class="alert alert-success text-center">
@@ -100,8 +94,7 @@
             <a class="btn mybtn" href="{{route('home')}}">Torna alla Home</a>
         </div>
         </div>
-    </div>
-        
+    </div>    
     @endif
     
 </x-layout>
