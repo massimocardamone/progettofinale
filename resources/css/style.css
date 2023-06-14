@@ -364,7 +364,7 @@ body{
     box-shadow: 8px 10px 10px var(--dark);
 }
 
-.coldetsxd:hover{
+/* .coldetsxd:hover{
     border-radius: 20px 20px 20px 20px;
     padding: 1rem; 
     background-color: var(--lightt);
@@ -376,7 +376,7 @@ body{
     padding: 2rem;
     background-color: var(--lightt);
     box-shadow: 8px 10px 10px var(--light);
-}
+} */
 
  
 .myformdiv{
