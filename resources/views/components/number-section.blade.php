@@ -7,19 +7,19 @@
             </div>
         </div>
         <div class="col-12 col-md-12 numSec mynumbers d-flex mysection12 justify-content-center">
-            <div>
+            <div class="pt-3">
                 <h3 class="fst-italic">Le categorie:</h3>
                 <h4 class="text-center"><span class="catNum spanNum">{{count($genres->all())}}</span></h4>
             </div>
         </div>
         <div class="col-12 col-md-12 numSec mynumbers spanNum d-flex mysection12 justify-content-center">
-            <div>
+            <div class="pt-3">
                 <h3 class="fst-italic">I nostri articoli:</h3>
                 <h4 class="text-center"><span class="artNum">{{$artNum}}</span></h4>    
             </div>             
         </div>
         <div class="col-12 col-md-12 numSec mynumbers spanNum d-flex mysection12 justify-content-center">
-            <div>
+            <div class="pt-3">
                 <h3 class="fst-italic">Utenti soddisfatti:</h3>
                 <h4 class="text-center"><span class="satNum"></span> %</h4>
             </div>       
