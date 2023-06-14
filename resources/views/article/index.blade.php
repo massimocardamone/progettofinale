@@ -1,4 +1,4 @@
-<x-layout docTitle="Index" title="Tutti gli Articoli">
+<x-layout docTitle="Index" title="{{__('messages.Tutti i prodotti')}}">
     <div class="container">
         
         {{-- LISTA CATEGORIE --}}
@@ -15,7 +15,7 @@
             </div>
             @empty
                 <div class="col-12">
-                    <h3 class="text center">Nessun articolo trovato</h3>
+                    <h3 class="text center">{{__('messages.Nessun prodotto')}}</h3>
                 </div>
             @endforelse 
         </div>

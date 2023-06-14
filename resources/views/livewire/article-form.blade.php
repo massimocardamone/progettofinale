@@ -6,7 +6,7 @@
     @endif --}}
 
     <div class="mb-3">
-        <label for="name" class="form-label">Nome Prodotto</label>
+        <label for="name" class="form-label">{{__('messages.Nome prodotto')}}</label>
         <input type="text" class="form-control myinput @error('name')
         is-invalid @enderror"wire:model="name"
             id="name">
@@ -16,7 +16,7 @@
     </div>
 
     <div class="mb-3">
-        <label for="image" class="form-label">Immagine</label>
+        <label for="image" class="form-label">{{__('messages.Imnagine')}}</label>
         <input wire:model='temporary_images' type="file" class="form-control @error('temporary_images')
         @enderror" multiple id="image" name='images' placeholder="img">
         @error('temporary_images.*')
@@ -41,7 +41,7 @@
       @endif
 
     <div class="mb-3">
-        <label for="description" class="form-label">Descrizione</label>
+        <label for="description" class="form-label">{{__('messages.Descrizione')}}</label>
         <textarea wire:model="description" id="description"
             class="form-control myinput @error('description') is-invalid @enderror" cols="30" rows="10">
           </textarea>
@@ -52,7 +52,7 @@
 
 
     <div class="mb-3">
-        <label for="price" class="form-label">Prezzo</label>
+        <label for="price" class="form-label">{{__('messages.Prezzo')}}</label>
         <input type="number" step="0.01" min="0" wire:model="price"
             class="form-control myinput @error('price')
         is-invalid
@@ -86,7 +86,7 @@
         </div>
     </div>
     <div class="d-flex justify-content-center mb-3">
-        <button type="submit" class="btn btn-success">Aggiungi</button>
+        <button type="submit" class="btn btn-success">{{__('messages.Aggiungi')}}</button>
     </div>
 
 

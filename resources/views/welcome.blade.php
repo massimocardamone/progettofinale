@@ -5,7 +5,7 @@
 <div class="container mysezione11">
   <div class="row">
     <div class="col-12">
-      <h3 class="fst-italic">I nostri nuovi prodotti!</h3>
+      <h3 class="fst-italic">{{ __('messages.I nostri prodotti')}}</h3>
     </div>
   </div>
 </div>
@@ -48,8 +48,8 @@
    <div class="row justify-content-center">
      <div class="col-12 col-md-3 mysezione11 mt-5 text-center">
        <p>Colica Store</p>
-       <p>vuoi lavorare con noi?</p>
-       <a href="{{route('become.revisor')}}" class="btn btn-warning">clicca qui</a>
+       <p>{{ __('messages.Vuoi lavorare con noi?')}}</p>
+       <a href="{{route('become.revisor')}}" class="btn btn-warning">{{__('messages.clicca qui')}}</a>
      </div>
    </div>
  </div>  
