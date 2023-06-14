@@ -2,7 +2,7 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="{{route('home')}}">
         <div class="divlogo">
-          <img class="imglogo" src="/media/logocropped.png" alt="">
+          <img class="imglogo" src="/media/logocropped.png" alt="logo">
         </div>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,7 +13,7 @@
           
           @auth
           <li class="nav-item">
-            <a class="nav-link" href="{{route('create')}}">Aggiungi prodotto</a>
+            <a class="nav-link mylinks" href="{{route('create')}}">Aggiungi prodotto</a>
           </li>
           @endauth
           <li class="nav-item">
