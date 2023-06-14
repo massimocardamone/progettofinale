@@ -11,16 +11,21 @@
   
   <div class="container mt-1">
     <div class="row bg-danger justify-content-between">
-      <div class="col-12 col-md-8 bg-warning d-flex">
-        @foreach ($articles as $article)
-        <div class="col-12 col-md-3">     
-          <x-card :article='$article'/>      
-        </div>
-        @endforeach        
+      <div class="col-12 col-md-8 bg-warning d-flex"> 
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    @foreach ($articles as $article)
+                        <div class="swiper-slide">          
+                              <x-card :article='$article'/>     
+                        </div> 
+                    @endforeach
+                </div>
+            </div>
+        </div> 
+        <div class="col-12 col-md-4 bg-primary d-flex align-items-center">
+          <x-number-section artNum='{{$artNum}}' userNum='{{$userNum}}'/></div>             
+      </div>     
       </div>
-      <div class="col-12 col-md-4 bg-primary d-flex align-items-center">
-        <x-number-section artNum='{{$artNum}}' userNum='{{$userNum}}'/></div>             
-    </div>
   </div>
   
   
