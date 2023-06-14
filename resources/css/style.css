@@ -1,7 +1,7 @@
 :root {
     --main: rgb(15, 47, 33);
     --maint: rgba(15, 47, 33, 0.682);
-    --main: rgb(76, 42, 133)
+    --main: rgb(76, 42, 133);
     --sec: rgb(0, 79, 45);
     --sect: rgba(0, 79, 45, 0.646);
     --secv: rgb(179, 136, 235);
@@ -482,4 +482,22 @@ body{
     background-position: center;
     width: 200px;
     height: 150px;
+}
+
+.swiper {
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+  }
+.swiper-slide 
+{
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+ .swiper-slide img {
+    display: block;
+    width: 100%;
 }
