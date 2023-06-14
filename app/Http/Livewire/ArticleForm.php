@@ -1,12 +1,14 @@
 <?php
 
 namespace App\Http\Livewire;
-
+use File;
 use App\Models\Genre;
 use App\Models\Article;
+use App\Models\Image;
 use Livewire\Component;
-use Illuminate\Support\Facades\Auth;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleForm extends Component
 {
@@ -73,9 +75,14 @@ class ArticleForm extends Component
         $this->article->save();
         if(count($this->images)>0){
             foreach ($this->images as $image) {
-               $this->article->images()->create(['path'=>$image->store('images','public')]);
-                   }
-               }
+            //    $this->article->images()->create(['path'=>$image->store('images','public')]);
+               $newFileName = "articles/{$this->article->id}";
+               $newImage = $this->article->images()->create(['path'=>$image->store($newFileName,'public')]);
+
+               dispatch(new ResizeImage($newImage->path,400,300));
+                }
+                File::deleteDirectory(storage_path('/app/livewire-tmp'));
+            }
         $this->reset();
         redirect(route('create'))->with('message','Prodotto aggiunto, in attesa revisione');
 
