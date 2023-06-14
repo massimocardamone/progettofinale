@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 <x-layout docTitle="home" title="{{ $article_to_check ? 'Prodotto da revisionare' : 'non ci sono prodotti' }}">
     <div class="container mt-5 mb-5">
         <div class="row">
+=======
+<x-layout docTitle="home" title="{{ $article_to_check ? 'Articolo da revisionare' : 'non ci sono articoli' }}">
+    {{-- messaggi di risposta --}}
+    <div class="container">
+        <div class="row ">
+>>>>>>> 9c8b22b0bfaee47d8b07fa2b6f72e17f829c6b1c
             <div class="col-12">
                 @if (session('messageRev'))
                     <div class="alert alert-success text-center">
@@ -16,7 +23,7 @@
                         @else
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-12 d-flex justify-content-center">
+                                    <div class="col-12 d-flex  justify-content-center">
                                         <form method="POST" action="{{ route('revisor.oldArticle') }}">
                                             @method('PATCH')
                                             @csrf
@@ -47,10 +54,24 @@
                     </div>
                 </div>
                 <div class=" col-12 col-md-6 coldetdx">
+                    @if (count($article_to_check->images()->get()) <=1)
                     <div class="coldetdxd ">
-                        {{-- <img class="img-fluid imgdet" src="{{ Storage::url($article_to_check->img) }}" alt=""> --}}
-                        <img class="imgdet img-fluid w-100" src="https://picsum.photos/400/300" alt="">
+                        <img class="imgdet img-fluid w-100" src="{{!$article_to_check->images()->get()->isEmpty() ? $article_to_check->images()->first()->getUrl(400,300) : "/media/default.jpg" }}" alt="">
                     </div>
+                    @else
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            @foreach ($article_to_check->images()->get() as $item)
+                            <div class="swiper-slide">
+                                <img src="{{$item->getUrl(400,300)}}" class="d-block"/>
+                            </div>  
+                             @endforeach
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                      </div>
+                    @endif
                 </div>
             </div>
             <div class="container my-5">
@@ -73,8 +94,14 @@
             </div>
         </div>
     @else
-        <div class="vh-60"></div>
+    <div class="container vh-60">
+        <div class="row ">
+            <div class="col-12 d-flex mt-5 justify-content-center">
+            <a class="btn mybtn" href="{{route('home')}}">Torna alla Home</a>
+        </div>
+        </div>
+    </div>
+        
     @endif
-
-
+    
 </x-layout>

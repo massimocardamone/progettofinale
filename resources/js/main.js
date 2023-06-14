@@ -1,3 +1,4 @@
+
 // Caricamento Spinner
 let Start = document.querySelector('#Start');
 let End = document.querySelector('#End');
@@ -5,7 +6,7 @@ let End = document.querySelector('#End');
 setTimeout(() => {
     Start.classList.add('d-none');
     End.classList.remove('d-none');
-}, 900)
+}, 200)
 
 let link = document.querySelectorAll('.page-link')
 if (link.length>0) {
@@ -72,5 +73,19 @@ if (created) {
         }
     });
 }
+
+let swiper = new Swiper(".mySwiper", {
+
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  });
        
 

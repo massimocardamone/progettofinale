@@ -1,4 +1,4 @@
-<div class="container-fluid bg-success numWrapper">
+<div class="container-fluid containerseznumeri numWrapper">
     <div class="row">
         <div class="col-12 col-md-12 numSec mynumbers d-flex mysection12 justify-content-center">
             <div>
