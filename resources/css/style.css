@@ -59,6 +59,31 @@ body{
     background-image:linear-gradient(to bottom, var(--maint), var(--acct)), url(/public/media/sfondoh.jpg);    
 }
 
+/* STILI ELEMENTI */
+.mylinks{
+    text-decoration-line: none;
+}
+
+.mylinks:hover{
+    text-shadow: 0px 0px 10px var(--light);
+}
+
+.mylinks:visited {
+    color: var(--acc);
+    text-decoration: none;
+  }
+  
+.mylinks:hover {
+    color: var(--acc);
+    text-decoration: none;
+  }
+  
+.mylinks:active {
+    color: var(--light);
+    text-decoration: none;
+  }
+  
+
 /* STILI NAVBAR */
 .navbar-custom{
   position: fixed;

@@ -17,7 +17,7 @@
           </li>
           @endauth
           <li class="nav-item">
-            <a class="nav-link" href="{{route('article_index')}}">Tutti i prodotti</a>
+            <a class="nav-link mylinks" href="{{route('article_index')}}">Tutti i prodotti</a>
           </li>
           <li class="nav-item">
             <form class="d-flex align-items-center mysearchbar" role="search" action="{{route('searchArticle')}}" method="GET">
