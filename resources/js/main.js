@@ -75,7 +75,7 @@ if (created) {
 }
 
 let swiper = new Swiper(".mySwiper", {
-    
+
     slidesPerView: 1,
     spaceBetween: 30,
     pagination: {
