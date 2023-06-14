@@ -138,18 +138,21 @@ body{
 }
 /* --------------------HOMEPAGE------------------------ */
 
+.containerseznumeri{
+    height: 100%;
+}
 
 .mycard{
     border-radius: 20px 20px 20px 20px;
     box-shadow: 3px 3px 10px var(--lightt);
-    background-color: var(--darkt);
+    background-color: var(--dark);
     height: 470px;
 }
 
 .mycard:hover{
     border-radius: 20px 20px 20px 20px;
     box-shadow: 3px 3px 10px var(--lightt);
-    background-color: var(--darkt);
+    background-color: var(--dark);
     height: 470px;
 }
 
@@ -387,9 +390,16 @@ body{
     border-radius: 30px 30px 30px 30px;
 }
 
+.mysectionx{
+    background-color: var(--lightt);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 30px 30px 30px 30px;
+}
+
 .mysection12{
     background-color: var(--darkt);
-    border-radius: 30px 30px 30px 30px;
+    border-radius: 30px 0px 0px 30px;
 }
 
 .mysection13{
@@ -408,7 +418,7 @@ body{
         width: 600px;
     }
     .mynumbers{
-        height: 5rem;
+        height: 7rem;
     }
     
   }
@@ -476,9 +486,9 @@ body{
     font-weight: 900;
     position: absolute;
     content: "NEW";
-    bottom: 420px;
+    bottom: 430px;
     right: -30px;
-    color: var(--acc);
+    color: var(--secv);
     transform: rotateZ(30deg);
     text-shadow: 3px 3px 0px var(--sec);
 }
