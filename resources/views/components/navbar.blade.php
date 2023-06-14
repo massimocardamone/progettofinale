@@ -13,12 +13,12 @@
           
           
           <li class="nav-item">
-            <a class="nav-link mylinks" href="{{route('article_index')}}">Tutti i prodotti</a>
+            <a class="nav-link mylinks" href="{{route('article_index')}}">{{ __('messages.Tutti i prodotti')}}</a>
           </li>
           <li class="nav-item">
             <form class="d-flex align-items-center mysearchbar" role="search" action="{{route('searchArticle')}}" method="GET">
               @csrf
-              <input class="form-control myinputsearch me-2" name="searched" type="search" placeholder="Cerca un prodotto" aria-label="Search">
+              <input class="form-control myinputsearch me-2" name="searched" type="search" placeholder="{{ __('messages.cerca un prodotto')}}" aria-label="Search">
               <button class="btn mybtn" type="submit">{{ __('messages.cerca');}}</button>
             </form>
           </li>

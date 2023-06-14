@@ -1,14 +1,14 @@
-<x-layout docTitle="Register" title="Registrati">
+<x-layout docTitle="Register" title="{{__('messages.Registrati')}}">
     <div class="container">
         <div class="row mysezione11">
-            <h3>Benvenuto!</h3>
+            <h3>{{__('messages.Benvenuto')}}!</h3>
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 mysection m-3 p-3">
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
                     <div class="mb-3">
-                        <label for="userName" class="form-label">Nome utente</label>
+                        <label for="userName" class="form-label">{{__('messages.nome utente')}}</label>
                         <input type="text"
                             class="form-control @error('name')
         is-invalid @enderror myinput text-light"
@@ -18,7 +18,7 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="userMail" class="form-label">Email utente</label>
+                        <label for="userMail" class="form-label">{{__('messages.email utente')}}</label>
                         <input type="email" name="email"
                             class="form-control @error('email')
         is-invalid @enderror myinput text-light"
@@ -28,7 +28,7 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="userPassword" class="form-label">Password</label>
+                        <label for="userPassword" class="form-label">{{__('messages.Password')}}</label>
                         <input type="password" name="password"
                             class="form-control @error('password')
         is-invalid @enderror myinput text-light"
@@ -38,7 +38,7 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="passwordConfirmation" class="form-label">Conferma password</label>
+                        <label for="passwordConfirmation" class="form-label">{{__('messages.conferma password')}}</label>
                         <input type="password" name="password_confirmation"
                             class="form-control @error('password_confirmation')
         is-invalid @enderror myinput text-light"
@@ -48,7 +48,7 @@
                         @enderror
                     </div>
                     <div class="mb-3 form-check d-flex justify-content-center">
-                        <button type="submit" class="btn mybtn mt-3">Registrati</button>
+                        <button type="submit" class="btn mybtn mt-3">{{__('messages.Registrati')}}</button>
                     </div>
                 </form>
             </div>

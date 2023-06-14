@@ -2,24 +2,24 @@
     <div class="row ">
         <div class="col-12  col-md-12 numSec mynumbers d-flex mysection12 justify-content-center">
             <div class="pt-3">
-                <h3 class="fst-italic">I nostri utenti:</h3>
+                <h3 class="fst-italic">{{__('messages.I nostri utenti')}}:</h3>
                 <h4 class="text-center"><span class="userNum spanNum">{{$userNum}}</span></h4>
             </div>
         </div>
         <div class="col-12 col-md-12 numSec mynumbers d-flex mysection12 justify-content-center">
-            <div class="pt-3">
+            <div>
                 <h3 class="fst-italic">Le categorie:</h3>
                 <h4 class="text-center"><span class="catNum spanNum">{{count($genres->all())}}</span></h4>
             </div>
         </div>
         <div class="col-12 col-md-12 numSec mynumbers spanNum d-flex mysection12 justify-content-center">
-            <div class="pt-3">
+            <div>
                 <h3 class="fst-italic">I nostri articoli:</h3>
                 <h4 class="text-center"><span class="artNum">{{$artNum}}</span></h4>    
             </div>             
         </div>
         <div class="col-12 col-md-12 numSec mynumbers spanNum d-flex mysection12 justify-content-center">
-            <div class="pt-3">
+            <div>
                 <h3 class="fst-italic">Utenti soddisfatti:</h3>
                 <h4 class="text-center"><span class="satNum"></span> %</h4>
             </div>       

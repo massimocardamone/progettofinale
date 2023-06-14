@@ -14,10 +14,10 @@
                 <div class="col-12 col-md-3 myfootercol">
                     <ul>
                         <h2>{{__('messages.Dove spediamo')}}</h2>
-                        <li>A casa tua</li>
-                        <li>A casa sua</li>
-                        <li>Nel mondo</li>
-                        <li>Sulla terra ferma</li>
+                        <li>{{__('messages.a casa tua')}}</li>
+                        <li>{{__('messages.a casa sua')}}</li>
+                        <li>{{__('messages.nel mondo')}}</li>
+                        <li>{{__('messages.sulla terra ferma')}}</li>
                     </ul>                    
                 </div>
                 <div class="col-12 col-md-3 myfootercol">
