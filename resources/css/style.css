@@ -430,3 +430,11 @@ body{
 .show{
     color: var(--acct) !important;
 }
+
+/**IMMAGINE ANTEPRIMA*/
+.img-preview{
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 150px;
+}
