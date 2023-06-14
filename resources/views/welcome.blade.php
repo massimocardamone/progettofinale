@@ -17,12 +17,12 @@
   </div>
 
   <div class="container mt-1">
-    <div class="row bg-danger justify-content-between">
-      <div class="col-12 col-md-8 bg-warning d-flex">
-        <div class="swiper mySwiper2">
+    <div class="row justify-content-between">
+      <div class="col-12 col-md-8 d-flex">
+        <div class="swiper mySwiper2 swiper2">
           <div class="swiper-wrapper">
             @foreach ($articles as $article)
-            <div class="swiper-slide">
+            <div class="swiper-slide d-flex justify-content-center">
               <x-card :article='$article'/> 
             </div>
             @endforeach 

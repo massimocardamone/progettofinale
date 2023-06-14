@@ -514,6 +514,11 @@ body{
     height: 300px;
     padding: 50px;
   }
+
+.swiper2{
+    width: fit-content;
+    height: fit-content;
+}
 .swiper-slide 
 {
     background-position: center;
@@ -533,7 +538,7 @@ body{
   }
 
   .swiper-wrapper{
-    width: 100%;
+    width: fit-content;
   }
 
   .swiper-slide{
