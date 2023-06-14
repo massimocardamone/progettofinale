@@ -20,9 +20,9 @@
     <div class="row justify-content-between">
       <div class="col-12 col-md-8 d-flex mysectionx">
         <div class="swiper mySwiper2 swiper2">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper swiper-wrapper2">
             @foreach ($articles as $article)
-            <div class="swiper-slide d-flex justify-content-center">
+            <div class="swiper-slide d-flex justify-content-center swiper-slide2">
               <x-card :article='$article'/> 
             </div>
             @endforeach 
@@ -44,7 +44,7 @@
     <div class="row justify-content-center align-items-center">
       <div class="col-12 col-md-4 d-flex justify-content-end col-md-12 mysection13 mt-1 mb-3 text-center">
         <p>Colica Store</p>
-        <p>vuoi lavorare con noi?</p>
+        <p>Vuoi lavorare con noi?</p>
         <a href="{{route('become.revisor')}}" class="btn mybtn">clicca qui</a>
       </div>
     </div>

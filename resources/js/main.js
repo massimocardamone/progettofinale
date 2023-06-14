@@ -16,10 +16,7 @@ let swiper = new Swiper(".mySwiper", {
       },
   });
   
-let swiperCard = new Swiper(".mySwiper2", {
-    effect: "cards",
-    grabCursor: true,
-});
+
 
 // Caricamento Spinner
 let Start = document.querySelector('#Start');
@@ -28,6 +25,24 @@ let End = document.querySelector('#End');
 setTimeout(() => {
     Start.classList.add('d-none');
     End.classList.remove('d-none');
+    let swiperCard = new Swiper(".mySwiper2", {
+        effect: "cards",
+        grabCursor: true,
+    });
+    let swiper = new Swiper(".mySwiper", {
+
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+      });
+    
 }, 200)
 
 let link = document.querySelectorAll('.page-link')
@@ -96,6 +111,4 @@ if (created) {
     });
 }
 
-
- 
 

@@ -21,8 +21,8 @@
                              @endforeach
                         </div>
                         <div class="swiper-pagination"></div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next" id="coloraAcc"></div>
+                        <div class="swiper-button-prev" id="coloraAcc"></div>
                     </div> 
                 </div>
                 @endif           
@@ -34,7 +34,7 @@
                             <h4>{{__('messages.Nome')}}: <span class="titleText">{{$article->name}}</span></h4>
                         </li>
                         <li class="list-group coldetli"> <h4><span>{{__('messages.Prezzo')}}: € <span class="priceDet">{{$article->price}}</span></span></h4></li>
-                        <li class="list-group coldetli"><h4>{{__('messages.Categoria')}}: {{$article->genre->genre}}</h4></li>
+                        <li class="list-group coldetli"><h4>{{__('messages.Categoria')}}: {{__("messages.".$article->genre->genre."")}}</h4></li>
                         
                         <!-- Bottone per aprire la modale -->
                         <button class="coldetlibtn" onclick="openModal()"><h3>{{__('messages.Leggi la descrizione')}}!</h3></button>

@@ -75,7 +75,7 @@
                             @enderror"
                                 type="radio" value="{{ $genre->id }}" wire:model="genre_id"
                                 id="{{ $genre->id }}">
-                            <label for="{{ $genre->id }}" class="form-check-label">{{ $genre->genre }}</label>
+                            <label for="{{ $genre->id }}" class="form-check-label">{{__("messages.".$genre->genre."")}}</label>
                         </span>
                     </div>
                 @endforeach

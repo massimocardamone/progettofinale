@@ -16,14 +16,14 @@
 
 
 
-    {{-- <div id="Start" class="d-flex justify-content-center vh-100 align-items-center">
+    <div id="Start" class="d-flex justify-content-center vh-100 align-items-center">
         <div class="spinner spinner-border text-g" role="status">
             <span class=" visually-hidden">Loading...</span>
         </div>
-    </div> --}}
+    </div>
     <x-navbar />
     
-    {{-- <div id="End" class="d-none"> --}}
+    <div id="End" class="d-none">
         <x-header :title="$title" animate="{{$animate ?? '' }}" />
         <div class="container">
             <div class="row">
@@ -43,7 +43,7 @@
     @endif
         {{ $slot }}
         <x-footer/>
-    {{-- </div> --}}
+    </div>
 
 
 

@@ -5,7 +5,7 @@
             <img class="cardimg img-fluid" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : "/media/default.jpg" }}" alt="">
             <div class="cardcategory">
                 <!-- qui va il link alla pagina con tutti i prodotti della stessa categoria -->
-                <p class="m-0">{{$article->genre->genre}}</p>     
+                <p class="m-0">{{__("messages.".$article->genre->genre."")}}</p>     
             </div>
         </div>   
         <div class="cardBody m-2 mt-0"> 

@@ -81,8 +81,19 @@ return [
     'a casa tua'=>'a casa tua',
     'a casa sua'=>'a casa sua',
     'nel mondo'=>'nel mondo',
-    'sulla terra ferma'=>'sulla terra ferma'
+    'sulla terra ferma'=>'sulla terra ferma',
     
+    //Generi
+    'Arredamento'=>'Arredamento',
+    'Videogiochi'=>'Videogiochi',
+    'Abbigliamento'=>'Abbigliamento',
+    'Elettronica'=>'Elettronica',
+    'Giardinaggio'=>'Giardinaggio',
+    'Motori'=>'Motori',
+    'Giochi'=>'Giochi',
+    'Musica'=>'Musica',
+    'Sport'=>'Sport',
+    'Libri'=>'Libri'
 
 
 ];

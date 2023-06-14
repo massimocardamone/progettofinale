@@ -62,8 +62,8 @@
                              @endforeach
                         </div>
                         <div class="swiper-pagination"></div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next" id="coloraAcc"></div>
+                        <div class="swiper-button-prev" id="coloraAcc"></div>
                       </div>
                     @endif
                 </div>

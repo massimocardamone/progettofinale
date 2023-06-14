@@ -77,7 +77,19 @@ return [
     'a casa tua' => 'in your house',
     'a casa sua' => 'at his house',
     'nel mondo' => 'in the world',
-    'sulla terra ferma' => 'on the mainland'
+    'sulla terra ferma' => 'on the mainland',
+
+    //Generi
+    'Arredamento'=>'Furnitures',
+    'Videogiochi'=>'Videogames',
+    'Abbigliamento'=>'Clothing',
+    'Elettronica'=>'Electronics',
+    'Giardinaggio'=>'Gardening',
+    'Motori'=>'Motors',
+    'Giochi'=>'Games',
+    'Musica'=>'Musics',
+    'Sport'=>'Sport',
+    'Libri'=>'Books'
 
 
 
