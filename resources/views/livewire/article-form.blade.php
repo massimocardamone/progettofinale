@@ -6,7 +6,7 @@
     @endif --}}
 
     <div class="mb-3">
-        <label for="name" class="form-label">Nome Prodotto</label>
+        <label for="name" class="form-label">{{__('messages.Nome prodotto')}}</label>
         <input type="text" class="form-control myinput @error('name')
         is-invalid @enderror"wire:model="name"
             id="name" placeholder="Nome..">
@@ -16,8 +16,8 @@
     </div>
 
     <div class="mb-3">
-        <label for="image" class="form-label">Immagine</label>
-        <input wire:model='temporary_images' type="file" class="form-control  @error('temporary_images')
+        <label for="image" class="form-label">{{__('messages.Imnagine')}}</label>
+        <input wire:model='temporary_images' type="file" class="form-control @error('temporary_images')
         @enderror" multiple id="image" name='images' placeholder="img">
         @error('temporary_images.*')
             <p class="text-danger">{{ $message }}</p>
@@ -43,7 +43,7 @@
 
     <div class="mb-3">
         <label for="description" class="form-label">Descrizione</label>
-        <textarea wire:model="description" placeholder="Descrizione" id="description"
+        <textarea wire:model="description" id="description"
             class="form-control myinput @error('description') is-invalid @enderror" cols="30" rows="10">
         </textarea>
         @error('description')
@@ -54,7 +54,7 @@
 
     <div class="mb-3">
         <label for="price" class="form-label">Prezzo</label>
-        <input type="number" placeholder="Prezzo" step="0.01" min="0" wire:model="price"
+        <input type="number" step="0.01" min="0" wire:model="price"
             class="form-control myinput @error('price')
         is-invalid
       @enderror" id="price">
@@ -87,7 +87,7 @@
         </div>
     </div>
     <div class="d-flex justify-content-center mb-3">
-        <button type="submit" class="btn mybtn">Aggiungi</button>
+        <button type="submit" class="btn btn-success">Aggiungi</button>
     </div>
 
 

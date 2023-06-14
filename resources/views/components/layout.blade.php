@@ -40,7 +40,7 @@
                     <div class="alert alert-danger text-center">
                         <h3 class="lead">{{ session('access_denied') }}</h3>
                     </div>
-                @endif
+    @endif
         {{ $slot }}
         <x-footer></x-footer>
     </div>

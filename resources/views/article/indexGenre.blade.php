@@ -25,7 +25,7 @@
     <div class="container my-5 py-5 mysection">
         <div class="row">
             <div class="col-12 my-5 py-5">
-                <h2 class="text-center">Nessun Articolo per la categoria</h2> 
+                <h2 class="text-center">{{__('messages.Nessun prodotto')}}</h2> 
             </div>
         </div>
     </div>

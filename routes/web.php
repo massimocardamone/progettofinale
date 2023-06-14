@@ -5,6 +5,7 @@ use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RevisorController;
+use Illuminate\Foundation\Events\PublishingStubs;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +45,6 @@ route::get('/revisor{user}',[RevisorController::class, 'makeRevisor'])->name('ma
 
 //Rotta per Search
 route::get('/ricerca/articolo',[PublicController::class,'searchArticles'])->name('searchArticle');
+
+//  Rotta per icone linguaggio 
+route::post('/language/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
