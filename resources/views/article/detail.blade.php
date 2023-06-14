@@ -8,7 +8,7 @@
             <div class=" col-12 col-md-4 coldetdx d-flex align-items-center">
                 <div class="coldetdxd ">
                     {{-- @dd($article->images()->first()->getUrl(400,300)) --}}
-                    
+                    {{-- @if (count($article->images()->get()) >1) --}}
                     <img class="img-fluid imgdet" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : "/media/default.jpg" }}" alt="immagini">
                 </div>            
             </div>
