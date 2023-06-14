@@ -24,17 +24,23 @@
     <x-navbar />
     
     <div id="End" class="d-none">
-        <x-header :title="$title" />
-    @if (session('message'))
-        <div class="alert alert-success text-center">
-            <h3 class="lead">{{ session('message') }}</h3>
+        <x-header :title="$title" animate="{{$animate ?? '' }}" />
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                @if (session('message'))
+                    <div class="alert alert-success text-center">
+                        <h3 class="lead">{{ session('message') }}</h3>
+                    </div>
+                @endif
+            </div>
         </div>
-    @endif
+    </div>
     @if (session('access_denied'))
-        <div class="alert alert-danger text-center">
-            <h3 class="lead">{{ session('access_denied') }}</h3>
-        </div>
-    @endif
+                    <div class="alert alert-danger text-center">
+                        <h3 class="lead">{{ session('access_denied') }}</h3>
+                    </div>
+                @endif
         {{ $slot }}
         <x-footer></x-footer>
     </div>

@@ -6,7 +6,7 @@ let End = document.querySelector('#End');
 setTimeout(() => {
     Start.classList.add('d-none');
     End.classList.remove('d-none');
-}, 900)
+}, 200)
 
 let link = document.querySelectorAll('.page-link')
 if (link.length>0) {

@@ -1,5 +1,5 @@
 <a href="{{route('show',compact('article'))}}">
-    <div class="card position-relative mycard my-3 mx-2">
+    <div class="card position-relative mycard my-3 mx-2 animate__animated {{$animate ?? '' }}">
         <div class="position-relative imgBox">
             {{-- <img class="cardimg img-fluid" src="{{Storage::url($article->img)}}" alt=""> --}}
             <img class="cardimg img-fluid" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : "/media/default.jpg" }}" alt="">

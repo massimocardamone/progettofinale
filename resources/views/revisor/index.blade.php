@@ -1,6 +1,7 @@
 <x-layout docTitle="home" title="{{ $article_to_check ? 'Articolo da revisionare' : 'non ci sono articoli' }}">
+    {{-- messaggi di risposta --}}
     <div class="container">
-        <div class="row">
+        <div class="row ">
             <div class="col-12">
                 @if (session('messageRev'))
                     <div class="alert alert-success text-center">
@@ -16,7 +17,7 @@
                         @else
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-12 d-flex justify-content-center">
+                                    <div class="col-12 d-flex  justify-content-center">
                                         <form method="POST" action="{{ route('revisor.oldArticle') }}">
                                             @method('PATCH')
                                             @csrf
@@ -87,7 +88,14 @@
             </div>
         </div>
     @else
-        <div class="vh-60"></div>
+    <div class="container vh-60">
+        <div class="row ">
+            <div class="col-12 d-flex mt-5 justify-content-center">
+            <a class="btn mybtn" href="{{route('home')}}">Torna alla Home</a>
+        </div>
+        </div>
+    </div>
+        
     @endif
     
 </x-layout>
