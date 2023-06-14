@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('name');
             $table->float('price',8,2);
             $table->text('description');
-            $table->string('img')->default('media/default.jpg');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('genre_id')->nullable();
