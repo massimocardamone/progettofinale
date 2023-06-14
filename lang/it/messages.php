@@ -7,11 +7,7 @@ return [
     'cerca un prodotto' => 'cerca un prodotto',		
     'Registrati' => 'Registrati',		
     'Accedi' 	=>	'Accedi',		
-<<<<<<< HEAD
-    'Aggiungi un prodotto' => 'Aggiungi  prodotto',		
-=======
     'Aggiungi un prodotto' => 'Aggiungi prodotto',		
->>>>>>> f340a194617b10d74f2c9fb239064d25a293f7c7
     'Benvenuto' => 'Benvenuto',	
     'Zona revisione' =>	'Zona revisore',		
     'Esci' => 'Esci',		
@@ -87,13 +83,6 @@ return [
     'nel mondo'=>'nel mondo',
     'sulla terra ferma'=>'sulla terra ferma'
     
-
-
-    	
-
-   
-		
-
 
 
 ];
