@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Genre;
 use App\Models\Article;
+use App\Models\Image;
 use Livewire\Component;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;

@@ -37,7 +37,7 @@ class ResizeImage implements ShouldQueue
         $w = $this->w;
         $h = $this->h;
         $srcPath = storage_path() . '/app/public/' . $this->path . '/' . $this->fileName;
-        $destPath = storage_path() . '/app/public/' . $this->path . "/crop_{$w}_{$h}_" . $this->fileName;
+        $destPath = storage_path() . '/app/public/' . $this->path . "/crop_{$w}x{$h}_" . $this->fileName;
 
         $croppedImage = Image::load($srcPath)
                         ->crop(Manipulations::CROP_CENTER , $w , $h)
