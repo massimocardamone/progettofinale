@@ -16,9 +16,9 @@
     </div>
   </div>
 
-  <div class="container mt-1">
+  <div class="container mt-1 mb-1">
     <div class="row justify-content-between">
-      <div class="col-12 col-md-8 d-flex">
+      <div class="col-12 col-md-8 d-flex mysectionx">
         <div class="swiper mySwiper2 swiper2">
           <div class="swiper-wrapper">
             @foreach ($articles as $article)
@@ -29,7 +29,7 @@
           </div>
         </div>        
       </div>
-      <div class="col-12 col-md-4 bg-primary d-flex align-items-center">
+      <div class="col-12 col-md-4 d-flex align-items-center">
         <x-number-section artNum='{{$artNum}}' userNum='{{$userNum}}'/></div>             
     </div>
   </div>

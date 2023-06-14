@@ -1,6 +1,6 @@
-<div class="container-fluid containerseznumeri numWrapper">
-    <div class="row">
-        <div class="col-12 col-md-12 numSec mynumbers d-flex mysection12 justify-content-center">
+<div class="container-fluid d-flex containerseznumeri numWrapper mt-4">
+    <div class="row ">
+        <div class="col-12  col-md-12 numSec mynumbers d-flex mysection12 justify-content-center">
             <div class="pt-3">
                 <h3 class="fst-italic">{{__('messages.I nostri utenti')}}:</h3>
                 <h4 class="text-center"><span class="userNum spanNum">{{$userNum}}</span></h4>
