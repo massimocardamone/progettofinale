@@ -1,24 +1,24 @@
-<div class="container numWrapper my-5">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-5 numSec d-flex mysection justify-content-center mb-3">
+<div class="container-fluid containerseznumeri numWrapper">
+    <div class="row">
+        <div class="col-12 col-md-12 numSec mynumbers d-flex mysection12 justify-content-center">
             <div>
                 <h3 class="fst-italic">I nostri utenti:</h3>
                 <h4 class="text-center"><span class="userNum spanNum">{{$userNum}}</span></h4>
             </div>
         </div>
-        <div class="col-12 col-md-5 numSec d-flex mysection justify-content-center mb-3">
+        <div class="col-12 col-md-12 numSec mynumbers d-flex mysection12 justify-content-center">
             <div>
                 <h3 class="fst-italic">Le categorie:</h3>
                 <h4 class="text-center"><span class="catNum spanNum">{{count($genres->all())}}</span></h4>
             </div>
         </div>
-        <div class="col-12 col-md-5 numSec spanNum d-flex mysection justify-content-center">
+        <div class="col-12 col-md-12 numSec mynumbers spanNum d-flex mysection12 justify-content-center">
             <div>
                 <h3 class="fst-italic">I nostri articoli:</h3>
                 <h4 class="text-center"><span class="artNum">{{$artNum}}</span></h4>    
             </div>             
         </div>
-        <div class="col-12 col-md-5 numSec spanNum d-flex mysection justify-content-center">
+        <div class="col-12 col-md-12 numSec mynumbers spanNum d-flex mysection12 justify-content-center">
             <div>
                 <h3 class="fst-italic">Utenti soddisfatti:</h3>
                 <h4 class="text-center"><span class="satNum"></span> %</h4>

@@ -59,6 +59,13 @@
                   <span class="visually-hidden">{{ __('messages.Prodotti da accettare ')}}</span>   
               </li>
               @endif
+              <li class="dropdown-item"> 
+                @auth
+          <li class="nav-item">
+            <a class="nav-link mylinks" href="{{route('create')}}">Aggiungi prodotto</a>
+          </li>
+          @endauth
+              </li>
               <li class="dropdown-item">
                   <form method="POST" action="{{route('logout')}}">
                   @csrf
