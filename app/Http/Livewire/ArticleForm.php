@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Livewire;
-
+use File;
 use App\Models\Genre;
 use App\Models\Article;
 use App\Models\Image;
@@ -81,7 +81,7 @@ class ArticleForm extends Component
 
                dispatch(new ResizeImage($newImage->path,400,300));
                 }
-                // File::deleteDirectory(storage_path('/app/livewire-tmp'));
+                File::deleteDirectory(storage_path('/app/livewire-tmp'));
             }
         $this->reset();
         redirect(route('create'))->with('message','Prodotto aggiunto, in attesa revisione');
