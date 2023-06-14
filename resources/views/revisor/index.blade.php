@@ -11,7 +11,7 @@
                                 <form method="POST" action="{{ route('revisor.old', ['article' => $article_to_check]) }}">
                                     @method('PATCH')
                                     @csrf
-                                    <button class="btn mybtn"> Annulla </button>
+                                    <button class="btn mybtn"> {{__('messages.annulla')}} </button>
                                 </form>
                             </div>
                         @else
@@ -21,7 +21,7 @@
                                         <form method="POST" action="{{ route('revisor.oldArticle') }}">
                                             @method('PATCH')
                                             @csrf
-                                            <button class="btn mybtn"> Annulla </button>
+                                            <button class="btn mybtn"> {{__('messages.annulla')}} </button>
                                         </form>
                                     </div>
                                 </div>
@@ -40,9 +40,9 @@
                     <div class="coldetsxd">
                         <ul class="">
                             <li class="list-group text-light"><h4><span class="titleText">{{$article_to_check->name}}</span></h4></li>
-                            <li class="list-group text-light">Prezzo: €{{ $article_to_check->price }}</li>
-                            <li class="list-group text-light">Categoria: {{ $article_to_check->genre->genre }}</li>
-                            <li class="list-group text-light">Descrizione: {{ $article_to_check->description }}</li>
+                            <li class="list-group text-light">{{__('messages.Prezzo')}}: €{{ $article_to_check->price }}</li>
+                            <li class="list-group text-light">{{__('messages.Categoria')}}: {{ $article_to_check->genre->genre }}</li>
+                            <li class="list-group text-light">{{__('messages.Descrizione')}}: {{ $article_to_check->description }}</li>
                             {{-- <a href="{{ route('home') }}" class="btn mybtn my-3">Torna Indietro</a> --}}
                         </ul>
                     </div>
@@ -74,14 +74,14 @@
                         <form method="POST" action="{{ route('revisor.accept', ['article' => $article_to_check]) }}">
                             @method('PATCH')
                             @csrf
-                            <button class="btn mybtn">Accetta</button>
+                            <button class="btn mybtn">{{__('messages.accetta')}}</button>
                         </form>
                     </div>
                     <div class="col-12 col-md-4 d-flex justify-content-center">
                         <form method="POST" action="{{ route('revisor.refuse', ['article' => $article_to_check]) }}">
                             @method('PATCH')
                             @csrf
-                            <button class="btn mybtn">Rifiuta</button>
+                            <button class="btn mybtn">{{__('messages.rifiuta')}}</button>
                         </form>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
     <div class="container vh-60">
         <div class="row ">
             <div class="col-12 d-flex mt-5 justify-content-center">
-            <a class="btn mybtn" href="{{route('home')}}">Torna alla Home</a>
+            <a class="btn mybtn" href="{{route('home')}}">{{__('messages.Torna alla Home')}}</a>
         </div>
         </div>
     </div>    

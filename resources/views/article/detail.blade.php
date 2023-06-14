@@ -3,7 +3,7 @@
     <div class="container mt-3">
         <div class="row justify-content-between">
             <div class="col-12 col-md-2">
-                <a href="{{route('home')}}" class="btn mybtn my-3">torna indietro</a> 
+                <a href="{{route('home')}}" class="btn mybtn my-3">{{__('messages.Torna indietro')}}</a> 
             </div>
             <div class=" col-12 col-md-4 coldetdx d-flex align-items-center">
                 @if (count($article->images()->get()) <= 1)
@@ -31,13 +31,13 @@
                 <div class="">
                     <ul class="">  
                         <li class="list-group d-flex coldetli">
-                            <h4>Nome: <span class="titleText">{{$article->name}}</span></h4>
+                            <h4>{{__('messages.Nome')}}: <span class="titleText">{{$article->name}}</span></h4>
                         </li>
-                        <li class="list-group coldetli"> <h4><span>Prezzo: € <span class="priceDet">{{$article->price}}</span></span></h4></li>
-                        <li class="list-group coldetli"><h4>Categoria: {{$article->genre->genre}}</h4></li>
+                        <li class="list-group coldetli"> <h4><span>{{__('messages.Prezzo')}}: € <span class="priceDet">{{$article->price}}</span></span></h4></li>
+                        <li class="list-group coldetli"><h4>{{__('messages.Categoria')}}: {{$article->genre->genre}}</h4></li>
                         
                         <!-- Bottone per aprire la modale -->
-                        <button class="coldetlibtn" onclick="openModal()"><h3>Leggi la Descrizione!</h3></button>
+                        <button class="coldetlibtn" onclick="openModal()"><h3>{{__('messages.Leggi la descrizione')}}!</h3></button>
                         
                         <!-- La modale -->
                         <div id="myModal" class="modal">

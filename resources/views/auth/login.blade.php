@@ -1,7 +1,7 @@
-<x-layout docTitle="Login" title="Effettua il Login">
+<x-layout docTitle="Login" title="{{__('messages.Accedi')}}">
     <div class="container">
         <div class="row mysezione11">
-            <h3>Felici di rivederti!</h3>
+            <h3>{{__('messages.felice di vederti')}}</h3>
         </div>
         <div class="row justify-content-center p-3">
             <div class="col-12 col-md-6 collog mysection m-4">
@@ -9,7 +9,7 @@
                     @csrf
                     <div class="mb-2 mt-2">
                         <label for="userMail" class="form-label">
-                            <h5>Email utente</h5>
+                            <h5>{{__('messages.email utente')}}</h5>
                         </label>
                         <input type="email"
                             class="form-control @error('email')is-invalid @enderror myinput text-light"name="email" id="userMail">
@@ -19,7 +19,7 @@
                     </div>
                     <div class="mb-2 mt2">
                         <label for="userPassword" class="form-label">
-                            <h5>Password</h5>
+                            <h5>{{__('pagination.password')}}</h5>
                         </label>
                         <input type="password" name="password"
                             class="form-control @error('password')
@@ -37,9 +37,9 @@
             </div>
             <div class="col-12 d-flex justify-content-center">
                 <div class="mb-3 ">
-                    <h5 class="ms-3">Non sei ancora registrato?</h5>
+                    <h5 class="ms-3">{{__('messages.Non sei ancora registrato?')}}</h5>
                     <a href="{{ route('register') }}" class="nav-link text-center"><button
-                            class="btn mybtn ms-4">Registrati</button></a>
+                            class="btn mybtn ms-4">{{__('messages.Registrati')}}</button></a>
                 </div>
             </div>
         </div>

@@ -9,7 +9,7 @@
         <label for="name" class="form-label">{{__('messages.Nome prodotto')}}</label>
         <input type="text" class="form-control myinput @error('name')
         is-invalid @enderror"wire:model="name"
-            id="name" placeholder="Nome..">
+            id="name">
         @error('name')
             <p class="text-danger">{{ $message }}</p>
         @enderror
@@ -27,7 +27,7 @@
     @if(!empty($images))
         <div class="row">
             <div class="col-12">
-                <p>Previsione :</p>
+                <p>{{__('messages.previsione')}} :</p>
                 <div class="row border border-4 border-info rounded shadow py-4">
                     @foreach ($images as $key =>$image )
                         <div class="col my-3">
@@ -42,7 +42,7 @@
     @endif
 
     <div class="mb-3">
-        <label for="description" class="form-label">Descrizione</label>
+        <label for="description" class="form-label">{{__('messages.Descrizione')}}</label>
         <textarea wire:model="description" id="description"
             class="form-control myinput @error('description') is-invalid @enderror" cols="30" rows="10">
         </textarea>
@@ -53,7 +53,7 @@
 
 
     <div class="mb-3">
-        <label for="price" class="form-label">Prezzo</label>
+        <label for="price" class="form-label">{{__('messages.Prezzo')}}</label>
         <input type="number" step="0.01" min="0" wire:model="price"
             class="form-control myinput @error('price')
         is-invalid
@@ -87,7 +87,7 @@
         </div>
     </div>
     <div class="d-flex justify-content-center mb-3">
-        <button type="submit" class="btn btn-success">Aggiungi</button>
+        <button type="submit" class="btn btn-success">{{__('messages.Aggiungi')}}</button>
     </div>
 
 

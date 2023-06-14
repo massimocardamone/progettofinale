@@ -14,13 +14,13 @@
             </div>
             <div class="cardprice">
                 <h4><span><span class="price">{{$article->price}}</span> &euro;</span></h4>
-                <h5>Aggiunto da: {{$article->user->name}}</h5>
+                <h5>{{__('messages.aggiunto da')}}: {{$article->user->name}}</h5>
             </div>
             <div class="carddescription p-1">
                 <p class="fst-italic">{{$article->description}}</p>
             </div>
             <div class="carddate">
-                <p> creato in data <span class="created">{{$article->created_at->format('d/m/y')}}</span></p>
+                <p> {{__('messages.creato in data')}} <span class="created">{{$article->created_at->format('d/m/y')}}</span></p>
             </div>
         </div>
     </div>

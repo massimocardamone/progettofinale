@@ -3,7 +3,7 @@
   <div class="container mymotto d-flex justify-content-center">
     <div class="row align-items-center">
       <div class="col-12 d-flex  justify-content-center">
-        <h2 class="fst-italic">Prezzi... da mal di pancia!</h2>
+        <h2 class="fst-italic">{{ __('messages.sottotitolo')}}</h2>
       </div>
     </div>
   </div>
@@ -11,7 +11,7 @@
   <div class="container mysezione11">
     <div class="row">
       <div class="col-12">
-        <h3 class="fst-italic">I nostri nuovi prodotti!</h3>
+        <h3 class="fst-italic">{{ __('messages.I nostri prodotti')}}</h3>
       </div>
     </div>
   </div>
