@@ -13,7 +13,7 @@
         <div class="row">
             @foreach ($articles as $single)
             <div class="col-12 col-md-3">
-                <x-card :article="$single"></x-card>
+                <x-card :article="$single" animate="animate__fadeIn"></x-card>
             </div>
             @endforeach 
             <div class="col-12 d-flex justify-content-center mt-5">

@@ -1,4 +1,4 @@
-<x-layout docTitle="Homepage" title="C o l i c a S t o r e">
+<x-layout docTitle="Homepage" title="C o l i c a S t o r e" animate="animate__backInDown">
 
   <x-number-section artNum='{{$artNum}}' userNum='{{$userNum}}'/> 
 
@@ -14,7 +14,7 @@
       
         @foreach ($articles as $article)
         <div class="col-12 col-md-4">     
-          <x-card :article='$article'/>      
+          <x-card :article='$article' animate="animate__fadeIn"/>      
         </div>
         @endforeach
 

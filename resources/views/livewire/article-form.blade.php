@@ -9,7 +9,7 @@
         <label for="name" class="form-label">{{__('messages.Nome prodotto')}}</label>
         <input type="text" class="form-control myinput @error('name')
         is-invalid @enderror"wire:model="name"
-            id="name">
+            id="name" placeholder="Nome..">
         @error('name')
             <p class="text-danger">{{ $message }}</p>
         @enderror
@@ -22,29 +22,30 @@
         @error('temporary_images.*')
             <p class="text-danger">{{ $message }}</p>
         @enderror
-      </div>
-      @if(!empty($images))
-          <div class="row">
+    </div>
+
+    @if(!empty($images))
+        <div class="row">
             <div class="col-12">
-                <p>Photo :</p>
+                <p>Previsione :</p>
                 <div class="row border border-4 border-info rounded shadow py-4">
                     @foreach ($images as $key =>$image )
                         <div class="col my-3">
-                            <div class=" img-flud mx-auto shadow rounded" style= "background-image: url({{$image->temporaryUrl()}}); width:50px;height:50px;">
+                            <div class=" img-preview mx-auto shadow rounded" style= "background-image: url({{$image->temporaryUrl()}}); width:50px;height:50px;">
                             </div>
                             <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
                         </div>
                     @endforeach
                 </div>
             </div>
-          </div>
-      @endif
+        </div>
+    @endif
 
     <div class="mb-3">
-        <label for="description" class="form-label">{{__('messages.Descrizione')}}</label>
+        <label for="description" class="form-label">Descrizione</label>
         <textarea wire:model="description" id="description"
             class="form-control myinput @error('description') is-invalid @enderror" cols="30" rows="10">
-          </textarea>
+        </textarea>
         @error('description')
             <p class="text-danger">{{ $message }}</p>
         @enderror
@@ -52,7 +53,7 @@
 
 
     <div class="mb-3">
-        <label for="price" class="form-label">{{__('messages.Prezzo')}}</label>
+        <label for="price" class="form-label">Prezzo</label>
         <input type="number" step="0.01" min="0" wire:model="price"
             class="form-control myinput @error('price')
         is-invalid
@@ -86,7 +87,7 @@
         </div>
     </div>
     <div class="d-flex justify-content-center mb-3">
-        <button type="submit" class="btn btn-success">{{__('messages.Aggiungi')}}</button>
+        <button type="submit" class="btn btn-success">Aggiungi</button>
     </div>
 
 

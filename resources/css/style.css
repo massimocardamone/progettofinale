@@ -1,10 +1,13 @@
 :root {
     --main: rgb(15, 47, 33);
     --maint: rgba(15, 47, 33, 0.682);
+    --main: rgb(76, 42, 133);
     --sec: rgb(0, 79, 45);
     --sect: rgba(0, 79, 45, 0.646);
+    --secv: rgb(179, 136, 235);
     --acc: rgb(138, 170, 121);
     --acct: rgba(138, 170, 121, 0.644);
+    --accv: rgb(128, 147, 241);
     --light: rgb(238, 255, 247);
     --lightt: rgba(238, 255, 247, 0.503);
     --dark: rgb(20, 27, 24);
@@ -14,6 +17,11 @@
 h1,h5,h4,h3,h2,p {
     font-family: 'Montserrat', sans-serif;
     color: var(--acc);
+}
+
+.violet-text{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accv)
 }
 
 h2{
@@ -59,6 +67,31 @@ body{
     background-image:linear-gradient(to bottom, var(--maint), var(--acct)), url(/public/media/sfondoh.jpg);    
 }
 
+/* STILI ELEMENTI */
+.mylinks{
+    text-decoration-line: none;
+}
+
+.mylinks:hover{
+    text-shadow: 0px 0px 10px var(--light);
+}
+
+.mylinks:visited {
+    color: var(--acc);
+    text-decoration: none;
+  }
+  
+.mylinks:hover {
+    color: var(--acc);
+    text-decoration: none;
+  }
+  
+.mylinks:active {
+    color: var(--light);
+    text-decoration: none;
+  }
+  
+
 /* STILI NAVBAR */
 .navbar-custom{
   position: fixed;
@@ -92,6 +125,8 @@ body{
 .imglogo{
     width: 100%;
   }
+
+
 
 .linkbenvenuto{
     color: var(--acc);
@@ -179,7 +214,9 @@ body{
     border-color: var(--dark);
     box-shadow: 0px 0px 10px var(--acc);
 
-  } 
+  }
+
+
   .mydrop{
     margin-left: -200px;
   }
@@ -198,6 +235,14 @@ body{
   }
 
   .myinput:focus {
+    /* Stili quando il cursore si posiziona sopra il bottone */
+    background-color: var(--lightt);
+    color: var(--dark);
+    border-color: var(--dark);
+    box-shadow: 0px 0px 10px var(--acc);
+
+  }
+  .mybtn:focus {
     /* Stili quando il cursore si posiziona sopra il bottone */
     background-color: var(--lightt);
     color: var(--dark);
@@ -429,4 +474,30 @@ body{
 /* Colore parte utente */
 .show{
     color: var(--acct) !important;
+}
+
+/**IMMAGINE ANTEPRIMA*/
+.img-preview{
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 150px;
+}
+
+.swiper {
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+  }
+.swiper-slide 
+{
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+ .swiper-slide img {
+    display: block;
+    width: 100%;
 }

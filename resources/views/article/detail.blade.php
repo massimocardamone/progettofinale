@@ -6,11 +6,26 @@
                 <a href="{{route('home')}}" class="btn mybtn my-3">torna indietro</a> 
             </div>
             <div class=" col-12 col-md-4 coldetdx d-flex align-items-center">
+                @if (count($article->images()->get()) <= 1)
                 <div class="coldetdxd ">
-                    {{-- @dd($article->images()->first()->getUrl(400,300)) --}}
-                    
-                    <img class="img-fluid imgdet" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : "https://picsum.photos/400/300" }}" alt="immagini">
-                </div>            
+                    <img class="img-fluid imgdet" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : "/media/default.jpg" }}" alt="immagini">
+                </div>     
+                @else
+                <div class="coldetdxd">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            @foreach ($article->images()->get() as $item)
+                            <div class="swiper-slide">
+                                <img src="{{$item->getUrl(400,300)}}" class="d-block"/>
+                            </div>  
+                             @endforeach
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div> 
+                </div>
+                @endif           
             </div>
             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center coldetsx ">
                 <div class="">
@@ -38,23 +53,23 @@
             </div>   
         </div>      
     </div>
-    <div class="container my-3">
+    {{-- <div class="container my-3">
         <div class="row">
             <div class="col-12 col-md-6 coldetsx">
                 <div class="coldetdxd ">
-                    {{-- <img class="img-fluid imgdet" src="{{Storage::url($article->img)}}" alt=""> --}}
+                    
                     <img class="imgdet img-fluid w-100" src="https://picsum.photos/400/300" alt="">
                 </div>            
             </div>
             
             <div class="col-12 col-md-6 coldetdx">
                 <div class="coldetdxd ">
-                    {{-- <img class="img-fluid imgdet" src="{{Storage::url($article->img)}}" alt=""> --}}
+                  
                     <img class="imgdet img-fluid w-100" src="https://picsum.photos/400/300" alt="">
                 </div>            
             </div>
         </div>    
-    </div>               
+    </div>                --}}
 
 </x-layout>
 

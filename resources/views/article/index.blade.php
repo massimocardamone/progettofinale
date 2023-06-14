@@ -11,7 +11,7 @@
         <div class="row">
             @forelse ($articles as $article)
             <div class="col-12 col-sm-8 col-md-3 mx-sm-auto">
-                <x-card :article="$article"/>
+                <x-card :article="$article" animate="animate__fadeIn"/>
             </div>
             @empty
                 <div class="col-12">

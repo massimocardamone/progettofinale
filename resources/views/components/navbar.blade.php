@@ -2,7 +2,7 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="{{route('home')}}">
         <div class="divlogo">
-          <img class="imglogo" src="/media/logocropped.png" alt="">
+          <img class="imglogo" src="/media/logocropped.png" alt="logo">
         </div>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +17,7 @@
           </li>
           @endauth
           <li class="nav-item">
-            <a class="nav-link" href="{{route('article_index')}}">{{ __('messages.Tutti i prodotti')}}</a>
+            <a class="nav-link" href="{{route('article_index')}}">Tutti i prodotti</a>
           </li>
           <li class="nav-item">
             <form class="d-flex align-items-center mysearchbar" role="search" action="{{route('searchArticle')}}" method="GET">
