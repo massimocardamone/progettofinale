@@ -7,8 +7,8 @@
             </div>
             <div class=" col-12 col-md-4 coldetdx d-flex align-items-center">
                 <div class="coldetdxd ">
-                    {{-- <img class="img-fluid imgdet" src="{{Storage::url($article->img)}}" alt=""> --}}
-                    <img class="imgdet img-fluid" src="https://picsum.photos/400/300" alt="">
+                    {{-- @dd($article->images()->first()->path) --}}
+                    <img class="img-fluid imgdet" src="{{!$article->images()->get()->isEmpty() ? Storage::url($article->images()->first()->path) : "https://picsum.photos/400/300" }}" alt="immagini">
                 </div>            
             </div>
             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center coldetsx ">

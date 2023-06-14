@@ -6,13 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User;
 use App\Models\Genre;
+use App\Models\Image;
 use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
     use HasFactory, Searchable;
 protected $fillable = [
-    'name','price','description','img','user_id','genre_id'
+    'name','price','description','user_id','genre_id'
 ];
     // return array;
 
@@ -36,6 +37,12 @@ public function user(){
 public function genre(){
     return $this->belongsTo(Genre::class); 
 }
+//1-n images
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
+
 
 public function setAccepted( $value){
     $this->is_accepted = $value;
