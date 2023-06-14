@@ -20,8 +20,8 @@
     <div class="row bg-danger justify-content-between">
       <div class="col-12 col-md-8 bg-warning d-flex">
         @foreach ($articles as $article)
-        <div class="col-12 col-md-4">     
-          <x-card :article='$article' animate="animate__fadeIn"/>      
+        <div class="col-12 col-md-3">     
+          <x-card :article='$article'/>      
         </div>
         @endforeach        
       </div>

@@ -94,8 +94,7 @@
             <a class="btn mybtn" href="{{route('home')}}">Torna alla Home</a>
         </div>
         </div>
-    </div>
-        
+    </div>    
     @endif
     
 </x-layout>
