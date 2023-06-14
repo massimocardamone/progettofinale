@@ -6,7 +6,7 @@ return [
     'cerca' => 'cerca',		
     'Registrati' => 'Registrati',		
     'Accedi' 	=>	'Accedi',		
-    'Aggiungi un prodotto' => 'Aggiungi un prodotto',		
+    'Aggiungi un prodotto' => 'Aggiungi prodotto',		
     'Benvenuto' => 'Benvenuto',	
     'Zona revisione' =>	'Zona revisore',		
     'Esci' => 'Esci',		
