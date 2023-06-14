@@ -2,7 +2,7 @@
     <div class="card position-relative mycard my-3 mx-2">
         <div class="position-relative imgBox">
             {{-- <img class="cardimg img-fluid" src="{{Storage::url($article->img)}}" alt=""> --}}
-            <img class="cardimg img-fluid" src="https://picsum.photos/400/300" alt="">
+            <img class="cardimg img-fluid" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : "/media/default.jpg" }}" alt="">
             <div class="cardcategory">
                 <!-- qui va il link alla pagina con tutti i prodotti della stessa categoria -->
                 <p class="m-0">{{$article->genre->genre}}</p>     

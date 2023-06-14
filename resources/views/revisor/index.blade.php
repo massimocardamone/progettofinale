@@ -43,7 +43,7 @@
                 <div class=" col-12 col-md-6 coldetdx">
                     <div class="coldetdxd ">
                         {{-- <img class="img-fluid imgdet" src="{{ Storage::url($article_to_check->img) }}" alt=""> --}}
-                        <img class="imgdet img-fluid w-100" src="https://picsum.photos/400/300" alt="">
+                        <img class="imgdet img-fluid w-100" src="{{!$article_to_check->images()->get()->isEmpty() ? $article_to_check->images()->first()->getUrl(400,300) : "/media/default.jpg" }}" alt="">
                     </div>
                 </div>
             </div>
