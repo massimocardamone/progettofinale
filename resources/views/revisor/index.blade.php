@@ -1,5 +1,5 @@
-<x-layout docTitle="home" title="{{ $article_to_check ? 'Articolo da revisionare' : 'non ci sono articoli' }}">
-    <div class="container">
+<x-layout docTitle="home" title="{{ $article_to_check ? 'Prodotto da revisionare' : 'non ci sono prodotti' }}">
+    <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-12">
                 @if (session('messageRev'))
