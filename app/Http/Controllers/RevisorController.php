@@ -48,11 +48,11 @@ class RevisorController extends Controller
 
     //Richiesta per diventare Revisor
 
-    public function becomeRevisor()
+    public function becomeRevisor(Request $request)
     {
-
-        Mail::to('colicaStore@noReply.com')->send(new BecomeRevisorMail(Auth::user()));
-        return redirect()->back()->with('message', 'Richiesta per diventare revisore inoltrata');
+        $description = $request->description;
+        Mail::to('colicaStore@noReply.com')->send(new BecomeRevisorMail(Auth::user(),$description));
+        return redirect('/')->with('message', 'Richiesta per diventare revisore inoltrata');
     }
     public function makeRevisor(User $user)
     {

@@ -15,19 +15,19 @@ class BecomeRevisorMail extends Mailable
     use Queueable, SerializesModels;
 
     public $user;
-    // public $description;
+    public $description;
     /**
      * Create a new message instance.
      */
-    public function __construct(User $user)
-    {
-        $this->user=$user;
-    }
-    // public function __construct(User $user,$_description)
+    // public function __construct(User $user)
     // {
     //     $this->user=$user;
-    //     $this->description =$_description;
     // }
+    public function __construct(User $user,$_description)
+    {
+        $this->user=$user;
+        $this->description =$_description;
+    }
 
     public function build(){
         return $this->from('colicaStore@noReply.com')->view('mail.become-revisor');

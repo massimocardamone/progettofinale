@@ -3,8 +3,8 @@
     <div class="row">
         <div class="col-12">
             <div>
-                <h3 class="marginStart"> Nome: {{$user->name}}</h3>
-                <h3 class="marginStart"> Email: {{$user->email}}</h3>
+                <h3 class="marginStart"> Nome: {{Auth::user()->name}}</h3>
+                <h3 class="marginStart"> Email: {{Auth::user()->email}}</h3>
             </div>
             <div>
                 <form action="{{route('become.revisor')}}" method="POST">
@@ -16,9 +16,6 @@
                     <button type="submit" class="btn btn-success">Inoltra Richiesta</button>
                 </form>
             </div>
-            
-
-            
         </div>
     </div>
 </div>

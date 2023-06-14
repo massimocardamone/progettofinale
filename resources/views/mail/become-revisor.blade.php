@@ -43,7 +43,7 @@
         <h1 class="marginStart marginTop">L'utente ha richiesto di diventare revisore</h1>
         <h3 class="marginStart"> Nome: {{$user->name}}</h3>
         <h3 class="marginStart"> Email: {{$user->email}}</h3>
-        {{-- <h5 class="marginStart">{{$description}}</h5> --}}
+        <h5 class="marginStart">{{$description}}</h5>
     </div>
     <a href="{{route('make.revisor',compact('user'))}}"  class="mybtn">Rendi revisore</a>
 </body>

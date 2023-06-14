@@ -45,7 +45,7 @@
       <div class="col-12 col-md-4 d-flex justify-content-end col-md-12 mysection13 mt-1 mb-3 text-center">
         <p>Colica Store</p>
         <p>Vuoi lavorare con noi?</p>
-        <a href="{{route('become.revisor')}}" class="btn mybtn">clicca qui</a>
+        <a href="{{route('request.revisor')}}" class="btn mybtn">clicca qui</a>
       </div>
     </div>
   </div>
