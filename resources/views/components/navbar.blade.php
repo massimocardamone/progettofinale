@@ -11,11 +11,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           
-          @auth
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('create')}}">{{ __('messages.Aggiungi un prodotto')}}</a>
-          </li>
-          @endauth
+          
           <li class="nav-item">
             <a class="nav-link" href="{{route('article_index')}}">{{ __('messages.Tutti i prodotti')}}</a>
           </li>
@@ -62,7 +58,7 @@
               <li class="dropdown-item"> 
                 @auth
           <li class="nav-item">
-            <a class="nav-link mylinks" href="{{route('create')}}">{{ __('messages.Aggiungi un prodotto')}}</a>
+            <a class="nav-link" href="{{route('create')}}">{{ __('messages.Aggiungi un prodotto')}}</a>
           </li>
           @endauth
               </li>

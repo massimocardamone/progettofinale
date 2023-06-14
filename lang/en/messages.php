@@ -1,17 +1,16 @@
 <?php
 return [
     //navbar
-    'Tutti i prodotti' => 'all products',
-    'cerca un prodotto'    => 'Search for a product',
-    'cerca'    =>    'Search',
-    'cerca un prodotto' => 'search for a product',
-    'Registrati' =>    'Register',
-    'Accedi' => 'Login',
-    'Aggiungi un prodotto' => 'Add  product',
-    'Benvenuto' => 'Welcome',
-    'Zona revisione' => 'Mod zone',
-    'Esci'    => 'Logout',
-    'Prodotti da accettare' => 'products to accept',
+    'Tutti i prodotti' => 'all products',	
+    'cerca un prodotto'	=> 'Search for a product',	
+    'cerca'	=>	'Search',	
+    'Registrati' =>	'Register',	
+    'Accedi' => 'Login',		
+    'Aggiungi un prodotto' => 'Add a product',		
+    'Benvenuto' => 'Welcome',		
+    'Zona revisione' => 'Mod zone',		
+     'Esci'	=> 'Logout',		
+     'Prodotti da accettare' => 'products to accept',
 
     //homepage
     'sottotitolo' => 'Prices..bellyache',

@@ -17,22 +17,26 @@
   </div>
 
   <div class="container mt-1">
-    <div class="row bg-danger justify-content-between">
-      <div class="col-12 col-md-8 bg-warning d-flex">
-        @foreach ($articles as $article)
-        <div class="col-12 col-md-3">
-          <x-card :article='$article'/>
-        </div>
-        @endforeach
+    <div class="row justify-content-between">
+      <div class="col-12 col-md-8 d-flex">
+        <div class="swiper mySwiper2 swiper2">
+          <div class="swiper-wrapper">
+            @foreach ($articles as $article)
+            <div class="swiper-slide d-flex justify-content-center">
+              <x-card :article='$article'/> 
+            </div>
+            @endforeach 
+          </div>
+        </div>        
       </div>
       <div class="col-12 col-md-4 bg-primary d-flex align-items-center">
-        <x-number-section artNum='{{$artNum}}' userNum='{{$userNum}}'/></div>
+        <x-number-section artNum='{{$artNum}}' userNum='{{$userNum}}'/></div>             
     </div>
   </div>
-
-
-
-
+  
+  
+  
+  
   {{--* per inviare la candidatura del relatore --}}
   @auth 
   @if (!Auth::user()->is_revisor)

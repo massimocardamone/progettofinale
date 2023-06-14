@@ -507,11 +507,18 @@ body{
     height: 150px;
 }
 
+
+
 .swiper {
     width: 300px;
     height: 300px;
     padding: 50px;
   }
+
+.swiper2{
+    width: fit-content;
+    height: fit-content;
+}
 .swiper-slide 
 {
     background-position: center;
@@ -524,3 +531,19 @@ body{
     display: block;
     width: 100%;
 }
+
+.mySwiper2 {
+    height: fit-content;
+    padding: 50px;
+  }
+
+  .swiper-wrapper{
+    width: fit-content;
+  }
+
+  .swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;     
+  }

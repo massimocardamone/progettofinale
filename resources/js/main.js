@@ -1,3 +1,25 @@
+import { Autoplay, EffectCards, Navigation, Pagination } from "swiper";
+import Swiper from "swiper";
+Swiper.use([Autoplay, Navigation, Pagination, EffectCards]);
+
+let swiper = new Swiper(".mySwiper", {
+
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  });
+  
+let swiperCard = new Swiper(".mySwiper2", {
+    effect: "cards",
+    grabCursor: true,
+});
 
 // Caricamento Spinner
 let Start = document.querySelector('#Start');
@@ -74,18 +96,6 @@ if (created) {
     });
 }
 
-let swiper = new Swiper(".mySwiper", {
 
-    slidesPerView: 1,
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-  });
-       
+ 
 

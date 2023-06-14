@@ -16,34 +16,34 @@
 
 
 
-    <div id="Start" class="d-flex justify-content-center vh-100 align-items-center">
+    {{-- <div id="Start" class="d-flex justify-content-center vh-100 align-items-center">
         <div class="spinner spinner-border text-g" role="status">
             <span class=" visually-hidden">Loading...</span>
         </div>
-    </div>
+    </div> --}}
     <x-navbar />
     
-    <div id="End" class="d-none">
+    {{-- <div id="End" class="d-none"> --}}
         <x-header :title="$title" animate="{{$animate ?? '' }}" />
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                @if (session('message'))
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    @if (session('message'))
                     <div class="alert alert-success text-center">
                         <h3 class="lead">{{ session('message') }}</h3>
                     </div>
-                @endif
+                    @endif
+                </div>
             </div>
         </div>
-    </div>
     @if (session('access_denied'))
-                    <div class="alert alert-danger text-center">
-                        <h3 class="lead">{{ session('access_denied') }}</h3>
-                    </div>
+        <div class="alert alert-danger text-center">
+            <h3 class="lead">{{ session('access_denied') }}</h3>
+        </div>
     @endif
         {{ $slot }}
-        <x-footer></x-footer>
-    </div>
+        <x-footer/>
+    {{-- </div> --}}
 
 
 
