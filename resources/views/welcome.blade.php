@@ -1,6 +1,6 @@
 <x-layout docTitle="Homepage" title="C o l i c a S t o r e" animate="animate__backInDown">
 
-  <x-number-section artNum='{{$artNum}}' userNum='{{$userNum}}'/> 
+  {{-- <x-number-section artNum='{{$artNum}}' userNum='{{$userNum}}'/>  --}}
 
 <div class="container mysezione11">
   <div class="row">
@@ -9,20 +9,12 @@
     </div>
   </div>
   
-  <div class="container mysezione11">
-    <div class="row">
-      <div class="col-12">
-        <h3 class="fst-italic">I nostri nuovi prodotti!</h3>
-      </div>
-    </div>
-  </div>
-  
   <div class="container mt-1">
     <div class="row bg-danger justify-content-between">
       <div class="col-12 col-md-8 bg-warning d-flex">
         @foreach ($articles as $article)
-        <div class="col-12 col-md-4">     
-          <x-card :article='$article' animate="animate__fadeIn"/>      
+        <div class="col-12 col-md-3">     
+          <x-card :article='$article'/>      
         </div>
         @endforeach        
       </div>
