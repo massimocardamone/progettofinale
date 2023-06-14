@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        $genres = ['Arredamento', 'Videogiochi', 'Abbigliamento', 'Elettronica', 'Giardinaggio', 'Motori', 'Giochi', 'Bambini', 'Sport', 'Libri'];
+        $genres = ['Arredamento', 'Videogiochi', 'Abbigliamento', 'Elettronica', 'Giardinaggio', 'Motori', 'Giochi', 'Musica', 'Sport', 'Libri'];
 
         foreach ($genres as $genre) {
             Genre::create([

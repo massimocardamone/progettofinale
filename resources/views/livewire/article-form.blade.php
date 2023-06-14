@@ -17,7 +17,7 @@
 
     <div class="mb-3">
         <label for="image" class="form-label">Immagine</label>
-        <input wire:model='temporary_images' type="file" class="form-control @error('temporary_images')
+        <input wire:model='temporary_images' type="file" class="form-control myform @error('temporary_images')
         @enderror" multiple id="image" name='images' placeholder="img">
         @error('temporary_images.*')
             <p class="text-danger">{{ $message }}</p>
