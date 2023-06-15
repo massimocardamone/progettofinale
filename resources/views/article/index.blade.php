@@ -7,14 +7,14 @@
 
     </div>
     {{-- LISTA CARD --}}
-    <div class="container mysection min-vh-100">
-        <div class="row >
+    <div class="container mysection">
+        <div class="row">
             @forelse ($articles as $article)
             <div class="col-12 col-sm-8 col-md-3 mx-sm-auto">
                 <x-card :article="$article" animate="animate__fadeIn"/>
             </div>
             @empty
-                <div class="col-12">
+                <div class="col-12 min-vh-100">
                     <h3 class="text-center">{{__('messages.Nessun prodotto')}}</h3>
                 </div>
             @endforelse 
