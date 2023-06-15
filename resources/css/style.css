@@ -553,7 +553,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 18px;     
+    border-radius: 18px;    
 }
 #coloraAcc{
     color: var(--acc) !important;
