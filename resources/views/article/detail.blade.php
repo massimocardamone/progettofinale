@@ -5,9 +5,9 @@
             <div class="col-12 col-md-2">
                 <a href="{{route('home')}}" class="btn mybtn my-3">{{__('messages.Torna indietro')}}</a> 
             </div>
-            <div class=" col-12 col-md-4 coldetdx d-flex align-items-center">
+            <div class=" col-12 col-md-4 coldetdx d-flex align-items-center min-vh-100">
                 @if (count($article->images()->get()) <= 1)
-                <div class="coldetdxd ">
+                <div class="coldetdxd">
                     <img class="img-fluid imgdet" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : "/media/default.jpg" }}" alt="immagini">
                 </div>     
                 @else
