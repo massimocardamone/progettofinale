@@ -39,7 +39,7 @@
         @auth
         <ul class="navbar-nav">  
           
-          <li class="nav-item dropdown mydrop">
+          <li class="nav-item dropdown mydrop me-md-5">
             <a class="nav-link linkbenvenuto dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {{ __('messages.Benvenuto')}} {{Auth::user()->name}}
             </a>
