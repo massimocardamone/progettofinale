@@ -4,7 +4,7 @@
     --mainv: rgb(76, 42, 133);
     --sec: rgb(0, 79, 45);
     --sect: rgba(0, 79, 45, 0.646);
-    --secv: rgb(179, 136, 235);
+    --secv: #b388eb;
     --acc: rgb(138, 170, 121);
     --acct: rgba(138, 170, 121, 0.644);
     --accv: rgb(128, 147, 241);
@@ -553,7 +553,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 18px;     
+    border-radius: 18px;    
 }
 #coloraAcc{
     color: var(--acc) !important;

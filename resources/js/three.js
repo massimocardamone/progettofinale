@@ -47,9 +47,9 @@ const particles = new THREE.Points(particlesGeometry, particlesMaterial)
 scene.add(particles)
 
 // light
-const directionalLight= new THREE.DirectionalLight('#8aaa79',2)
-directionalLight.position.set(1,1,0)
-scene.add(directionalLight)
+// const directionalLight= new THREE.DirectionalLight('#b388eb',2)
+// directionalLight.position.set(1,1,0)
+// scene.add(directionalLight)
 
 
 /**
