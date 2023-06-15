@@ -3,7 +3,7 @@ import { WebGLRenderer } from "three";
 
 
 let value = Math.round(Math.random() * 10)
-console.log(value);
+
 let color
 if (value >= 5) {
      color= '#b388eb'
