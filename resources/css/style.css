@@ -219,11 +219,13 @@ body{
     box-shadow: 0px 0px 10px var(--acc);
 
   }
-
-
-  .mydrop{
+.show{
+    background-color: var(--darkt);
+}
+/* commentato perchè rompeva il layout da mobile */
+/* .mydrop{
     margin-left: -200px;
-  }
+  } */
 
 .myinput {
     background-color: var(--lightt);
