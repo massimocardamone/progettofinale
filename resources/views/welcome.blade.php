@@ -41,8 +41,8 @@
   <div class="container">
     <div class="row justify-content-center align-items-center">
       <div class="col-12 d-flex justify-content-start col-md-12 mysection13 mt-1 mb-3 p-3 align-items-center">        
-        <h2 class="violet-text pe-2">Vuoi lavorare con noi?</h2>
-        <a href="{{route('request.revisor')}}" class="btn mybtn">clicca qui</a>
+        <h2 class="violet-text pe-2">{{__('messages.Vuoi lavorare con noi?')}}?</h2>
+        <a href="{{route('request.revisor')}}" class="btn mybtn">{{__('messages.clicca qui')}}</a>
       </div>
     </div>
   </div>

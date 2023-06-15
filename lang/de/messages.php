@@ -59,18 +59,23 @@ return [
     'accetta' => 'akzeptieren',
     'rifiuta' => 'verweigert',
 
-    //registrati
+    //accedi
     'felice di vederti' => 'Schön, dich zu sehen',
     'email utente' => 'Benutzer Email',
     'Password' => 'Password',
     'Accedi' => 'anmelden',
     'Non sei ancora registrato?' => 'Noch nicht registriert?',
-    'Registrati' => 'anmelden',
+    'Registrati' => 'einschreiben',
 
     //registrati
     'Benvenuto' => 'Willkommen',
     'nome utente' => 'Nutzername',
     'Conferma password' => 'Bestätige das Passwort',
+
+    //lavora con noi
+    'lavora con noi' => 'arbeite mit uns',
+    'Perchè vuoi diventare revisore?' => 'Warum möchten Sie Gutachter werden??',
+    'Inoltra Richiesta' => 'Anfrage einreichen',
 
     //footer 
     "chi siamo" => "Wer wir sind",
