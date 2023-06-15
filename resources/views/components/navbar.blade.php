@@ -23,10 +23,16 @@
             </form>
           </li>
           <li class="nav-item">
-            <x-_locale lang='it' />
-            <x-_locale lang='en' />
-            <x-_locale lang='de' />
-
+            @if (session('locale') == 'it')
+              <x-_locale lang='en' /> 
+              <x-_locale lang='de' />
+            @elseif (session('locale') == 'en')
+              <x-_locale lang='it'/>
+              <x-_locale lang='de' /> 
+            @elseif (session('locale') == 'de')
+              <x-_locale lang='it'/>
+              <x-_locale lang='en' />
+            @endif
 
           </li>
         </ul>

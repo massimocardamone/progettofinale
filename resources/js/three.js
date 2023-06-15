@@ -34,7 +34,7 @@ const objectsDistance = 4
 
 // particles
 // geometry
-const particlesCount = 500
+const particlesCount = 700
 const positions = new Float32Array(particlesCount*3)
 for(let i = 0;i<particlesCount;i++){
     positions[i*3]  =  (Math.random()-0.5)*10            //x
