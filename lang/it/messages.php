@@ -97,7 +97,17 @@ return [
     'Giochi'=>'Giochi',
     'Musica'=>'Musica',
     'Sport'=>'Sport',
-    'Libri'=>'Libri'
+    'Libri'=>'Libri',
+
+    //RISPOSTA
+    'Prodotto aggiunto'=>'Prodotto aggiunto, in attesa revisione',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
 
 
 ];

@@ -94,8 +94,9 @@ return [
     'Giochi'=>'Games',
     'Musica'=>'Musics',
     'Sport'=>'Sport',
-    'Libri'=>'Books'
+    'Libri'=>'Books',
 
 
-
+    //RISPOSTA
+    'Prodotto aggiunto' => 'AGGIUNTO',
 ];

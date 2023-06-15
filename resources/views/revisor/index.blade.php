@@ -1,4 +1,4 @@
-<x-layout docTitle="home" title="{{ $article_to_check ? 'Articolo da revisionare' : 'non ci sono articoli' }}">
+<x-layout docTitle="home" title="{{ $article_to_check ? __('messages.Articolo da revisionare') : __('messages.non ci sono articoli') }}">
     {{-- messaggi di risposta --}}
     <div class="container">
         <div class="row ">

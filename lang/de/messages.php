@@ -96,7 +96,10 @@ return [
     'Giochi'=>'Spiele',
     'Musica'=>'Musik',
     'Sport'=>'Sport',
-    'Libri'=>'Bücher'
+    'Libri'=>'Bücher',
+
+    //RISPOSTA
+    'Prodotto aggiunto' => 'DESH revisione',
 
 
 

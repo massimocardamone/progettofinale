@@ -84,7 +84,7 @@ class ArticleForm extends Component
                 File::deleteDirectory(storage_path('/app/livewire-tmp'));
             }
         $this->reset();
-        redirect(route('create'))->with('message','Prodotto aggiunto, in attesa revisione');
+        redirect(route('create'))->with('message',__('messages.Prodotto aggiunto'));
 
     }
     
