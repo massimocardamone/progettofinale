@@ -34,17 +34,14 @@
     </div>
   </div>
   
-  
-  
-  
+ 
   {{--* per inviare la candidatura del relatore --}}
   @auth 
   @if (!Auth::user()->is_revisor)
   <div class="container">
     <div class="row justify-content-center align-items-center">
-      <div class="col-12 col-md-4 d-flex justify-content-end col-md-12 mysection13 mt-1 mb-3 text-center">
-        <p>Colica Store</p>
-        <p>Vuoi lavorare con noi?</p>
+      <div class="col-12 d-flex justify-content-start col-md-12 mysection13 mt-1 mb-3 p-3 align-items-center">        
+        <h2 class="violet-text pe-2">Vuoi lavorare con noi?</h2>
         <a href="{{route('request.revisor')}}" class="btn mybtn">clicca qui</a>
       </div>
     </div>
