@@ -429,6 +429,7 @@ body{
 
 .myfooter{
     background-color: var(--darkt);
+    margin-top: 250px;
 }
 
 .myfootercolprinc{
