@@ -14,7 +14,7 @@
 <body>
 
 
-
+    <canvas class="webgl"></canvas>
 
     <div id="Start" class="d-flex justify-content-center vh-100 align-items-center">
         <div class="spinner spinner-border text-g" role="status">
@@ -45,13 +45,12 @@
         <x-footer/>
     </div>
 
-
+    
 
 
 
     @livewireScripts
     @vite(['resources/js/app.js'])
-
 </body>
 
 </html>
