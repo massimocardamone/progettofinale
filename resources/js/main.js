@@ -63,8 +63,8 @@ if (link.length>0) {
     }
 })
 
-link[0].innerHTML='<< Precedente';
-link[1].innerHTML='Successivo >>';
+// link[0].innerHTML=`{{(__"messages.Precedente")}}`;
+// link[1].innerHTML='Successivo >>';
 }
 
 let prices = document.querySelectorAll('.price');
