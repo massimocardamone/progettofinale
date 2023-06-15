@@ -28,6 +28,10 @@ setTimeout(() => {
     let swiperCard = new Swiper(".mySwiper2", {
         effect: "cards",
         grabCursor: true,
+        cardsEffect:{
+            slideShadows:true,
+            
+        },
     });
     let swiper = new Swiper(".mySwiper", {
 

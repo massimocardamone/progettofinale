@@ -38,7 +38,7 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="passwordConfirmation" class="form-label">{{__('messages.conferma password')}}</label>
+                        <label for="passwordConfirmation" class="form-label">{{__('messages.Conferma password')}}</label>
                         <input type="password" name="password_confirmation"
                             class="form-control @error('password_confirmation')
         is-invalid @enderror myinput text-light"
