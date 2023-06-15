@@ -79,6 +79,11 @@ return [
     'nel mondo' => 'in the world',
     'sulla terra ferma' => 'on the mainland',
 
+    //lavora con noi
+    'lavora con noi'=> 'work with us',
+    'Perchè vuoi diventare revisore?' => 'Why do you want to become a moderator?',
+    'Inoltra Richiesta' => 'Submit Request',
+
     //Generi
     'Arredamento'=>'Furnitures',
     'Videogiochi'=>'Videogames',

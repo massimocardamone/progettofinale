@@ -72,6 +72,10 @@ return [
   'nome utente'=>'nome utente',
   'Conferma password'=>'Conferma password',
 
+  //lavora con noi
+  'lavora con noi' => 'lavora con noi',
+  'Perchè vuoi diventare revisore?'=>'Perchè vuoi diventare revisore?',
+  'Inoltra Richiesta'=>'Inoltra Richiesta',
 
 
     //footer 

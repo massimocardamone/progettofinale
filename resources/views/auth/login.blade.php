@@ -19,7 +19,7 @@
                     </div>
                     <div class="mb-2 mt2">
                         <label for="userPassword" class="form-label">
-                            <h5>{{__('pagination.password')}}</h5>
+                            <h5>{{__('messages.Password')}}</h5>
                         </label>
                         <input type="password" name="password"
                             class="form-control @error('password')
@@ -31,7 +31,7 @@
                         @enderror
                     </div>
                     <div class="mb-2 mt-2 form-check d-flex justify-content-center">
-                        <button type="submit" class="btn mybtn  px-4">Accedi</button>
+                        <button type="submit" class="btn mybtn  px-4">{{__('messages.Accedi')}}</button>
                     </div>
                 </form>
             </div>
