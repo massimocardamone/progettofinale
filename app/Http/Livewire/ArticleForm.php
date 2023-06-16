@@ -92,6 +92,12 @@ class ArticleForm extends Component
         $this->reset();
         redirect(route('create'))->with('message', __('messages.Prodotto aggiunto'));
     }
+    // RemoveFaces::withChain([
+                        //     new ResizeImage($newImage->path, 400, 300),
+                        //     new GoogleVisionSafeSearch($newImage->id),
+                        //     new GoogleVisionLabelImage($newImage->id),
+                        //     new AddWatermark($newImage->id)
+                        // ])->dispatch($newImage->id);
 
     public function render()
     {
