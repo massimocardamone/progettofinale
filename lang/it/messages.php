@@ -76,6 +76,7 @@ return [
   'lavora con noi' => 'lavora con noi',
   'Perchè vuoi diventare revisore?'=>'Perchè vuoi diventare revisore?',
   'Inoltra Richiesta'=>'Inoltra Richiesta',
+  'revisorMotivation'=>'Scrivi la tua motivazione',
 
 
     //footer 

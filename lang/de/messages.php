@@ -76,6 +76,7 @@ return [
     'lavora con noi' => 'arbeite mit uns',
     'Perchè vuoi diventare revisore?' => 'Warum möchten Sie Gutachter werden??',
     'Inoltra Richiesta' => 'Anfrage einreichen',
+    'revisorMotivation'=>'Schreiben sie ihre motivation',
 
     //footer 
     "chi siamo" => "Wer wir sind",
