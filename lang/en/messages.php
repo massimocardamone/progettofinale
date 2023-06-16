@@ -13,13 +13,13 @@ return [
      'Prodotti da accettare' => 'products to accept',
 
     //homepage
-    'sottotitolo' => 'Prices..bellyache',
+    'sottotitolo' => 'Bellyache prices!',
     'I nostri utenti' =>        'Users',
     'Le Categorie'    =>    '  Categories',
-    'I nostri prodotti'    =>    'our products',
+    'I nostri prodotti'    =>    'New products',
     'Utenti soddisfatti' =>    ' Satisfied customers',
     'I nostri nuovi prodotti!' =>    ' Our new products!		',
-    'Vuoi lavorare con noi?' =>    ' work with us',
+    'Vuoi lavorare con noi?' =>    'Wants to work with us',
     'clicca qui' => 'click her',
 
     //index
@@ -38,7 +38,7 @@ return [
     'creato in data' => 'created on',
 
     //article-form
-    'CREA IL TUO PRODOTTO' => 'CREATE OUR PRODUCT',
+    'CREA IL TUO PRODOTTO' => 'create your product',
     'Nome prodotto' => 'Name product',
     'Imnagine' => 'Image',
     'previsione' => 'forecast',
