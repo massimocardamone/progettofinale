@@ -4,7 +4,7 @@
             <h3>{{__('messages.felice di vederti')}}</h3>
         </div>
         <div class="row justify-content-center p-3">
-            <div class="col-12 col-md-6 collog mysection m-4">
+            <div class="col-12 col-md-6 collog mysection m-3 p-3">
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="mb-2 mt-2">
@@ -37,7 +37,7 @@
             </div>
             <div class="col-12 d-flex justify-content-center">
                 <div class="mb-3 ">
-                    <h5 class="ms-3">{{__('messages.Non sei ancora registrato?')}}</h5>
+                    <h5 class="ms-3 textdarkw">{{__('messages.Non sei ancora registrato?')}}</h5>
                     <a href="{{ route('register') }}" class="nav-link text-center"><button
                             class="btn mybtn ms-4">{{__('messages.Registrati')}}</button></a>
                 </div>

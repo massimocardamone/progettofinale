@@ -20,7 +20,7 @@ return [
     'I nostri prodotti'	=>	'I nostri prodotti'	,	
     'Utenti soddisfatti' =>	'Utenti soddisfatti',		
     'I nostri nuovi prodotti!' =>	'I nostri nuovi prodotti!',	
-    'Vuoi lavorare con noi?' =>	'Vuoi lavorare con noi?',	
+    'Vuoi lavorare con noi?' =>	'Vuoi lavorare con noi',	
     'clicca qui' => 'clicca qui',
 
     //index 
@@ -32,14 +32,14 @@ return [
     'Prezzo' => 'Prezzo',
     'Categoria' => 'Categoria',	
     'Leggi la descrizione' => 'Leggi la descrizione',
-    "Nessun prodotto" =>  "Nessun prodotto",
+    "Nessun prodotto" =>  "Oops...Non ci sono prodotti al momento :(",
 
     //card
     'aggiunto da'=>'aggiunto da',
     'creato in data'=> 'creato in data',
 
     //article-form
-    'CREA IL TUO PRODOTTO' => 'CREA IL TUO PRODOTTO ',				
+    'CREA IL TUO PRODOTTO' => 'crea il tuo prodotto ',				
     'Nome prodotto' => 'Nome prodotto',	
     'Imnagine' => 'Immagine',
   'previsione' => 'previsione',
