@@ -14,6 +14,10 @@ class Image extends Model
     use HasFactory;
 
     protected $fillable = ['path'];
+    //serve per la labels
+    protected $casts = [
+    'labels' =>'array'
+    ];
 
     public function article()
     {

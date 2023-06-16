@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
 use App\Models\Genre;
 use App\Models\Article;
@@ -86,6 +87,7 @@ class ArticleForm extends Component
 
                 dispatch(new ResizeImage($newImage->path, 400, 300));
                 dispatch(new GoogleVisionSafeSearch($newImage->id));
+                dispatch(new GoogleVisionLabelImage ($newImage->id));
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
