@@ -2,11 +2,18 @@ import * as THREE from "three";
 import { WebGLRenderer } from "three";
 
 
+let value = Math.round(Math.random() * 10)
 
-const parameters = {
-    materialColor: '#8aaa79'
+let color
+if (value >= 5) {
+     color= '#b388eb'
+    }else{
+     color = '#8aaa79'   
 }
 
+const parameters = {
+    materialColor: color
+}
 /**
  * Base
  */
@@ -27,7 +34,7 @@ const objectsDistance = 4
 
 // particles
 // geometry
-const particlesCount = 500
+const particlesCount = 700
 const positions = new Float32Array(particlesCount*3)
 for(let i = 0;i<particlesCount;i++){
     positions[i*3]  =  (Math.random()-0.5)*10            //x
@@ -46,10 +53,6 @@ const particlesMaterial = new THREE.PointsMaterial({
 const particles = new THREE.Points(particlesGeometry, particlesMaterial)
 scene.add(particles)
 
-// light
-// const directionalLight= new THREE.DirectionalLight('#b388eb',2)
-// directionalLight.position.set(1,1,0)
-// scene.add(directionalLight)
 
 
 /**

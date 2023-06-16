@@ -83,6 +83,7 @@ return [
     'lavora con noi'=> 'work with us',
     'Perchè vuoi diventare revisore?' => 'Why do you want to become a moderator?',
     'Inoltra Richiesta' => 'Submit Request',
+    'revisorMotivation'=>'Write down your motivation',
 
     //Generi
     'Arredamento'=>'Furnitures',
@@ -94,8 +95,9 @@ return [
     'Giochi'=>'Games',
     'Musica'=>'Musics',
     'Sport'=>'Sport',
-    'Libri'=>'Books'
+    'Libri'=>'Books',
 
 
-
+    //RISPOSTA
+    'Prodotto aggiunto' => 'AGGIUNTO',
 ];

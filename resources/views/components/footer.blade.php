@@ -26,6 +26,7 @@
                         <li>Apple</li>
                         <li>Nike</li>
                         <li>Aulab</li>
+                        <li>Samsung</li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-3 myfootercol d-flex justify-content-center align-items-center">

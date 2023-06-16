@@ -1,4 +1,4 @@
-<x-layout docTitle="detail" title="{{$genre->genre}}">
+<x-layout docTitle="detail" title='{{__("messages.".$genre->genre."")}}'>
     
     <div class="container mysection">
         

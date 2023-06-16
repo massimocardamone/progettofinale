@@ -12,9 +12,7 @@
                     <label for="description" class="form-label">
                         <h4 class="violet-text">{{__('messages.Perchè vuoi diventare revisore?')}}</h4>
                     </label>
-                    <textarea name="description" id="description"
-                    class="form-control myinput" cols="30" rows="10">
-                    </textarea>
+                    <textarea name="description" id="description" class="form-control myinput" cols="30" rows="10" placeholder="{{__('messages.revisorMotivation')}}"></textarea>
                     <button type="submit" class="btn mybtn mt-2">{{__('messages.Inoltra Richiesta')}}</button>
                 </form>
             </div>

@@ -219,11 +219,13 @@ body{
     box-shadow: 0px 0px 10px var(--acc);
 
   }
-
-
-  .mydrop{
+.show{
+    background-color: var(--darkt);
+}
+/* commentato perchè rompeva il layout da mobile */
+/* .mydrop{
     margin-left: -200px;
-  }
+  } */
 
 .myinput {
     background-color: var(--lightt);
@@ -427,6 +429,7 @@ body{
 
 .myfooter{
     background-color: var(--darkt);
+    margin-top: 250px;
 }
 
 .myfootercolprinc{
@@ -569,3 +572,16 @@ body{
     width: 100%;
     z-index: -1;
 }
+    /* pallino form viola */
+.form-check-input:checked{
+    background-color: var(--secv);
+    border-color: var(--secv);
+
+    /* Se vuoi il pallino tutto viola, se no cancellalo */
+    /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%b388eb'/%3e%3c/svg%3e"); */
+}
+/* Per togliere il cerchio blu */
+.form-check-input:focus{
+    box-shadow:none;
+}
+
