@@ -35,6 +35,12 @@ p,label{
     color: var(--light);
 }
 
+.textdarkw{
+    text-shadow: 0px 0px 10px var(--mainv);
+}
+.textlightw{
+    text-shadow: 0px 0px 10px var(--secv);
+}
 
 a:link {
     color: var(--acc);
@@ -432,7 +438,7 @@ body{
 
 .myfooter{
     background-color: var(--darkt);
-    margin-top: 250px;
+    margin-top: 50px;
 }
 
 .myfootercolprinc{
