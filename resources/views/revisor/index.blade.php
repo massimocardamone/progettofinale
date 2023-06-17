@@ -56,7 +56,7 @@
                 </div>
 
                 <div class=" col-12 col-md-6 coldetdx">
-                    @if (count($article_to_check->images()->get()) <= 1)
+                    @if (count($article_to_check->images()->get()) == 1)
                         <div class="coldetdxd ">
                             <div class="card">
                                 <img src="{{!$article_to_check->images()->get()->isEmpty()? $article_to_check->images()->first()->getUrl(400, 300): '/media/default.jpg' }}" class="d-block" />
@@ -84,7 +84,7 @@
                                 </div>
                             </div>
                         </div>
-                    @else
+                    @elseif(count($article_to_check->images()->get()) > 1)
                         <div class="swiper mySwiper hContent">
                             <div class="swiper-wrapper">
                                 @foreach ($article_to_check->images()->get() as $item)
@@ -120,6 +120,12 @@
                             <div class="swiper-pagination mt-2"></div>
                             <div class="swiper-button-next" id="coloraAcc"></div>
                             <div class="swiper-button-prev" id="coloraAcc"></div>
+                        </div>
+                        @elseif(count($article_to_check->images()->get()) == 0)
+                        <div class="coldetdxd ">
+                            <div class="card">
+                            <img src="{{!$article_to_check->images()->get()->isEmpty()? $article_to_check->images()->first()->getUrl(400, 300): '/media/default.jpg' }}" class="d-block" />
+                            </div>
                         </div>
                     @endif
                 </div>
