@@ -57,10 +57,10 @@ class RemoveFaces implements ShouldQueue
             $image = SpatieImage::load($srcPath);
 
             $image->watermark(base_path('resources/img/zorro.png'))
-            ->watermarkPosition('bottom-center')
+            ->watermarkPosition('bottom')
             ->watermarkPadding($bounds[0][0],$bounds[0][1])
-            ->watermarkWidth($w *(150/100), Manipulations::UNIT_PIXELS)
-            ->watermarkHeight($h *(135/100),Manipulations::UNIT_PIXELS)
+            ->watermarkWidth($w *(160/100), Manipulations::UNIT_PIXELS)
+            ->watermarkHeight($h *(125/100),Manipulations::UNIT_PIXELS)
             ->watermarkFit(Manipulations::FIT_STRETCH);
         
             $image->save($srcPath);
