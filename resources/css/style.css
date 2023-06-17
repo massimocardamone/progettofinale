@@ -236,6 +236,11 @@ body{
     margin-left: -200px;
   } */
 
+/**effetto hover dropdown*/
+.dropdown-item:hover{
+    background-color: var(--sec);
+        cursor: pointer;
+}
 .myinput {
     background-color: var(--lightt);
 }
