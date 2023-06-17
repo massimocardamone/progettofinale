@@ -5,10 +5,10 @@
                 <div class="col-12 col-md-3 myfootercol">
                     <ul>
                         <h2>{{__('messages.chi siamo')}}</h2>
-                        <li><a href="https://www.linkedin.com/in/massimo-cardamone-webdev/">Cardamone Massimo</a></li>
-                        <li><a href="https://www.linkedin.com/in/stefanocossu-webdev/">Cossu Stefano</a></li>
-                        <li><a href="https://www.linkedin.com/in/davide-ieria-dev/">Ieria Davide</a></li>
-                        <li><a href="https://www.linkedin.com/in/walterladislaowebdev/">Ladislao Walter</a></li>
+                        <li><a href="https://www.linkedin.com/in/massimo-cardamone-webdev/" target="_blank">Cardamone Massimo</a></li>
+                        <li><a href="https://www.linkedin.com/in/stefanocossu-webdev/" target="_blank">Cossu Stefano</a></li>
+                        <li><a href="https://www.linkedin.com/in/davide-ieria-dev/" target="_blank">Ieria Davide</a></li>
+                        <li><a href="https://www.linkedin.com/in/walterladislaowebdev/" target="_blank">Ladislao Walter</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-3 myfootercol">
