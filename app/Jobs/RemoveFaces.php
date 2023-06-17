@@ -42,9 +42,9 @@ class RemoveFaces implements ShouldQueue
         putenv('GOOGLE_APPLICATION_CREDENTIALS='. base_path('google_credential.json'));
 
         $imageAnnotator = new ImageAnnotatorClient();
+
         $response = $imageAnnotator->faceDetection($image);
         $faces = $response->getFaceAnnotations();
-
         foreach ($faces as $face) {
             $vertices = $face->getBoundingPoly()->getVertices();
             $bounds = [];
