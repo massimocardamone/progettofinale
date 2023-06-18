@@ -59,6 +59,15 @@ return [
     'accetta' => 'akzeptieren',
     'rifiuta' => 'verweigert',
 
+    //GoogleRevisor
+    'Revisione immagini' => 'Bildbesprechung',
+    'ettichette'=> 'Etiketten',
+    'Adulti' => 'Erwachsene',
+    'Satira' => 'Satire',
+    'Medicina' => 'Medizin',
+    'Violenza' => 'Gewalt',
+    'Razzismo' => 'Rassismus',
+
     //accedi
     'felice di vederti' => 'Schön, dich zu sehen',
     'email utente' => 'Benutzer Email',
@@ -71,6 +80,7 @@ return [
     'Benvenuto' => 'Willkommen',
     'nome utente' => 'Nutzername',
     'Conferma password' => 'Bestätige das Passwort',
+    'lunghezza password' => 'Das Passwort muss 8 Zeichen lang sein',
 
     //lavora con noi
     'lavora con noi' => 'arbeite mit uns',

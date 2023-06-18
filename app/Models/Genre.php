@@ -10,7 +10,7 @@ class Genre extends Model
 {
     use HasFactory;
 
-    protected $fillable=['genre'];
+    protected $fillable=['genre','eng','de'];
 
     public function articles(){
         return $this->hasMany(Article::class); 

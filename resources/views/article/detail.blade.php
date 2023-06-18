@@ -39,6 +39,70 @@
     </style>
 
     <div class="container mt-3">
+    {{-- CONTAINER BOTTONE BACK E CATEGORIA--}}
+    <div class="container my-4">
+        <div class="row">
+            {{-- bottone back --}}
+            <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
+                <a href="{{route('home')}}" class="btn mybtn my-3">{{__('messages.Torna indietro')}}</a> 
+            </div>
+            {{-- categoria --}}
+            <div class="col-12 col-md-9 mysection d-flex justify-content-start align-items-center p-3 mt-3">
+                <h3 class="violet-text textlightw">{{__('messages.Categoria')}}: {{__("messages.".$article->genre->genre."")}}</h3>
+            </div>
+        </div>
+    </div>
+    {{-- CONTAINER FOTO E DESCRIZIONE --}}
+    <div class="container ">
+        <div class="row ">
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                @if (count($article->images()->get()) <= 1)
+                <div class="coldetdxd">
+                    <img class="img-fluid imgdet" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : "/media/default.jpg" }}" alt="immagini">
+                </div>     
+                @else
+                <div class="coldetdxd">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            @foreach ($article->images()->get() as $item)
+                            <div class="swiper-slide">
+                                <img src="{{$item->getUrl(400,300)}}" class="d-block"/>
+                            </div>  
+                             @endforeach
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next" id="coloraAcc"></div>
+                        <div class="swiper-button-prev" id="coloraAcc"></div>
+                    </div> 
+                </div>
+                @endif 
+            </div>
+            <div class="col-12 col-md-8 d-flex align-items-center justify-content-center">
+                <div class="row">
+                    <div class="col-12 mysection p-3 my-2">
+                        <h4>{{__('messages.Nome')}}: <span class="titleText">{{$article->name}}</span></h4>
+                    </div>
+                    <div class="col-12 mysection p-3 my-2">
+                        <h4><span>{{__('messages.Prezzo')}}: € <span class="priceDet">{{$article->price}}</span></span></h4>
+                    </div>
+                    <button class="coldetlibtn" onclick="openModal()"><h3>{{__('messages.Leggi la descrizione')}}!</h3></button>
+                        
+                        <!-- La modale -->
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal()">&times;</span>
+                                <h2>{{$article->name}}</h2>
+                                <p>{{$article->description}}</p>
+                            </div>
+                        </div>
+                    
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- <div class="container mt-3 bg-success">
         <div class="row justify-content-between">
             <div class="col-12 col-md-2">
                 <a href="{{route('home')}}" class="btn mybtn my-3">{{__('messages.Torna indietro')}}</a> 
@@ -104,7 +168,24 @@
                 </div>
             </div>   
         </div>      
-    </div>
+    </div> --}}
+    {{-- <div class="container my-3">
+        <div class="row">
+            <div class="col-12 col-md-6 coldetsx">
+                <div class="coldetdxd ">
+                    
+                    <img class="imgdet img-fluid w-100" src="https://picsum.photos/400/300" alt="">
+                </div>            
+            </div>
+            
+            <div class="col-12 col-md-6 coldetdx">
+                <div class="coldetdxd ">
+                  
+                    <img class="imgdet img-fluid w-100" src="https://picsum.photos/400/300" alt="">
+                </div>            
+            </div>
+        </div>    
+    </div>                --}}
 
 </x-layout>
 

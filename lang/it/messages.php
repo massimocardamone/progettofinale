@@ -59,6 +59,16 @@ return [
     'accetta'=>'accetta',
     'rifiuta'=>'rifiuta',
 
+  //GoogleRevisor
+  'Revisione immagini'=> 'Revisione immagini',
+  'ettichette'=>'etichette',
+  'Adulti'=>'Adulti',
+  'Satira'=>'Satira',
+  'Medicina'=>'Medicina',
+  'Violenza'=>'Violenza',
+  'Razzismo'=>'Razzismo',
+  
+
   //accedi
   'felice di vederti' => 'felice di vederti',
   'email utente' => 'email utente',
@@ -71,6 +81,7 @@ return [
   'Benvenuto'=>'Benvenuto',
   'nome utente'=>'nome utente',
   'Conferma password'=>'Conferma password',
+  'lunghezza password'=>'la password deve essere di 8 caratteri',
 
   //lavora con noi
   'lavora con noi' => 'lavora con noi',
@@ -99,16 +110,4 @@ return [
     'Musica'=>'Musica',
     'Sport'=>'Sport',
     'Libri'=>'Libri',
-
-    //RISPOSTA
-    'Prodotto aggiunto'=>'Prodotto aggiunto, in attesa revisione',
-    ''=>'',
-    ''=>'',
-    ''=>'',
-    ''=>'',
-    ''=>'',
-    ''=>'',
-    ''=>'',
-
-
 ];

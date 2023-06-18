@@ -57,6 +57,15 @@ return [
     'accetta' => 'accept',
     'rifiuta' => 'refuses',
 
+    //GoogleRevisor
+    'Revisione immagini' => 'image reviewed',
+    'ettichette' => 'Labels',
+    'Adulti' => 'Adult',
+    'Satira' => 'spoof',
+    'Medicina' => 'medical',
+    'Violenza' => 'Violence',
+    'Razzismo' => 'Racy',
+
     //accedi
     'felice di vederti'=> 'nice to see you', 
     'email utente'=> 'user email',
@@ -69,6 +78,7 @@ return [
     'Benvenuto' => 'welcome',
     'nome utente' => 'username',
     'Conferma password' => 'Confirm password',
+    'lunghezza password' => 'the password must be 8 characters long',
 
     //footer 
     "chi siamo" => "Who we are",

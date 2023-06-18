@@ -65,7 +65,7 @@ return [
         'numeric' => 'The :attribute field must be greater than or equal to :value.',
         'string' => 'The :attribute field must be greater than or equal to :value characters.',
     ],
-    'image' => 'The :attribute field must be an image.',
+    'image' => 'Die Datei muss ein Bild sein.',
     'in' => 'The selected :attribute is invalid.',
     'in_array' => 'The :attribute field must exist in :other.',
     'integer' => 'The :attribute field must be an integer.',
@@ -163,8 +163,37 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'name' => [
+            'required' => 'Name ist erforderlich',
+        ],
+        'description' => [
+            'required' => 'die Beschreibung ist erforderlich',
+        ],
+        'price' => [
+            'required' => 'der Preis  ist erforderlich',
+            'min' => 'Der Preis darf nicht kleiner als 0 sein',
+        ],
+        'images' => [
+            'required' => 'ein Bild ist erforderlich',
+            'max' => 'Das Bild darf nicht größer als 2 MB sein',
+
+        ],
+        'temporary_images' => [
+            'required' => 'ein Bild ist erforderlich',
+            'max' => 'Das Bild darf nicht größer als 2 MB sein',
+        ],
+        'genre_id' => [
+            'required' => 'eine Kategorie ist erforderlich',
+        ],
+        'password' => [
+            'required' => 'Das Passwort ist obligatorisch',
+            'password' => 'falsches Passwort',
+            'confirmed' => 'Passwörter müssen gleich sein'
+        ],
+        'email' => [
+            'required' => 'Die E-Mail-Adresse ist unbedingt erforderlich',
+            'email' => 'Die E-Mail muss gültig sein',
+            'unique' => 'die E-Mail ist schon da'
         ],
     ],
 
