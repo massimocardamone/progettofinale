@@ -33,7 +33,7 @@
                         <div class="col my-3">
                             <div class=" img-preview mx-auto shadow rounded" style= "background-image: url({{$image->temporaryUrl()}});">
                             </div>
-                            <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})"></button>
+                            <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})"><i class="fa-solid fa-trash-can"></i></button>
                         </div>
                     @endforeach
                 </div>
