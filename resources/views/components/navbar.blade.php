@@ -58,12 +58,11 @@
                       {{App\Models\Article::toBeRevisionedCount()}}
                     </span>          
                   </a>           
-                  <span class="visually-hidden">{{ __('messages.Prodotti da accettare ')}}</span>   
+                  {{-- <span class="visually-hidden">{{ __('messages.Prodotti da accettare ')}}</span>    --}}
               </li>
               @endif
-              <li class="dropdown-item"> 
                 @auth
-          <li class="nav-item">
+          <li class="dropdown-item">
             <a class="nav-link" href="{{route('create')}}">{{ __('messages.Aggiungi un prodotto')}}</a>
           </li>
           @endauth
@@ -71,7 +70,7 @@
               <li class="dropdown-item">
                   <form method="POST" action="{{route('logout')}}">
                   @csrf
-                  <button class="dropdown-item colorAcc">{{ __('messages.Esci')}}</button>
+                  <button class="dropdown-item nav-link colorAcc">{{ __('messages.Esci')}}</button>
                 </form>
               </li>
             </ul>  

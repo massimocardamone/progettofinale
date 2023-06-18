@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Jobs;
-
-use App\Models\Image;
-use Google\Cloud\Vision\V1\Client\ImageAnnotatorClient;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use App\Models\Image;
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
+// use Google\Cloud\Vision\V1\Client\ImageAnnotatorClient;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
@@ -21,41 +21,42 @@ class GoogleVisionSafeSearch implements ShouldQueue
      */
     public function __construct($article_image_id)
     {
-        $this->$article_image_id = $article_image_id;
+        $this->article_image_id = $article_image_id;
     }
 
     /**
      * Execute the job.
      */
-    public function handle(): void
+    public function handle()
     {
         $i = Image::find($this->article_image_id);
 
-        if(!$i){
+        if (!$i) {
             return;
         }
 
-        $image = file_get_contents(storage_path('/app/public/'. $i->path));
+        $image = file_get_contents(storage_path('app/public/'. $i->path));
 
-        putenv('GOOGLE_APPLICATION_CREDENTIALS='. base_path('google_credential.json'));
+        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
 
         $imageAnnotator = new ImageAnnotatorClient();
+
         $response = $imageAnnotator->safeSearchDetection($image);
         $imageAnnotator->close();
 
-        $safe = $response->GetSafeSearchAnnotation();
+        $safe = $response->getSafeSearchAnnotation();
         $adult = $safe->getAdult();
         $medical = $safe->getMedical();
         $spoof = $safe->getSpoof();
         $violence = $safe->getViolence();
         $racy = $safe->getRacy();
-        
-        echo json_encode([$adult, $medical]);
-         
-         $likelihoodName = [
+
+        // echo json_encode([$adult, $medical]);
+
+        $likelihoodName = [
             'text-secondary fas fa-circle', 'text-secondary fas fa-circle', 'text-success fas fa-circle', 'text-warring fas fa-circle',
             'text-warring fas fa-circle', 'text-danger fas fa-circle',
-         ];
+        ];
 
         $i->adult = $likelihoodName[$adult];
         $i->medical = $likelihoodName[$medical];

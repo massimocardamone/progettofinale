@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\BecomeRevisorMail;
 use App\Models\Article;
+use App\Models\Image;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
@@ -16,7 +17,8 @@ class RevisorController extends Controller
     public function index()
     {
         $article_to_check = Article::where('is_accepted', null)->first();
-        return view('revisor.index', compact('article_to_check'));
+        $image = Image::all();
+        return view('revisor.index', compact('article_to_check', 'image'));
     }
     // pusanti di accettazione articolo
     public function acceptArticle(Article $article)

@@ -236,6 +236,11 @@ body{
     margin-left: -200px;
   } */
 
+/**effetto hover dropdown*/
+.dropdown-item:hover{
+    background-color: var(--sec);
+        cursor: pointer;
+}
 .myinput {
     background-color: var(--lightt);
 }
@@ -504,9 +509,7 @@ body{
     transform: rotateZ(30deg);
     text-shadow: 3px 3px 0px var(--sec);
 }
-.vh-60{
-    height: 58vh;
-}
+
 
 .colorAcc{
     color: var(--acc);
@@ -593,4 +596,21 @@ body{
 .form-check-input:focus{
     box-shadow:none;
 }
-
+.hContent{
+    height: fit-content;
+    min-height: 500px;
+    width: 50vh;
+}
+.wMe{
+    display: inline-block;
+    width: 80px;
+}
+.borderL{
+    border-left: 2px solid var(--acc);
+}
+.bgMain{
+    background-color: var(--dark);
+}
+.vh-60{
+    height: 58vh;
+}
