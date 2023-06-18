@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User;
 use App\Models\Genre;
 use App\Models\Image;
 use Laravel\Scout\Searchable;
+use App\Models\ArticleScore;
 
 class Article extends Model
 {
@@ -36,6 +37,9 @@ public function user(){
 }
 public function genre(){
     return $this->belongsTo(Genre::class); 
+}
+public function articleScores(){
+    return $this->hasMany(ArticleScore::class); 
 }
 //1-n images
     public function images()

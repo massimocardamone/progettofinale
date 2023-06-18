@@ -39,6 +39,20 @@
                         <!-- Bottone per aprire la modale -->
                         <button class="coldetlibtn" onclick="openModal()"><h3>{{__('messages.Leggi la descrizione')}}!</h3></button>
                         
+                        @auth
+                        @if(count($article_score->where('article_id',$article->id)->where('user_id',Auth::user()->id))==0)
+                            @livewire('get-vote',['article_id'=>$article->id])
+                        @else
+                            
+                        @endif
+                        @else
+                        
+                        @endauth
+                        
+                        
+                        
+                        
+                        
                         <!-- La modale -->
                         <div id="myModal" class="modal">
                             <div class="modal-content">

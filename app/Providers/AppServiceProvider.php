@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\ArticleScore;
 use App\Models\Genre;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Schema;
@@ -26,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
     {
         if (Schema::hasTable('genres')) {
             View::share('genres',Genre::all());
+            View::share('article_score',ArticleScore::all());
         }
         Paginator::useBootstrap();
     }
