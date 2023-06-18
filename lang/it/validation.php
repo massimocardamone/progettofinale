@@ -1,5 +1,7 @@
 <?php
 
+use Symfony\Contracts\Service\Attribute\Required;
+
 return [
 
     /*
@@ -65,7 +67,7 @@ return [
         'numeric' => 'The :attribute field must be greater than or equal to :value.',
         'string' => 'The :attribute field must be greater than or equal to :value characters.',
     ],
-    'image' => 'The :attribute field must be an image.',
+    'image' => 'deve essere un immagine.',
     'in' => 'The selected :attribute is invalid.',
     'in_array' => 'The :attribute field must exist in :other.',
     'integer' => 'The :attribute field must be an integer.',
@@ -163,9 +165,39 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'name' => [
+            'required' => 'il nome è richiesto',
         ],
+        'description' => [
+            'required' => 'la descrizione è richiesta',
+        ],
+        'price' => [
+            'required' => 'il prezzo  è richiesto',
+            'min' => 'il prezzo non può essere minore di 0',
+        ],
+        'images' => [
+            'required' => 'è richiesto un immagine',
+            'max' => 'l\'immagine non può essere maggiore di 2MB',
+
+        ],
+        'temporary_images' => [
+            'required' => 'è richiesto un immagine',
+            'max' => 'l\'immagine non può essere maggiore di 2MB',
+        ],
+        'genre_id' => [
+            'required' => 'è richiesto una categoria',
+        ],
+        'password' =>[
+            'required'=>'la password è obbligatoria',
+            'password'=>'password errata',
+            'confirmed'=>'le password devono essere uguali'
+        ],
+        'email' =>[
+            'required'=>'l\'email è obbligatoria',
+            'email'=>'l\'email deve essere valida',
+            'unique'=>'L\'email è già presente'
+        ],
+
     ],
 
     /*

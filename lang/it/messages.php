@@ -81,6 +81,7 @@ return [
   'Benvenuto'=>'Benvenuto',
   'nome utente'=>'nome utente',
   'Conferma password'=>'Conferma password',
+  'lunghezza password'=>'la password deve essere di 8 caratteri',
 
   //lavora con noi
   'lavora con noi' => 'lavora con noi',
@@ -109,16 +110,4 @@ return [
     'Musica'=>'Musica',
     'Sport'=>'Sport',
     'Libri'=>'Libri',
-
-    //RISPOSTA
-    'Prodotto aggiunto'=>'Prodotto aggiunto, in attesa revisione',
-    ''=>'',
-    ''=>'',
-    ''=>'',
-    ''=>'',
-    ''=>'',
-    ''=>'',
-    ''=>'',
-
-
 ];

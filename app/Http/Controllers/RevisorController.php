@@ -24,7 +24,7 @@ class RevisorController extends Controller
     public function acceptArticle(Article $article)
     {
         $article->setAccepted(true);
-        return redirect()->back()->with('messageRev', "Prodotto accettato");
+        return redirect()->back()->with('messageRev', __('alert.Prodotto accettato'));
     }
     // pusanti di rifiuto articolo
     public function rifuteArticle(Article $article)

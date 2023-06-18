@@ -14,15 +14,25 @@ return new class extends Migration
     {
         Schema::create('genres', function (Blueprint $table) {
             $table->id();
-            $table->string('genre');
+            $table->string('genre')->nullable();
+            $table->string('eng')->nullable();
+            $table->string('de')->nullable();
             $table->timestamps();
         });
 
         $genres = ['Arredamento', 'Videogiochi', 'Abbigliamento', 'Elettronica', 'Giardinaggio', 'Motori', 'Giochi', 'Musica', 'Sport', 'Libri'];
+        $engs = ['Furnitures', 'Videogames', 'Clothing', 'Electronics', 'Gardening', 'Motors', 'Games', 'Musics', 'Sport', 'Books'];
+        $des = ['Möbel', 'Videospiele', 'Kleidung', 'Elektronik', 'Gartenarbeit', 'Motoren', 'Spiele', 'Musik', 'Sport', 'Bücher'];
 
-        foreach ($genres as $genre) {
+
+        for ($i = 0; $i < count($genres); $i++) {
+            $genre = $genres[$i];
+            $eng = $engs[$i];
+            $de = $des[$i];
             Genre::create([
-                'genre' => $genre
+                'genre' => $genre,
+                'eng' => $eng,
+                'de' => $de,
             ]);
         }
     }
