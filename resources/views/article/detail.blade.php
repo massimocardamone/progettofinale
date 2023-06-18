@@ -1,13 +1,13 @@
 <x-layout docTitle="detail" :title="$article->name">
     {{-- CONTAINER BOTTONE BACK E CATEGORIA--}}
-    <div class="container">
+    <div class="container my-4">
         <div class="row">
             {{-- bottone back --}}
             <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
                 <a href="{{route('home')}}" class="btn mybtn my-3">{{__('messages.Torna indietro')}}</a> 
             </div>
             {{-- categoria --}}
-            <div class="col-12 col-md-9 mysection d-flex justify-content-start align-items-center p-3">
+            <div class="col-12 col-md-9 mysection d-flex justify-content-start align-items-center p-3 mt-3">
                 <h3 class="violet-text textlightw">{{__('messages.Categoria')}}: {{__("messages.".$article->genre->genre."")}}</h3>
             </div>
         </div>

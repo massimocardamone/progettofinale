@@ -1,6 +1,6 @@
 <x-layout docTitle="detail" title='{{__("messages.".$genre->genre."")}}'>
     
-    <div class="container mysection">
+    <div class="container mysection mt-3">
         
         {{-- LISTA CATEGORIE --}}
 
