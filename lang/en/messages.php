@@ -57,6 +57,15 @@ return [
     'accetta' => 'accept',
     'rifiuta' => 'refuses',
 
+    //GoogleRevisor
+    'Revisione immagini' => 'image reviewed',
+    'ettichette' => 'Labels',
+    'Adulti' => 'Adult',
+    'Satira' => 'spoof',
+    'Medicina' => 'medical',
+    'Violenza' => 'Violence',
+    'Razzismo' => 'Racy',
+
     //accedi
     'felice di vederti'=> 'nice to see you', 
     'email utente'=> 'user email',

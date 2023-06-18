@@ -59,6 +59,15 @@ return [
     'accetta' => 'akzeptieren',
     'rifiuta' => 'verweigert',
 
+    //GoogleRevisor
+    'Revisione immagini' => 'Bildbesprechung',
+    'ettichette'=> 'Etiketten',
+    'Adulti' => 'Erwachsene',
+    'Satira' => 'Satire',
+    'Medicina' => 'Medizin',
+    'Violenza' => 'Gewalt',
+    'Razzismo' => 'Rassismus',
+
     //accedi
     'felice di vederti' => 'Schön, dich zu sehen',
     'email utente' => 'Benutzer Email',

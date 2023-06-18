@@ -63,17 +63,17 @@
                                 <div class="card-body bgMain">
                                     <div class="d-flex align-items-center">
                                         <div class="pe-3"> 
-                                            <h5>Revisione immagini</h5>
+                                            <h5>{{__('messages.Revisione immagini')}}</h5>
                                             <ul>
-                                                <li class="colorAcc"><span class="me-2 wMe colorAcc">Adulti:</span><span class="{{ $article_to_check->images()->first()->adult}}"></span></li>
-                                                <li class="colorAcc"><span class="me-2 wMe colorAcc">Satira:</span><span class="{{ $article_to_check->images()->first()->spoof}}"></span></li>
-                                                <li class="colorAcc"><span class="me-2 wMe colorAcc">Medicina:</span><span class="{{ $article_to_check->images()->first()->medical}}"></span></li>
-                                                <li class="colorAcc"><span class="me-2 wMe colorAcc">Violenza:</span><span class="{{ $article_to_check->images()->first()->violence}}"></span></li>
-                                                <li class="colorAcc"><span class="me-2 wMe colorAcc">Razzismo:</span><span class="{{ $article_to_check->images()->first()->racy}}"></span></li>
+                                                <li class="colorAcc"><span class="me-2 wMe colorAcc">{{__('messages.Adulti')}}:</span><span class="{{ $article_to_check->images()->first()->adult}}"></span></li>
+                                                <li class="colorAcc"><span class="me-2 wMe colorAcc">{{__('messages.Satira')}}:</span><span class="{{ $article_to_check->images()->first()->spoof}}"></span></li>
+                                                <li class="colorAcc"><span class="me-2 wMe colorAcc">{{__('messages.Medicina')}}:</span><span class="{{ $article_to_check->images()->first()->medical}}"></span></li>
+                                                <li class="colorAcc"><span class="me-2 wMe colorAcc">{{__('messages.Violenza')}}:</span><span class="{{ $article_to_check->images()->first()->violence}}"></span></li>
+                                                <li class="colorAcc"><span class="me-2 wMe colorAcc">{{__('messages.Razzismo')}}:</span><span class="{{ $article_to_check->images()->first()->racy}}"></span></li>
                                             </ul>
                                         </div>
                                         <div class="borderL ps-2">
-                                            <h5>Labels</h5>
+                                            <h5>{{__('messages.ettichette')}}</h5>
                                             <ul>
                                                 @foreach ($article_to_check->images()->first()->labels as $label )
                                                 <li class="colorAcc">{{$label}}</li>
@@ -96,15 +96,15 @@
                                                     <div class="pe-3"> 
                                                         <h5>Revisione immagini</h5>
                                                         <ul>
-                                                            <li class="colorAcc"><span class="me-2 wMe colorAcc">Adulti:</span><span class="{{ $item->adult }}"></span></li>
-                                                            <li class="colorAcc"><span class="me-2 wMe colorAcc">Satira:</span><span class="{{ $item->spoof }}"></span></li>
-                                                            <li class="colorAcc"><span class="me-2 wMe colorAcc">Medicina:</span><span class="{{ $item->medical }}"></span></li>
-                                                            <li class="colorAcc"><span class="me-2 wMe colorAcc">Violenza:</span><span class="{{ $item->violence }}"></span></li>
-                                                            <li class="colorAcc"><span class="me-2 wMe colorAcc">Razzismo:</span><span class="{{ $item->racy }}"></span></li>
+                                                            <li class="colorAcc"><span class="me-2 wMe colorAcc">{{__('messages.Adulti')}}:</span><span class="{{ $article_to_check->images()->first()->adult}}"></span></li>
+                                                            <li class="colorAcc"><span class="me-2 wMe colorAcc">{{__('messages.Satira')}}:</span><span class="{{ $article_to_check->images()->first()->spoof}}"></span></li>
+                                                            <li class="colorAcc"><span class="me-2 wMe colorAcc">{{__('messages.Medicina')}}:</span><span class="{{ $article_to_check->images()->first()->medical}}"></span></li>
+                                                            <li class="colorAcc"><span class="me-2 wMe colorAcc">{{__('messages.Violenza')}}:</span><span class="{{ $article_to_check->images()->first()->violence}}"></span></li>
+                                                            <li class="colorAcc"><span class="me-2 wMe colorAcc">{{__('messages.Razzismo')}}:</span><span class="{{ $article_to_check->images()->first()->racy}}"></span></li>
                                                         </ul>
                                                     </div>
                                                     <div class="borderL ps-2">
-                                                        <h5>Labels</h5>
+                                                        <h5>{{__('messages.ettichette')}}</h5>
                                                         <ul>
                                                             @foreach ($item->labels as $label )
                                                                 <li class="colorAcc">{{$label}}</li>

@@ -59,6 +59,16 @@ return [
     'accetta'=>'accetta',
     'rifiuta'=>'rifiuta',
 
+  //GoogleRevisor
+  'Revisione immagini'=> 'Revisione immagini',
+  'ettichette'=>'etichette',
+  'Adulti'=>'Adulti',
+  'Satira'=>'Satira',
+  'Medicina'=>'Medicina',
+  'Violenza'=>'Violenza',
+  'Razzismo'=>'Razzismo',
+  
+
   //accedi
   'felice di vederti' => 'felice di vederti',
   'email utente' => 'email utente',

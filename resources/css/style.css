@@ -603,7 +603,7 @@ body{
 }
 .wMe{
     display: inline-block;
-    width: 80px;
+    width: 90px;
 }
 .borderL{
     border-left: 2px solid var(--acc);
