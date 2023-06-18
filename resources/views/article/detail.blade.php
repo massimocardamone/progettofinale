@@ -133,7 +133,7 @@ priceDet.innerHTML= priceDetValue.toFixed(2);
 
 
 let stars = document.querySelectorAll(".stella")
-// let path=document.querySelectorAll("path")
+
 
 if (stars.length>0) {
     for (let index = 0; index <= stars.length; index++) {

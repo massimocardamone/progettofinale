@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Livewire;
-
+use App\Models\Leaderboard;
 use App\Models\Article;
 use App\Models\ArticleScore;
 use Livewire\Component;
@@ -10,11 +10,15 @@ use Illuminate\Support\Facades\Auth;
 
 class GetVote extends Component
 {   
-    protected $article;
+    public $article;
     public $articleScore;
     public $article_id;
     public $vote;
-    private $user_id;
+    private $user_id; 
+    public $record;
+    public $voters;
+    public $average;
+    public $sum;
 
     use WithFileUploads;
     protected $rules = [
@@ -37,6 +41,38 @@ class GetVote extends Component
         $articleScore->user()->associate(Auth::user());
         $this->articleScore = $articleScore;
         $this->articleScore->save();
+
+        $leader = Leaderboard::all();
+        $article=Article::where('id',$this->article_id);
+        if(count($leader->where('article_id', $this->article_id))==0) {
+           $this->record = Leaderboard::create(
+            [
+                'article_id'=>$this->article_id,
+                'voters'=>1,
+                'average'=>$this->vote
+            ]
+            );
+            $this->record->save();
+        }else {
+            $this->record=Leaderboard::where('article_id', $this->article_id)->first();
+            $sumArray= ArticleScore::where('article_id', $this->article_id)->get();
+            
+            $this->sum = 0;
+            foreach ($sumArray as $element) {
+            $this->sum += $element->vote;
+            
+            }
+            
+            $this->voters=($this->record->voters)+1;
+            $this->average=round($this->sum/$this->voters,1);
+            
+            $this->record->update([
+                'article_id'=>$this->article_id,
+                'voters'=>$this->voters,
+                'average'=>$this->average
+            ]);
+            $this->record->save();
+        }
 
         $this->article= Article::where('id',$this->article_id)->first();
         $article = $this->article;

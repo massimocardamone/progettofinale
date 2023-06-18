@@ -17,9 +17,7 @@ return new class extends Migration
             $table->unsignedInteger('vote');
             $table->unsignedBigInteger('user_id')->nullable();;
             $table->unsignedBigInteger('article_id')->nullable();;
-            // $table->foreign('article_id')->references('id')->on('articles');
-            // $table->unsignedBigInteger('leaderboard_id')->nullable();;
-            // $table->foreign('leaderboard_id')->references('id')->on('leaderboards');
+            $table->foreign('article_id')->references('id')->on('articles');
             $table->timestamps();
         });
     }
@@ -30,10 +28,8 @@ return new class extends Migration
     public function down(): void
     {   
         Schema::table('article_scores', function (Blueprint $table) {
-            // $table->dropForeign(['article_id']);
-            // $table->dropColumn('article_id'); 
-            // $table->dropForeign(['leaderboard_id']);
-            // $table->dropColumn('leaderboard_id');  
+            $table->dropForeign(['article_id']);
+            $table->dropColumn('article_id'); 
         });
         Schema::dropIfExists('article_scores');
     }
