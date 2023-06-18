@@ -97,6 +97,15 @@
                         </div>
                     
                 </div>
+                        @auth
+                        @if(count($article_score->where('article_id',$article->id)->where('user_id',Auth::user()->id))==0)
+                            @livewire('get-vote',['article_id'=>$article->id])
+                        @else
+                            
+                        @endif
+                        @else
+                        
+                        @endauth
 
                 </div>
             </div>
