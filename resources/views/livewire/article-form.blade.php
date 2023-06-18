@@ -67,7 +67,7 @@
         <div class="container">
             <div class="row">
                 @foreach ($genres as $genre)
-                    <div class="col-12 col-sm-4 col-md-4 ">
+                    <div class="col-12 col-sm-4 col-md-4">
                         <span class="form-check mx-2">
                             <input
                                 class="form-check-input @error('genre_id')
