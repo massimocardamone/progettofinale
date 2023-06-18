@@ -1,58 +1,59 @@
-<form wire:submit.prevent="store">
-    
-    <span class="form-check mx-2">
-        {{-- <i class="fa-solid fa-star"></i> --}}
+<form wire:submit.prevent="store" class="my-5">
+    <h2 class="text-center">Esprimi il tuo voto!</h2>
+    <div class="d-flex justify-content-center">
+    <span class="form-check mx-3">
         <input
-            class="form-check-input @error('vote')
+            class=" @error('vote')
         is-invalid
         @enderror"
             type="radio" value="1" wire:model="vote"
             id="voto1">
-        <label for="voto1" class="form-check-label">1</label>
+        <label for="voto1" class="stella"><i class="fa-solid fa-star icons" aria-hidden="true"></i></label>   
     </span>
 
-    <span class="form-check mx-2">
+    <span class="form-check mx-3">
         <input
-            class="form-check-input @error('vote')
+            class=" @error('vote')
         is-invalid
         @enderror"
             type="radio" value="2" wire:model="vote"
             id="voto2">
-        <label for="voto2" class="form-check-label">2</label>
+        <label for="voto2" class="stella"><i class="fa-solid fa-star icons" aria-hidden="true"></i></label>
     </span>
 
-    <span class="form-check mx-2">
+    <span class="form-check mx-3">
         <input
-            class="form-check-input @error('vote')
+            class=" @error('vote')
         is-invalid
         @enderror"
             type="radio" value="3" wire:model="vote"
             id="voto3">
-        <label for="voto3" class="form-check-label">3</label>
+        <label for="voto3" class="stella"><i class="fa-solid fa-star icons" aria-hidden="true"></i></label>
     </span>
 
-    <span class="form-check mx-2">
+    <span class="form-check mx-3">
         <input
-            class="form-check-input @error('vote')
+            class=" @error('vote')
         is-invalid
         @enderror"
             type="radio" value="4" wire:model="vote"
             id="voto4">
-        <label for="voto4" class="form-check-label">4</label>
+        <label for="voto4" class="stella"><i class="fa-solid fa-star icons" aria-hidden="true"></i></label>
     </span>
 
-    <span class="form-check mx-2">
+    <span class="form-check mx-3">
         <input
-            class="form-check-input @error('vote')
+            class="@error('vote')
         is-invalid
         @enderror"
             type="radio" value="5" wire:model="vote"
             id="voto5">
-        <label for="voto5" class="form-check-label">5</label>
+        <label for="voto5" class="stella"><i class="fa-solid fa-star icons" aria-hidden="true"></i></label>
     </span>
-    
-    <p class="d-none" value="{{$article_id}}" wire:model="article_id"></p>
-    <div class="d-flex justify-content-center mb-3">
-        <button type="submit"  class="btn btn-success">Vota</button>
     </div>
+    <p class="d-none" value="{{$article_id}}" wire:model="article_id"></p>
+    <div class="d-flex justify-content-center my-3">
+        <button type="submit"  class="btn btn-success">Vota!</button>
+    </div>
+
 </form>

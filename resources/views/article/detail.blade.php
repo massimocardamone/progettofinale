@@ -1,5 +1,43 @@
 <x-layout docTitle="detail" :title="$article->name">
-    
+    <style>
+      path{
+        
+        fill: currentColor;
+       
+
+      }
+       input[type="radio"]{
+        -webkit-appearance: none;
+       }
+       label{
+        position: relative;
+        margin: auto
+        height: fit-content;
+        width: fit-content;
+        /* color: inherit; */
+        transition: 0.5s;
+       }
+       .fa{
+        font-size:50px
+        position: absolute;
+        top: 50%;
+        left:50%;
+        tranform:translate(-50%,-80%);
+       }
+       input[type="radio"]:checked+label{
+        color:gold !important;
+        box-shadow: 0 15px 45px gold;
+       }
+       
+       input[type="radio"],label::before,label::after{
+        transition-delay: 0.5s;
+        color: initial;
+        padding: 0;
+        margin:0;
+        box-sizing: inherit;
+       }
+    </style>
+
     <div class="container mt-3">
         <div class="row justify-content-between">
             <div class="col-12 col-md-2">
@@ -67,23 +105,6 @@
             </div>   
         </div>      
     </div>
-    {{-- <div class="container my-3">
-        <div class="row">
-            <div class="col-12 col-md-6 coldetsx">
-                <div class="coldetdxd ">
-                    
-                    <img class="imgdet img-fluid w-100" src="https://picsum.photos/400/300" alt="">
-                </div>            
-            </div>
-            
-            <div class="col-12 col-md-6 coldetdx">
-                <div class="coldetdxd ">
-                  
-                    <img class="imgdet img-fluid w-100" src="https://picsum.photos/400/300" alt="">
-                </div>            
-            </div>
-        </div>    
-    </div>                --}}
 
 </x-layout>
 
@@ -105,10 +126,30 @@
             closeModal();
         }
     }
-</script>
 
-<script>
-    let priceDet = document.querySelector('.priceDet');
-    let priceDetValue = parseFloat(priceDet.innerHTML);
-    priceDet.innerHTML= priceDetValue.toFixed(2);
+let priceDet = document.querySelector('.priceDet');
+let priceDetValue = parseFloat(priceDet.innerHTML);
+priceDet.innerHTML= priceDetValue.toFixed(2);
+
+
+let stars = document.querySelectorAll(".stella")
+// let path=document.querySelectorAll("path")
+
+if (stars.length>0) {
+    for (let index = 0; index <= stars.length; index++) {
+        let star = stars[index];
+        
+        star.addEventListener('click',(event)=>{
+            setTimeout(() => {
+                let path=document.querySelectorAll("path")
+                for (let i = 0; i <= index; i++) {
+                let stella = path[i];
+                stella.setAttribute('color','gold');   
+                }  
+            }, 350);
+            
+                
+        })
+    }
+}
 </script>
