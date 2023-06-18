@@ -78,6 +78,7 @@ return [
     'Benvenuto' => 'welcome',
     'nome utente' => 'username',
     'Conferma password' => 'Confirm password',
+    'lunghezza password' => 'the password must be 8 characters long',
 
     //footer 
     "chi siamo" => "Who we are",

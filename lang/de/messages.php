@@ -80,6 +80,7 @@ return [
     'Benvenuto' => 'Willkommen',
     'nome utente' => 'Nutzername',
     'Conferma password' => 'Bestätige das Passwort',
+    'lunghezza password' => 'Das Passwort muss 8 Zeichen lang sein',
 
     //lavora con noi
     'lavora con noi' => 'arbeite mit uns',

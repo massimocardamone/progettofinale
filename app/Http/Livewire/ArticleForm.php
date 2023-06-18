@@ -29,22 +29,22 @@ class ArticleForm extends Component
 
     protected $rules = [
         'name' => 'required',
-        'price' => 'min:0|required',
+        'price' => 'required|numeric|min:0',
         'description' => 'required',
-        'images.*' => 'image|max:1024',
-        'temporary_images.*' => 'image|max:1024',
+        'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        'temporary_images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         'genre_id' => 'required',
 
     ];
 
-    protected $messages = [
-        '*.required' => 'Il campo è obbligatorio.',
-        'price.min' => 'Il prezzo non può essere negativo',
-        'images.image' => 'deve  contenere un immagine',
-        'temporary_images.*.image' => 'il file deve essere un immagine',
-        'images.max' => 'il file deve essere di massimo 1MB',
-        'temporary_image.*.max' => 'il file deve essere di massimo 1MB',
-    ];
+    // protected $messages = [
+    //     '*.required' =>,
+    //     'price.min' => 'Il prezzo non può essere negativo',
+    //     'images.image' => 'deve  contenere un immagine',
+    //     'temporary_images.*.image' => 'il file deve essere un immagine',
+    //     'images.max' => 'il file deve essere di massimo 1MB',
+    //     'temporary_image.*.max' => 'il file deve essere di massimo 1MB',
+    // ];
 
     public function updatedTemporaryImages()
     {
@@ -98,7 +98,7 @@ class ArticleForm extends Component
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
         $this->reset();
-        redirect(route('create'))->with('message', __('messages.Prodotto aggiunto'));
+        redirect(route('create'))->with('message', __('alert.Prodotto aggiunto'));
     }
     public function render()
     {

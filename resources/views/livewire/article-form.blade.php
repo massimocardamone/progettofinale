@@ -54,7 +54,7 @@
 
     <div class="mb-3">
         <label for="price" class="form-label">{{__('messages.Prezzo')}}</label>
-        <input type="number" step="0.01" min="0" wire:model="price"
+        <input type="number" step="0.01"  wire:model="price"
             class="form-control myinput @error('price')
         is-invalid
       @enderror" id="price">
