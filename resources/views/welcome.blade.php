@@ -58,10 +58,32 @@
   @endif
   @endauth
 
+  {{-- SEZIONE I MIGLIORI PRODOTTI --}}
+  {{-- TITLE BOARD --}}
   <div class="container mysezione11">
-    <div class="row bg-warning justify-content-end">
-      <div class="col-12 col-md-6 bg-primary d-flex justify-content-end">
-        <h3 class="fst-italic">{{__('messages.boardTitlte')}}</h3>
+    <div class="row justify-content-end">
+      <div class="col-12 col-md-6 d-flex justify-content-end">
+        <h2 class="fst-italic violet-text textdarkw">{{__('messages.boardTitlte')}}</h2>
+      </div>
+    </div>
+  </div>
+  {{-- SHOW 3 BEST CARDS --}}
+  <div class="container ">
+    <div class="row bg-primary">
+      <div class="col-12 col-md-4 bg-warning">
+        ciao
+      </div>
+      <div class="col-12 col-md-8 bg-success">
+        <div class="row">
+          <div class="col-12 topprodc d-flex mysectionx">
+            @foreach ($leaderboard as $item)
+            <div class="mx-3 ">
+              <x-card :article="$item->article"/>
+            </div> 
+            @endforeach
+          </div>
+
+        </div>
       </div>
     </div>
   </div>

@@ -156,6 +156,7 @@ body{
     box-shadow: 3px 3px 10px var(--lightt);
     background-color: var(--dark);
     height: 470px;
+    width: 100%;
 }
 
 .mycard:hover{
@@ -613,4 +614,9 @@ body{
 }
 .vh-60{
     height: 58vh;
+}
+
+.topprodc{
+    display: flex;
+    flex-wrap: wrap;
 }
