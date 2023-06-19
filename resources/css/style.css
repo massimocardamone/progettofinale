@@ -624,7 +624,7 @@ body{
 @media (min-width: 600px) and (max-width: 1281px){
 
     .imgBox{
-        max-width: 250px;
+        max-width: 300px;
     }
 }
 @media (min-width: 200px) and (max-width: 600px){
@@ -639,4 +639,9 @@ body{
         transform: rotateZ(30deg);
         text-shadow: 3px 3px 0px var(--sec);
     }
+
+        .mysection12 {
+            background-color: var(--darkt);
+            border-radius: 30px 30px 30px 30px;
+        }
 }
