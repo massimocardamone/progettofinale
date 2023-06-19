@@ -438,6 +438,12 @@ body{
     }
     
   }
+  @media (min-width: 600px) and (max-width: 1281px){
+
+    .imgBox{
+        max-width: 250px;
+    }
+  }
  
 /* -----------------FOOTER-------------------- */
 

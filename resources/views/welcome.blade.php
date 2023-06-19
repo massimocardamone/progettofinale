@@ -58,7 +58,7 @@
   @endif
   @endauth
 
-  @if (count($leaderboard)>1)
+  @if (count($leaderboard)>0)
   <div class="container mt-1 mb-1">
     <div class="row justify-content-between">
       <div class="col-12 mysezione11 d-flex align-items-center">
