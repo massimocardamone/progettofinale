@@ -15,8 +15,8 @@ return new class extends Migration
         Schema::create('article_scores', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('vote');
-            $table->unsignedBigInteger('user_id')->nullable();;
-            $table->unsignedBigInteger('article_id')->nullable();;
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('article_id')->nullable();
             $table->foreign('article_id')->references('id')->on('articles');
             $table->timestamps();
         });
