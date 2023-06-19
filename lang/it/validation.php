@@ -194,7 +194,7 @@ return [
         ],
         'email' =>[
             'required'=>'l\'email è obbligatoria',
-            'email'=>'l\'email deve essere valida',
+            'email'=>' deve contenere un E-mail valida',
             'unique'=>'L\'email è già presente'
         ],
         'vote' =>[

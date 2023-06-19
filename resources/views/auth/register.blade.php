@@ -19,7 +19,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="userMail" class="form-label">{{__('messages.email utente')}}</label>
-                        <input type="email" name="email"
+                        <input type="text" name="email"
                             class="form-control @error('email')
         is-invalid @enderror myinput text-light"
                             id="userMail" aria-describedby="emailHelp" value={{old('email')}}>
