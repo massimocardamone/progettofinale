@@ -1,6 +1,6 @@
 <x-layout docTitle='{{__("messages.".$genre->genre."")}}' title='{{__("messages.".$genre->genre."")}}'>
     
-    <div class="container mysection mt-3">
+    <div class="container mt-3">
         
         {{-- LISTA CATEGORIE --}}
 
@@ -9,7 +9,7 @@
     </div>
     
     @if ( count($articles)>0)
-    <div class="container mysection">
+    <div class="container mysection ">
         <div class="row">
             @foreach ($articles as $single)
             <div class="col-12 col-md-3">

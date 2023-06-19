@@ -1,5 +1,5 @@
 <x-layout docTitle="{{__('messages.Tutti i prodotti')}}" title="{{__('messages.Tutti i prodotti')}}">
-    <div class="container">
+    <div class="container mt-3">
         
         {{-- LISTA CATEGORIE --}}
 
