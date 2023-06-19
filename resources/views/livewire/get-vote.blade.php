@@ -58,7 +58,7 @@
     </div>
     <p class="d-none" value="{{$article_id}}" wire:model="article_id"></p>
     <div class="d-flex justify-content-center my-3">
-        <button type="submit"  class="btn btn-success">{{__('messages.Vota')}}</button>
+        <button type="submit"  class="mybtn">{{__('messages.Vota')}}</button>
     </div>
 
 </form>

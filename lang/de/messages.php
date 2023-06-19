@@ -23,6 +23,7 @@ return [
     'I nostri nuovi prodotti!' =>    'Unsere neuen Produkte!',
     'Vuoi lavorare con noi?' =>    'Möchtest du mit uns arbeiten',
     'clicca qui' => 'klicken Sie hier',
+    'boardTitlte'=>"die beliebtesten Produkte",
 
     //index
     'Tutti i prodotti' =>    'alle Produkte',

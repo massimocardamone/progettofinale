@@ -22,6 +22,7 @@ return [
     'I nostri nuovi prodotti!' =>    ' Our new products!		',
     'Vuoi lavorare con noi?' =>    'Wants to work with us',
     'clicca qui' => 'click her',
+    'boardTitlte'=>"Users' choice!",
 
     //index
     'Tutti i prodotti' =>    'All products ',
