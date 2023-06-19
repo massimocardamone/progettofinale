@@ -110,4 +110,7 @@ return [
     'Musica'=>'Musica',
     'Sport'=>'Sport',
     'Libri'=>'Libri',
+
+    //titoli rotte
+    'dettagli'=>'dettagli',
 ];
