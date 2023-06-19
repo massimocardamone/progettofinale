@@ -63,15 +63,20 @@
       <div class="col-12 mysezione11 d-flex align-items-center">
         <h3 class="fst-italic">{{__('messages.boardTitlte')}}</h3>
       </div>
-      <div class="col-12 d-flex mysectionx justify-content-center">
+      <div class="col-12 d-none d-md-flex mysectionx justify-content-center">
         @foreach ($leaderboard as $item)
         <div class="mx-3 premiumcard">
           <x-card :article="$item->article"/>
         </div> 
-        @endforeach
-      </div>
+        @endforeach 
     </div>
-  </div>
+    
+      @foreach ($leaderboard as $item)
+      <div class="col-12 d-md-none d-flex mysectionx justify-content-center">
+          <x-card :article="$item->article"/>
+        </div> 
+        @endforeach 
+    </div>
 
 
 <script>
