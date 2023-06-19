@@ -85,8 +85,7 @@
                     <div class="col-12 mysection p-3 my-2">
                         <h4><span>{{__('messages.Prezzo')}}: € <span class="priceDet">{{$article->price}}</span></span></h4>
                     </div>
-                    <button class="coldetlibtn" onclick="openModal()"><h3>{{__('messages.Leggi la descrizione')}}!</h3></button>
-                        
+                    <button class="coldetlibtn" onclick="openModal()"><h3>{{__('messages.Leggi la descrizione')}}!</h3></button>      
                         <!-- La modale -->
                         <div id="myModal" class="modal">
                             <div class="modal-content">
@@ -95,14 +94,16 @@
                                 <p>{{$article->description}}</p>
                             </div>
                         </div>
-                    
                 </div>
                 </div>
                 @auth
                     @if(count($article_score->where('article_id',$article->id)->where('user_id',Auth::user()->id))==0)
                     @livewire('get-vote',['article_id'=>$article->id])
                     @else
-                    <x-score :article="$article" />
+                    <div class="d-flex flex-column">
+                        <x-score :article="$article" />
+                        <h6 class="text-center mt-3 fst-italic">"{{__('messages.voters')}} {{$article->leaderboard->voters}}"</h6>
+                    </div>
                     @endif
                 @endauth
                 @guest 
@@ -113,7 +114,10 @@
                     </h3>
                 </div> --}}
                     @else
-                    <x-score :article="$article" />
+                    <div class="d-flex flex-column">
+                        <x-score :article="$article" />
+                        <h6 class="text-center mt-3 fst-italic"s>{{__('messages.voters')}} {{$article->leaderboard->voters}}</h6>
+                    </div>  
                 @endif
                 @endguest
             </div>

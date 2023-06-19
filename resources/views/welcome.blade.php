@@ -49,4 +49,21 @@
   @endif
   @endauth
 
+  <div class="container mt-1 mb-1">
+    <div class="row justify-content-between">
+      <div class="col-12 mysezione11 d-flex align-items-center">
+        <h3 class="fst-italic">{{__('messages.clicca qui')}}</h3>
+      </div>
+      <div class="col-12 d-flex mysectionx justify-content-center">
+        @foreach ($leaderboard as $item)
+        <div class="mx-3">
+          <x-card :article="$item->article"/>
+        </div> 
+        @endforeach
+      </div>
+    </div>
+  </div>
+  
+  
+
 </x-layout>

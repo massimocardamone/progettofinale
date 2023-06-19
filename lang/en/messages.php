@@ -114,4 +114,5 @@ return [
     //vote
     'Esprimi il tuo voto' => 'Cast your vote!',
     'Vota' => 'rate it!',
+    'voters'=> 'On an average grade:',
 ];

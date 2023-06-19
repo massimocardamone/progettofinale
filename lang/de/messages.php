@@ -116,5 +116,6 @@ return [
     //vote
     'Esprimi il tuo voto' => 'Gib deine Stimme ab!',
     'Vota' => 'Abstimmung!',
+    'voters'=> 'Bei einer durchschnittsnote:',
 
 ];

@@ -118,4 +118,5 @@ return [
   //vote
   'Esprimi il tuo voto' => 'Esprimi il tuo voto!',
   'Vota' => 'Vota!',
+  'voters'=> 'Su una media di voti:',
 ];

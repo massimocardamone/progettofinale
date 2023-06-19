@@ -7,6 +7,7 @@ use App\Models\Article;
 use App\Models\Genre;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Leaderboard;
 
 class PublicController extends Controller
 {
@@ -17,7 +18,9 @@ class PublicController extends Controller
         $artNum= count(Article::where('is_accepted',true)->get());
         $userNum= count(User::all());
 
-        return view('welcome',compact('articles','artNum','userNum'));
+        $leaderboard=Leaderboard::take(3)->orderBy('average','desc')->get();
+
+        return view('welcome',compact('articles','artNum','userNum','leaderboard'));
     }
     // funzione di ricerca articoli
     public function searchArticles(Request $request){
