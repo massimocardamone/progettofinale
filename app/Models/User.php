@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Article;
-use App\Models\ArticleScore;
+use App\Models\Score;
 
 class User extends Authenticatable
 {
@@ -48,7 +48,7 @@ class User extends Authenticatable
     public function articles(){
         return $this->hasMany(Article::class); 
     }
-    public function articleScores(){
-        return $this->hasMany(ArticleScore::class); 
+    public function scores(){
+        return $this->hasMany(Score::class); 
     }
 }

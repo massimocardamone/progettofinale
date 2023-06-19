@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\ArticleScore as Score;
+use App\Models\Score as Score;
 use App\Models\Article;
 use App\Models\Leaderboard;
 use Illuminate\Http\Request;

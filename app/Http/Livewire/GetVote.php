@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 use App\Models\Leaderboard;
 use App\Models\Article;
-use App\Models\ArticleScore;
+use App\Models\Score;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 class GetVote extends Component
 {   
     public $article;
-    public $articleScore;
+    public $score;
     public $article_id;
     public $vote;
     private $user_id; 
@@ -31,16 +31,16 @@ class GetVote extends Component
     {
 
         $this->validate();
-        $articleScore = ArticleScore::create(
+        $score = Score::create(
             [
                 'vote' => $this->vote,
                 'article_id' => $this->article_id,
                 'user_id' => Auth::id()
             ]
         );
-        $articleScore->user()->associate(Auth::user());
-        $this->articleScore = $articleScore;
-        $this->articleScore->save();
+        $score->user()->associate(Auth::user());
+        $this->score = $score;
+        $this->score->save();
 
         $leader = Leaderboard::all();
         $article=Article::where('id',$this->article_id);
@@ -55,7 +55,7 @@ class GetVote extends Component
             $this->record->save();
         }else {
             $this->record=Leaderboard::where('article_id', $this->article_id)->first();
-            $sumArray= ArticleScore::where('article_id', $this->article_id)->get();
+            $sumArray= Score::where('article_id', $this->article_id)->get();
             
             $this->sum = 0;
             foreach ($sumArray as $element) {

@@ -77,6 +77,7 @@
         </div> 
         @endforeach 
     </div>
+  </div>
 
 
 <script>
