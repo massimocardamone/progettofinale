@@ -1,22 +1,23 @@
 <?php
 return [
     //navbar
-    'Tutti i prodotti' => 'all products',	
-    'cerca un prodotto'	=> 'Search for a product',	
-    'cerca'	=>	'Search',	
-    'Registrati' =>	'Register',	
-    'Accedi' => 'Login',		
-    'Aggiungi un prodotto' => 'Add a product',		
-    'Benvenuto' => 'Welcome',		
-    'Zona revisione' => 'Mod zone',		
-     'Esci'	=> 'Logout',		
-     'Prodotti da accettare' => 'products to accept',
+    'Tutti i prodotti' => 'all products',
+    'cerca un prodotto'    => 'Search for a product',
+    'cerca'    =>    'Search',
+    'Registrati' =>    'Register',
+    'Accedi' => 'Login',
+    'Aggiungi un prodotto' => 'Add a product',
+    'Benvenuto' => 'Welcome',
+    'Zona revisione' => 'Mod zone',
+    'Esci'    => 'Logout',
+    'Prodotti da accettare' => 'products to accept',
 
     //homepage
     'sottotitolo' => 'Bellyache prices!',
     'I nostri utenti' =>        'Users',
     'Le Categorie'    =>    '  Categories',
-    'I nostri prodotti'    =>    'New products',
+    'I nuovi prodotti'    =>    'New products',
+    'i nostri prodotti' => 'Our products',
     'Utenti soddisfatti' =>    ' Satisfied customers',
     'I nostri nuovi prodotti!' =>    ' Our new products!		',
     'Vuoi lavorare con noi?' =>    'Wants to work with us',
@@ -31,7 +32,7 @@ return [
     'Prezzo' => 'Price',
     'Categoria'    => 'Category',
     'Leggi la descrizione' => 'Read the description',
-    "Nessun prodotto" => "no product",
+    "Nessun prodotto" => "Oops...There are no products at the moment :(",
 
     //card
     'aggiunto da' => 'Added by',
@@ -50,8 +51,8 @@ return [
     //buttom
     'torna indietro' => 'come back',
     //revisore
-    'Articolo da revisionare' => 'Article to be reviewed',
-    'non ci sono articoli' => 'there are no articles',
+    'Articolo da revisionare' => 'product to be reviewed',
+    'non ci sono articoli' => 'there are no products',
     'Torna alla Home' => 'back to home',
     'annulla' => 'cancel',
     'accetta' => 'accept',
@@ -67,12 +68,12 @@ return [
     'Razzismo' => 'Racy',
 
     //accedi
-    'felice di vederti'=> 'nice to see you', 
-    'email utente'=> 'user email',
-    'Password'=>'Password',
-    'Accedi'=> 'Log in',
-    'Non sei ancora registrato?'=> 'Not registered yet?',
-    'Registrati'=> 'Sign in',
+    'felice di vederti' => 'nice to see you',
+    'email utente' => 'user email',
+    'Password' => 'Password',
+    'Accedi' => 'Log in',
+    'Non sei ancora registrato?' => 'Not registered yet?',
+    'Registrati' => 'Sign in',
 
     //registrati
     'Benvenuto' => 'welcome',
@@ -90,22 +91,22 @@ return [
     'sulla terra ferma' => 'on the mainland',
 
     //lavora con noi
-    'lavora con noi'=> 'work with us',
+    'lavora con noi' => 'work with us',
     'Perchè vuoi diventare revisore?' => 'Why do you want to become a moderator?',
     'Inoltra Richiesta' => 'Submit Request',
-    'revisorMotivation'=>'Write down your motivation',
+    'revisorMotivation' => 'Write down your motivation',
 
     //Generi
-    'Arredamento'=>'Furnitures',
-    'Videogiochi'=>'Videogames',
-    'Abbigliamento'=>'Clothing',
-    'Elettronica'=>'Electronics',
-    'Giardinaggio'=>'Gardening',
-    'Motori'=>'Motors',
-    'Giochi'=>'Games',
-    'Musica'=>'Musics',
-    'Sport'=>'Sport',
-    'Libri'=>'Books',
+    'Arredamento' => 'Furnitures',
+    'Videogiochi' => 'Videogames',
+    'Abbigliamento' => 'Clothing',
+    'Elettronica' => 'Electronics',
+    'Giardinaggio' => 'Gardening',
+    'Motori' => 'Motors',
+    'Giochi' => 'Games',
+    'Musica' => 'Musics',
+    'Sport' => 'Sport',
+    'Libri' => 'Books',
 
     //titoli rotte
     'dettagli' => 'details',

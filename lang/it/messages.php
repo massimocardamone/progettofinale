@@ -17,6 +17,7 @@ return [
   'sottotitolo' => 'Prezzi...da mal di pancia',
   'I nostri utenti' =>    'I nostri utenti',
   'Le Categorie'  =>  'Le Categorie',
+  'i nuovi prodotti' => 'I nostri prodotti',
   'I nostri prodotti'  =>  'I nostri prodotti',
   'Utenti soddisfatti' =>  'Utenti soddisfatti',
   'I nostri nuovi prodotti!' =>  'I nostri nuovi prodotti!',
@@ -52,8 +53,8 @@ return [
   'torna indietro' => 'torna indietro',
 
   //revisore
-  'Articolo da revisionare' => 'Articolo da revisionare',
-  'non ci sono articoli' => 'non ci sono articoli',
+  'Articolo da revisionare' => 'Prodotto da revisionare',
+  'non ci sono Prodotto' => 'non ci sono articoli',
   'Torna alla Home' => 'Torna alla Home',
   'annulla' => 'annulla',
   'accetta' => 'accetta',
