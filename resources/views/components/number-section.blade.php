@@ -14,7 +14,7 @@
         </div>
         <div class="col-12 col-md-12 numSec mynumbers spanNum d-flex mysection12 justify-content-center">
             <div class="pt-3">
-                <h3 class="fst-italic">{{__('messages.i nostri prodotti')}}:</h3>
+                <h3 class="fst-italic">{{__('messages.I nostri prodotti')}}:</h3>
                 <h4 class="text-center"><span class="artNum">{{$artNum}}</span></h4>    
             </div>             
         </div>

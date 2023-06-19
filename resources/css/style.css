@@ -276,7 +276,7 @@ body{
     /* background-color: var(--darkt); */
     background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/media/sfondoh.jpg);
     border-radius: 20px 20px 20px 20px;
-    height: 10rem;
+    min-height: 10rem;
 
 }
 
