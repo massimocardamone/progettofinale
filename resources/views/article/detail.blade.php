@@ -97,104 +97,30 @@
                         </div>
                     
                 </div>
-                        @auth
-                        @if(count($article_score->where('article_id',$article->id)->where('user_id',Auth::user()->id))==0)
-                            @livewire('get-vote',['article_id'=>$article->id])
-                        @else
-                            
-                        @endif
-                        @else
-                        
-                        @endauth
-
                 </div>
+                @auth
+                    @if(count($article_score->where('article_id',$article->id)->where('user_id',Auth::user()->id))==0)
+                    @livewire('get-vote',['article_id'=>$article->id])
+                    @else
+                    <x-score :article="$article" />
+                    @endif
+                @endauth
+                @guest 
+                @if(count($article_score->where('article_id',$article->id))==0)
+                {{-- <div>
+                    <h3>
+                        Nessun Voto
+                    </h3>
+                </div> --}}
+                    @else
+                    <x-score :article="$article" />
+                @endif
+                @endguest
             </div>
         </div>
     </div>
-    {{-- <div class="container mt-3 bg-success">
-        <div class="row justify-content-between">
-            <div class="col-12 col-md-2">
-                <a href="{{route('home')}}" class="btn mybtn my-3">{{__('messages.Torna indietro')}}</a> 
-            </div>
-            <div class=" col-12 col-md-4 coldetdx d-flex align-items-center vh-60 mb-5">
-                @if (count($article->images()->get()) <= 1)
-                <div class="coldetdxd">
-                    <img class="img-fluid imgdet" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : "/media/default.jpg" }}" alt="immagini">
-                </div>     
-                @else
-                <div class="coldetdxd">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            @foreach ($article->images()->get() as $item)
-                            <div class="swiper-slide">
-                                <img src="{{$item->getUrl(400,300)}}" class="d-block"/>
-                            </div>  
-                             @endforeach
-                        </div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-next" id="coloraAcc"></div>
-                        <div class="swiper-button-prev" id="coloraAcc"></div>
-                    </div> 
-                </div>
-                @endif           
-            </div>
-            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center coldetsx ">
-                <div class="">
-                    <ul class="">  
-                        <li class="list-group d-flex coldetli">
-                            <h4>{{__('messages.Nome')}}: <span class="titleText">{{$article->name}}</span></h4>
-                        </li>
-                        <li class="list-group coldetli"> <h4><span>{{__('messages.Prezzo')}}: € <span class="priceDet">{{$article->price}}</span></span></h4></li>
-                        <li class="list-group coldetli"><h4>{{__('messages.Categoria')}}: {{__("messages.".$article->genre->genre."")}}</h4></li>
-                        
-                        <!-- Bottone per aprire la modale -->
-                        <button class="coldetlibtn" onclick="openModal()"><h3>{{__('messages.Leggi la descrizione')}}!</h3></button>
-                        
-                        @auth
-                        @if(count($article_score->where('article_id',$article->id)->where('user_id',Auth::user()->id))==0)
-                            @livewire('get-vote',['article_id'=>$article->id])
-                        @else
-                            
-                        @endif
-                        @else
-                        
-                        @endauth
-                        
-                        
-                        
-                        
-                        
-                        <!-- La modale -->
-                        <div id="myModal" class="modal">
-                            <div class="modal-content">
-                                <span class="close" onclick="closeModal()">&times;</span>
-                                <h2>{{$article->name}}</h2>
-                                <p>{{$article->description}}</p>
-                            </div>
-                        </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>   
-        </div>      
-    </div> --}}
-    {{-- <div class="container my-3">
-        <div class="row">
-            <div class="col-12 col-md-6 coldetsx">
-                <div class="coldetdxd ">
-                    
-                    <img class="imgdet img-fluid w-100" src="https://picsum.photos/400/300" alt="">
-                </div>            
-            </div>
-            
-            <div class="col-12 col-md-6 coldetdx">
-                <div class="coldetdxd ">
-                  
-                    <img class="imgdet img-fluid w-100" src="https://picsum.photos/400/300" alt="">
-                </div>            
-            </div>
-        </div>    
-    </div>                --}}
+
+
 
 </x-layout>
 
