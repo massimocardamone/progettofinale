@@ -73,7 +73,7 @@
     </div>
   </div>
 
-  
+
 <script>
 let premiumcard= document.querySelectorAll('.premiumcard')
 if (premiumcard.length >0) {
