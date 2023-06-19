@@ -58,7 +58,14 @@
   @endif
   @endauth
 
-  <div class="container mt-1 mb-1">
+  <div class="container mysezione11">
+    <div class="row bg-warning justify-content-end">
+      <div class="col-12 col-md-6 bg-primary d-flex justify-content-end">
+        <h3 class="fst-italic">{{__('messages.boardTitlte')}}</h3>
+      </div>
+    </div>
+  </div>
+  {{-- <div class="container mt-1 mb-1">
     <div class="row justify-content-between">
       <div class="col-12 mysezione11 d-flex align-items-center">
         <h3 class="fst-italic">{{__('messages.boardTitlte')}}</h3>
@@ -72,7 +79,7 @@
       </div>
     </div>
   </div>
-
+ --}}
 
 <script>
 let premiumcard= document.querySelectorAll('.premiumcard')
