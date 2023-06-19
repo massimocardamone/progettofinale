@@ -1,5 +1,14 @@
 <x-layout docTitle="Homepage" title="C o l i c a S t o r e" animate="animate__backInDown">
+<style>
+  .rotateSx{
+    transform: rotateZ(-5deg)
+  }
+  .rotateDx{
+    transform: rotateZ(5deg)
+}
+</style>
 
+  
   <div class="container mymotto d-flex justify-content-center">
     <div class="row align-items-center">
       <div class="col-12 d-flex  justify-content-center">
@@ -52,18 +61,33 @@
   <div class="container mt-1 mb-1">
     <div class="row justify-content-between">
       <div class="col-12 mysezione11 d-flex align-items-center">
-        <h3 class="fst-italic">{{__('messages.clicca qui')}}</h3>
+        <h3 class="fst-italic">{{__('messages.boardTitlte')}}</h3>
       </div>
       <div class="col-12 d-flex mysectionx justify-content-center">
         @foreach ($leaderboard as $item)
-        <div class="mx-3">
+        <div class="mx-3 premiumcard">
           <x-card :article="$item->article"/>
         </div> 
         @endforeach
       </div>
     </div>
   </div>
+
   
-  
+<script>
+let premiumcard= document.querySelectorAll('.premiumcard')
+if (premiumcard.length >0) {
+  if(premiumcard.length==2){
+    premiumcard[0].classList.add('rotateSx')
+    premiumcard[1].classList.add('rotateDx')
+  }else if(premiumcard.length==3){
+    premiumcard[0].classList.add('rotateSx')
+    premiumcard[2].classList.add('rotateDx')
+  }else{}
+}
+
+</script>
+
 
 </x-layout>
+
