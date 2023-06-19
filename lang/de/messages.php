@@ -109,8 +109,8 @@ return [
     'Sport'=>'Sport',
     'Libri'=>'Bücher',
 
-    //RISPOSTA
-    'Prodotto aggiunto' => 'DESH revisione',
+    //titoli rotte
+    'dettagli' => 'Einzelheiten',
 
 
 

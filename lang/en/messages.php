@@ -107,7 +107,6 @@ return [
     'Sport'=>'Sport',
     'Libri'=>'Books',
 
-
-    //RISPOSTA
-    'Prodotto aggiunto' => 'AGGIUNTO',
+    //titoli rotte
+    'dettagli' => 'details',
 ];

@@ -1,4 +1,4 @@
-<x-layout docTitle="Login" title="{{__('messages.Accedi')}}">
+<x-layout docTitle="{{__('messages.Accedi')}}" title="{{__('messages.Accedi')}}">
     <div class="container">
         <div class="row mysezione11">
             <h3>{{__('messages.felice di vederti')}}</h3>

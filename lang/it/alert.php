@@ -1,6 +1,10 @@
 <?php
 return[
-    //messaggi di errore
-    'Prodotto aggiunto' => 'Prodotto aggiunto, in attesa revisione',
-    'Prodotto accettato' => 'Prodotto accettato',
+    //messaggi di errore Revisor
+    'articolo aggiunto' => 'articolo aggiunto, in attesa revisione',
+    'articolo accettato' => 'articolo accettato',
+    'articolo non accettato'=>'articolo non accettato',
+    'articolo annullato'=>'articolo annullato',
+    'Richiesta revisore'=>'Richiesta per diventare revisore inoltrata',
+    'Revisore'=> 'Congratulazioni, sei diventato un  revisore',
 ];

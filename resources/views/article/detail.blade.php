@@ -1,4 +1,4 @@
-<x-layout docTitle="detail" :title="$article->name">
+<x-layout docTitle="{{__('messages.dettagli')}}" :title="$article->name">
     <style>
       path{
         

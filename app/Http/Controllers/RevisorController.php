@@ -24,20 +24,20 @@ class RevisorController extends Controller
     public function acceptArticle(Article $article)
     {
         $article->setAccepted(true);
-        return redirect()->back()->with('messageRev', __('alert.Prodotto accettato'));
+        return redirect()->back()->with('messageRev', __('alert.articolo accettato'));
     }
     // pusanti di rifiuto articolo
     public function rifuteArticle(Article $article)
     {
         $article->setAccepted(false);
-        return redirect()->back()->with('messageRev', "Prodotto non accettato");
+        return redirect()->back()->with('messageRev', __('alert.articolo non accettato'));
     }
     //pulsante di articolo annullato-dentro
     public function old(Article $article)
     {
         $article = Article::orderBy('id', 'desc')->where('is_accepted', true)->orWhere('is_accepted', false)->first();
         $article->setAccepted(null);
-        return redirect()->back()->with('message', "Articolo annullato");
+        return redirect()->back()->with('message',__('alert.articolo annullato'));
     }
 
     //pulante di ultimo articolo-fuori
@@ -45,7 +45,7 @@ class RevisorController extends Controller
     {
         $article_to_check = Article::orderBy('id', 'desc')->first();
         $article_to_check->setAccepted(null);
-        return redirect()->back()->with('message', "Articolo annullato");
+        return redirect()->back()->with('message', __('alert.articolo annullato') );
     }
 
     //Richiesta per diventare Revisor
@@ -54,11 +54,11 @@ class RevisorController extends Controller
     {
         $description = $request->description;
         Mail::to('colicaStore@noReply.com')->send(new BecomeRevisorMail(Auth::user(),$description));
-        return redirect('/')->with('message', 'Richiesta per diventare revisore inoltrata');
+        return redirect('/')->with('message', __('alert.Richiesta revisore'));
     }
     public function makeRevisor(User $user)
     {
         Artisan::call('app:make-user-revisor', ['email' => $user->email]);
-        return redirect('/')->with('message', 'Congratulazioni ' . $user->name . ', è diventato revisore');
+        return redirect('/')->with('message', __('alert.Revisore'));
     }
 }

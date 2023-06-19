@@ -1,4 +1,4 @@
-<x-layout docTitle="detail" title='{{__("messages.".$genre->genre."")}}'>
+<x-layout docTitle='{{__("messages.".$genre->genre."")}}' title='{{__("messages.".$genre->genre."")}}'>
     
     <div class="container mysection mt-3">
         

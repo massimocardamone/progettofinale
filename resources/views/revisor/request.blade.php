@@ -1,4 +1,4 @@
-<x-layout docTitle="Domanda Revisor" title="{{__('messages.lavora con noi')}}">
+<x-layout docTitle="{{__('messages.lavora con noi')}}" title="{{__('messages.lavora con noi')}}">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-md-7">
