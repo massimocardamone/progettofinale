@@ -106,12 +106,8 @@
         </div> 
         @endforeach 
     </div>
-<<<<<<< HEAD
   </div>
  --}}
-=======
-
->>>>>>> a70ba5b6c3b72913143f82b91c8881a3045c3d79
 
 <script>
 let premiumcard= document.querySelectorAll('.premiumcard')
