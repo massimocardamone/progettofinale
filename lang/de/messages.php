@@ -18,6 +18,7 @@ return [
     'I nostri utenti' => 'Unsere Benutzer',
     'Le Categorie'    =>    'Die Kategorien	',
     'I nostri prodotti'    =>    'Unsere Produkte!	',
+    'i nuovi prodotti' => 'Die neuen Produkte!',
     'Utenti soddisfatti' =>    'Zufriedene Benutzer	',
     'I nostri nuovi prodotti!' =>    'Unsere neuen Produkte!',
     'Vuoi lavorare con noi?' =>    'Möchtest du mit uns arbeiten',
@@ -32,7 +33,7 @@ return [
     'Prezzo' => 'Preis',
     'Categoria'    => 'Kategorie',
     'Leggi la descrizione' => 'Beschreibung lesen',
-    'Nessun prodotto' => "kein Produkt",
+    'Nessun prodotto' => "Oops...Zur Zeit sind keine Produkte vorhanden :(",
 
     //card
     'aggiunto da' => 'Hinzugefügt von',
@@ -52,8 +53,8 @@ return [
     'torna indietro' => 'Komm zurück',
 
     //revisore
-    'Articolo da revisionare' => 'Artikel, die überprüft werden müssen',
-    'non ci sono articoli' => 'Es gibt keine Artikel',
+    'Articolo da revisionare' => 'Produkt, die überprüft werden müssen',
+    'non ci sono articoli' => 'Es gibt keine Produkte',
     'Torna alla Home' => 'zurück nach Hause',
     'annulla' => 'stornieren',
     'accetta' => 'akzeptieren',
