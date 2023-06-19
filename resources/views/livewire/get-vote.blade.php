@@ -1,5 +1,5 @@
 <form wire:submit.prevent="store" class="my-5">
-    <h2 class="text-center">Esprimi il tuo voto!</h2>
+    <h2 class="text-center">{{__('messages.Esprimi il tuo voto')}}</h2>
     <div class="d-flex justify-content-center">
     <span class="form-check mx-3">
         <input
@@ -51,9 +51,14 @@
         <label for="voto5" class="stella"><i class="fa-solid fa-star icons" aria-hidden="true"></i></label>
     </span>
     </div>
+        <div>
+        @error('vote')
+            <p class="text-danger alert alert-warning text-center">{{ $message }}</p>
+        @enderror
+    </div>
     <p class="d-none" value="{{$article_id}}" wire:model="article_id"></p>
     <div class="d-flex justify-content-center my-3">
-        <button type="submit"  class="btn btn-success">Vota!</button>
+        <button type="submit"  class="btn btn-success">{{__('messages.Vota')}}</button>
     </div>
 
 </form>

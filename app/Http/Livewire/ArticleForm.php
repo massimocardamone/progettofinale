@@ -30,7 +30,7 @@ class ArticleForm extends Component
     protected $rules = [
         'name' => 'required',
         'price' => 'required|numeric|min:0',
-        'description' => 'required',
+        'description' => 'required|max:255',
         'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         'temporary_images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         'genre_id' => 'required',

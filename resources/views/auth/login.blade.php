@@ -12,7 +12,7 @@
                             <h5>{{__('messages.email utente')}}</h5>
                         </label>
                         <input type="email"
-                            class="form-control @error('email')is-invalid @enderror myinput text-light"name="email" id="userMail">
+                            class="form-control @error('email')is-invalid @enderror myinput text-light"name="email" id="userMail" value={{old('email')}}>
                         @error('email')
                             <p class="text-danger">{{ $message }}</p>
                         @enderror

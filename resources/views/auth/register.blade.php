@@ -9,10 +9,10 @@
                     @csrf
                     <div class="mb-3">
                         <label for="userName" class="form-label">{{__('messages.nome utente')}}</label>
-                        <input type="text"
+                        <input type="text" 
                             class="form-control @error('name')
         is-invalid @enderror myinput text-light"
-                            name="name" id="userName">
+                            name="name" id="userName" value={{old('name')}}>
                         @error('name')
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
@@ -22,24 +22,24 @@
                         <input type="email" name="email"
                             class="form-control @error('email')
         is-invalid @enderror myinput text-light"
-                            id="userMail" aria-describedby="emailHelp">
+                            id="userMail" aria-describedby="emailHelp" value={{old('email')}}>
                         @error('email')
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="mb-3">
                         <label for="userPassword" class="form-label">{{__('messages.Password')}}</label>
-                        <input type="password" name="password"
+                        <input type="password" name="password" 
                             class="form-control @error('password')
         is-invalid @enderror myinput text-light"
-                            id="exampleInputPassword1">
+                            id="exampleInputPassword1" >
                         @error('password')
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="mb-3">
                         <label for="passwordConfirmation" class="form-label">{{__('messages.Conferma password')}}</label>
-                        <input type="password" name="password_confirmation"
+                        <input type="password" name="password_confirmation" 
                             class="form-control @error('password_confirmation')
         is-invalid @enderror myinput text-light"
                             id="passwordConfirmation">

@@ -7,4 +7,5 @@ return[
     'articolo annullato' => 'item cancelled',
     'Richiesta revisore' => 'Application to become a reviewer submitted',
     'Revisore' => 'Congratulations, you\'ve become a reviewer',
+    'attenzione revisore'=>'attention only reviewers can access'
 ];

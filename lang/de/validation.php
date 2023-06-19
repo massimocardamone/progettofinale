@@ -195,6 +195,9 @@ return [
             'email' => 'Die E-Mail muss gültig sein',
             'unique' => 'die E-Mail ist schon da'
         ],
+        'vote' => [
+            'required' => 'Das Feld ist Pflichtfeld.',
+        ],
     ],
 
     /*

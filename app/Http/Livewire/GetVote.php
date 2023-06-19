@@ -24,9 +24,9 @@ class GetVote extends Component
     protected $rules = [
         'vote' => 'required'
     ];
-    protected $messages = [
-        '*.required' => 'Il campo è obbligatorio.'
-    ];
+    // protected $messages = [
+    //     '*.required' => 'Il campo è obbligatorio.'
+    // ];
     public function store()
     {
 

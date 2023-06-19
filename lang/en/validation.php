@@ -163,10 +163,11 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'vote' => [
+            'required' => 'The field is mandatory.',
         ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------

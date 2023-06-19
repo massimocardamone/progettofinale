@@ -112,7 +112,8 @@ return [
     //titoli rotte
     'dettagli' => 'Einzelheiten',
 
-
-
+    //vote
+    'Esprimi il tuo voto' => 'Gib deine Stimme ab!',
+    'Vota' => 'Abstimmung!',
 
 ];

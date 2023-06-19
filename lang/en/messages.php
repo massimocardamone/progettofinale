@@ -109,4 +109,8 @@ return [
 
     //titoli rotte
     'dettagli' => 'details',
+
+    //vote
+    'Esprimi il tuo voto' => 'Cast your vote!',
+    'Vota' => 'rate it!',
 ];

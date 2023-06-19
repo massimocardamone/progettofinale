@@ -7,4 +7,5 @@ return[
     'articolo annullato'=>'articolo annullato',
     'Richiesta revisore'=>'Richiesta per diventare revisore inoltrata',
     'Revisore'=> 'Congratulazioni, sei diventato un  revisore',
+    'attenzione revisore'=> 'attenzione solo i revisori possono accedere!',
 ];
