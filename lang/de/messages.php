@@ -17,8 +17,8 @@ return [
     'sottotitolo' => 'Preise..da Magenschmerzen',
     'I nostri utenti' => 'Unsere Benutzer',
     'Le Categorie'    =>    'Die Kategorien	',
-    'I nostri prodotti'    =>    'Unsere Produkte!	',
-    'i nuovi prodotti' => 'Die neuen Produkte!',
+    'i nuovi prodotti' => 'Die neuen Produkte',
+    'I nostri prodotti'    =>    'Unsere Produkte	',
     'Utenti soddisfatti' =>    'Zufriedene Benutzer	',
     'I nostri nuovi prodotti!' =>    'Unsere neuen Produkte!',
     'Vuoi lavorare con noi?' =>    'Möchtest du mit uns arbeiten',
@@ -90,12 +90,12 @@ return [
     'revisorMotivation'=>'Schreiben sie ihre motivation',
 
     //footer 
-    "chi siamo" => "Wer wir sind",
-    'Dove spediamo' => 'Wohin versenden wir',
+    "chi siamo" => "Ueber uns",
+    'Dove spediamo' => 'wir liefern',
     'I nostri Partners' => 'unsere Partner',
-    'a casa tua' => 'in deinem Haus',
-    'a casa sua' => 'zu Hause ua',
-    'nel mondo' => 'in der Welt',
+    'a casa tua' => 'zu Dir nach Hause',
+    'a casa sua' => 'zu ihm  nach Hause ',
+    'nel mondo' => 'Weltweit',
     'sulla terra ferma' => 'Auf dem Festland',
 
     //Generi

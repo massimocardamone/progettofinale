@@ -17,7 +17,7 @@ return [
     'I nostri utenti' =>        'Users',
     'Le Categorie'    =>    '  Categories',
     'I nuovi prodotti'    =>    'New products',
-    'i nostri prodotti' => 'Our products',
+    'I nostri prodotti' => 'Our products',
     'Utenti soddisfatti' =>    ' Satisfied customers',
     'I nostri nuovi prodotti!' =>    ' Our new products!		',
     'Vuoi lavorare con noi?' =>    'Wants to work with us',
@@ -114,5 +114,5 @@ return [
     //vote
     'Esprimi il tuo voto' => 'Cast your vote!',
     'Vota' => 'rate it!',
-    'voters'=> 'On an average grade:',
+    'voters' => 'On an average grade:',
 ];
