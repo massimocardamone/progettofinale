@@ -38,9 +38,9 @@
         }
     </style>
     
-    <div class="container mt-3">
+    <div class="container mt-3 mb-3 pr-4 pe-4 pb-4 mysectionx">
         {{-- CONTAINER BOTTONE BACK E CATEGORIA--}}
-        <div class="container my-4">
+        <div class="container mb-4">
             <div class="row">
                 {{-- bottone back --}}
                 <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
@@ -53,7 +53,7 @@
             </div>
         </div>
         {{-- CONTAINER FOTO E DESCRIZIONE --}}
-        <div class="container ">
+        <div class="container">
             <div class="row ">
                 <div class="col-12 col-md-4 d-flex justify-content-center">
                     @if (count($article->images()->get()) <= 1)
@@ -97,34 +97,36 @@
                     </div>
                 </div>
 
-                <div class="col-12  d-flex align-items-center justify-content-center mt-4 p-3">
-                    @auth
-                    @if(count($score->where('article_id',$article->id)->where('user_id',Auth::user()->id))==0)
-                    @livewire('get-vote',['article_id'=>$article->id])
-                    @else
-                    <div class="d-flex flex-column mysectionx p-3">
-                        <x-score :article="$article" />
-                        <h6 class="text-center mt-3 fst-italic">"{{__('messages.voters')}} {{$article->leaderboard->voters}}"</h6>
-                    </div>
-                    @endif
-                    @endauth
-                    @guest 
-                    @if(count($score->where('article_id',$article->id))==0)
-                    {{-- <div>
-                        <h3>
-                            Nessun Voto
-                        </h3>
-                    </div> --}}
-                    @else
-                    <div class="d-flex flex-column">
-                        <x-score :article="$article" />
-                        <h6 class="text-center mt-3 fst-italic"s>{{__('messages.voters')}} {{$article->leaderboard->voters}}</h6>
-                    </div>  
-                    @endif
-                    @endguest
-                </div>
+                
             </div>
         </div>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center mt-3 p-3">
+        @auth
+        @if(count($score->where('article_id',$article->id)->where('user_id',Auth::user()->id))==0)
+        @livewire('get-vote',['article_id'=>$article->id])
+        @else
+        <div class="d-flex flex-column mysectionx p-3">
+            <x-score :article="$article" />
+            <h6 class="text-center mt-3 fst-italic">"{{__('messages.voters')}} {{$article->leaderboard->voters}}"</h6>
+        </div>
+        @endif
+        @endauth
+        @guest 
+        @if(count($score->where('article_id',$article->id))==0)
+        {{-- <div>
+            <h3>
+                Nessun Voto
+            </h3>
+        </div> --}}
+        @else
+        <div class="d-flex flex-column">
+            <x-score :article="$article" />
+            <h6 class="text-center mt-3 fst-italic"s>{{__('messages.voters')}} {{$article->leaderboard->voters}}</h6>
+        </div>  
+        @endif
+        @endguest
     </div>
     
     
