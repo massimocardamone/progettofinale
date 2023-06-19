@@ -54,7 +54,7 @@ return [
     'torna indietro' => 'Komm zurück',
 
     //revisore
-    'Articolo da revisionare' => 'Produkt, die überprüft werden müssen',
+    'Articolo da revisionare' => 'Artikel zur überprüfung',
     'non ci sono articoli' => 'Es gibt keine Produkte',
     'Torna alla Home' => 'zurück nach Hause',
     'annulla' => 'stornieren',
