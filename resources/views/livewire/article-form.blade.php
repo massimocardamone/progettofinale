@@ -87,7 +87,7 @@
         </div>
     </div>
     <div class="d-flex justify-content-center mb-3">
-        <button type="submit" class="btn btn-success">{{__('messages.Aggiungi')}}</button>
+        <button type="submit" class="mybtn">{{__('messages.Aggiungi')}}</button>
     </div>
 
 

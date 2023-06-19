@@ -423,28 +423,8 @@ body{
     border-radius: 0px 0px 30px 30px;
     height: 5rem;
 }
-
-/* MEDIA QUERY PER I DISPOSITIVI MEDIO-GRANDI */
-@media (min-width: 1500px) and (max-width: 2000px) {
-    /* Le regole CSS specifiche per gli schermi md vanno qui */
-    .mycard{
-        width: 280px;
-    }
-    .coldetli{
-        width: 600px;
-    }
-    .mynumbers{
-        height: 7rem;
-    }
-    
-  }
-  @media (min-width: 600px) and (max-width: 1281px){
-
-    .imgBox{
-        max-width: 250px;
-    }
-  }
  
+
 /* -----------------FOOTER-------------------- */
 
 .myfooter{
@@ -624,4 +604,39 @@ body{
 .topprodc{
     display: flex;
     flex-wrap: wrap;
+}
+
+
+/* MEDIA QUERY PER I DISPOSITIVI MEDIO-GRANDI */
+@media (min-width: 1500px) and (max-width: 2000px) {
+    /* Le regole CSS specifiche per gli schermi md vanno qui */
+    .mycard{
+        width: 280px;
+    }
+    .coldetli{
+        width: 600px;
+    }
+    .mynumbers{
+        height: 7rem;
+    }
+    
+}
+@media (min-width: 600px) and (max-width: 1281px){
+
+    .imgBox{
+        max-width: 250px;
+    }
+}
+@media (min-width: 200px) and (max-width: 600px){
+    .newArticle::after{
+        font-size: 2rem;
+        font-weight: 900;
+        position: absolute;
+        content: "NEW";
+        bottom: 430px;
+        right: 0px;
+        color: var(--secv);
+        transform: rotateZ(30deg);
+        text-shadow: 3px 3px 0px var(--sec);
+    }
 }
