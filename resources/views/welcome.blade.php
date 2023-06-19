@@ -77,8 +77,8 @@
         </div> 
         @endforeach 
     </div>
+  </div>
 
-    
 
 <script>
 let premiumcard= document.querySelectorAll('.premiumcard')

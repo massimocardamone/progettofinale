@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User;
 use App\Models\Article;
 
-class ArticleScore extends Model
+class Score extends Model
 {
     use HasFactory;
     protected $fillable = [

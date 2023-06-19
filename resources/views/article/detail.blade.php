@@ -97,7 +97,7 @@
                 </div>
                 </div>
                 @auth
-                    @if(count($article_score->where('article_id',$article->id)->where('user_id',Auth::user()->id))==0)
+                    @if(count($score->where('article_id',$article->id)->where('user_id',Auth::user()->id))==0)
                     @livewire('get-vote',['article_id'=>$article->id])
                     @else
                     <div class="d-flex flex-column">
@@ -107,7 +107,7 @@
                     @endif
                 @endauth
                 @guest 
-                @if(count($article_score->where('article_id',$article->id))==0)
+                @if(count($score->where('article_id',$article->id))==0)
                 {{-- <div>
                     <h3>
                         Nessun Voto
