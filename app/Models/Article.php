@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\User;
 use App\Models\Genre;
 use App\Models\Image;
+use App\Models\Leaderboard;
+use App\Models\ArticleScore;
 use Laravel\Scout\Searchable;
+use Illuminate\Foundation\Auth\User;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Article extends Model
 {
@@ -36,6 +38,12 @@ public function user(){
 }
 public function genre(){
     return $this->belongsTo(Genre::class); 
+}
+public function articleScores(){
+    return $this->hasMany(ArticleScore::class); 
+}
+public function leaderboard(){
+    return $this->hasOne(Leaderboard::class); 
 }
 //1-n images
     public function images()
