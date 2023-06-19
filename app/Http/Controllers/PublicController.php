@@ -24,7 +24,7 @@ class PublicController extends Controller
     }
     // funzione di ricerca articoli
     public function searchArticles(Request $request){
-        $articles=Article::search($request->searched)->where('is_accepted',true)->paginate(9);
+        $articles=Article::search($request->searched)->where('is_accepted',true)->paginate(8);
         return view('article.index',compact('articles'));
     }
     public function setLanguage($lang){
