@@ -403,6 +403,7 @@ body{
     background-color: var(--darkt);
     margin-bottom: 1rem;
     border-radius: 30px 30px 30px 30px;
+    padding: 1rem;
 }
 
 .mysectionx{
